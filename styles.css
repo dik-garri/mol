@@ -1,0 +1,326 @@
+/* Вера и страх — Faith & Fear presentation
+ * Dark blue theme with gold/coral/teal accents
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ===========================================
+   CSS VARIABLES
+   =========================================== */
+:root {
+  --background-color: #0F1B2D;
+  --section-divider-bg: #0A1220;
+
+  /* Typography */
+  --heading-font: "Montserrat", Helvetica, sans-serif;
+  --body-font: "Montserrat", Helvetica, sans-serif;
+  --scripture-font: "Lora", Georgia, serif;
+  --base-font-size: 32px;
+  --text-size: 16pt;
+  --h1-size: 48pt;
+  --h2-size: 34pt;
+  --h3-size: 24pt;
+  --footnote-size: 11pt;
+
+  /* Colors */
+  --primary-color: #D4A843;
+  --secondary-color: #E8C572;
+  --fear-color: #C75B5B;
+  --faith-color: #5BA88C;
+  --text-color: #F0EBE0;
+  --muted-color: #7A8BA8;
+  --line-color: #2A3A52;
+
+  /* Layout */
+  --slide-padding: 60px;
+  --slide-padding-top: 40px;
+  --content-gap: 25px;
+
+  --box-radius: 10px;
+}
+
+/* ===========================================
+   BASE STYLES
+   =========================================== */
+
+.reveal {
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: bold;
+}
+
+.reveal-viewport {
+  background-color: var(--background-color);
+}
+
+.reveal-viewport.is-section-divider .slide-background.present {
+  background-color: var(--section-divider-bg) !important;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: var(--heading-font);
+  text-transform: none;
+  color: var(--primary-color);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.reveal h1 { font-size: var(--h1-size); }
+.reveal h2 { font-size: var(--h2-size); margin-bottom: 0; }
+.reveal h3 { font-size: var(--h3-size); }
+
+.reveal p,
+.reveal li,
+.reveal td,
+.reveal th,
+.reveal blockquote {
+  font-size: var(--text-size);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* ===========================================
+   LISTS
+   =========================================== */
+
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.reveal ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.reveal ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+.reveal ul ul li::before {
+  background: var(--muted-color);
+  width: 6px;
+  height: 6px;
+}
+
+.reveal blockquote p {
+  font-size: inherit;
+}
+
+/* ===========================================
+   SLIDE LAYOUT
+   =========================================== */
+
+.reveal .slides section {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: var(--slide-padding-top) var(--slide-padding) var(--slide-padding) var(--slide-padding) !important;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.reveal .slides section.stack {
+  padding: 0 !important;
+}
+
+.reveal .slides section > .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: var(--content-gap);
+  text-align: left;
+}
+
+.reveal .slides section > .footnote {
+  position: absolute;
+  bottom: 15px;
+  left: var(--slide-padding);
+  right: var(--slide-padding);
+  font-size: var(--footnote-size);
+  color: var(--muted-color);
+}
+
+/* ===========================================
+   SECTION DIVIDERS
+   =========================================== */
+
+.reveal .slides section.section-divider {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
+}
+
+.reveal .slides section.section-divider h1 {
+  font-size: 56pt;
+  text-align: center;
+}
+
+.reveal .slides section.section-divider p {
+  font-size: 20pt;
+  color: var(--muted-color);
+}
+
+/* ===========================================
+   TEXT SIZE UTILITIES
+   =========================================== */
+
+.text-lg { font-size: 18pt !important; }
+.text-xl { font-size: 20pt !important; }
+.text-2xl { font-size: 24pt !important; }
+.text-3xl { font-size: 28pt !important; }
+.text-4xl { font-size: 32pt !important; }
+
+.text-muted { color: var(--muted-color) !important; }
+.text-center { text-align: center !important; }
+.text-uppercase { text-transform: uppercase; letter-spacing: 0.1em; }
+.font-light { font-weight: 300; }
+.font-bold { font-weight: 600; }
+
+/* ===========================================
+   BLOCKQUOTES — scripture style
+   =========================================== */
+
+.reveal blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding: 20px 25px;
+  margin: 20px 0;
+  font-family: var(--scripture-font);
+  font-style: italic;
+  background: rgba(212, 168, 67, 0.08);
+  box-shadow: none;
+  width: 100%;
+  max-width: none;
+  border-radius: 0 var(--box-radius) var(--box-radius) 0;
+}
+
+.reveal blockquote cite {
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-family: var(--body-font);
+  color: var(--muted-color);
+  font-size: 13pt;
+}
+
+/* ===========================================
+   CUSTOM: Chain / flow arrows
+   =========================================== */
+
+.chain-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 20pt;
+  font-weight: 600;
+}
+
+.chain-item .arrow {
+  color: var(--muted-color);
+  font-size: 18pt;
+}
+
+/* ===========================================
+   CUSTOM: Concept cards (4 concepts slide)
+   =========================================== */
+
+.concept-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line-color);
+  border-radius: var(--box-radius);
+  padding: 20px;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+
+.concept-card .icon {
+  font-size: 28pt;
+  margin-bottom: 8px;
+}
+
+.concept-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 20pt;
+}
+
+.concept-card p {
+  font-size: 13pt;
+  color: var(--muted-color);
+  margin: 0;
+}
+
+/* ===========================================
+   CUSTOM: Exercise question cards
+   =========================================== */
+
+.exercise-card {
+  background: rgba(212, 168, 67, 0.08);
+  border-left: 4px solid var(--primary-color);
+  border-radius: 0 var(--box-radius) var(--box-radius) 0;
+  padding: 18px 24px;
+}
+
+.exercise-card p {
+  margin: 0;
+  font-size: 18pt;
+}
+
+.exercise-card .number {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 20pt;
+  margin-right: 10px;
+}
+
+/* ===========================================
+   CUSTOM: Breakdown steps
+   =========================================== */
+
+.breakdown-step {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 24px;
+  border-radius: var(--box-radius);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line-color);
+}
+
+.breakdown-step .step-icon {
+  font-size: 26pt;
+  flex-shrink: 0;
+  width: 50px;
+  text-align: center;
+}
+
+.breakdown-step h3 {
+  margin: 0;
+  font-size: 20pt;
+}
+
+.breakdown-step p {
+  margin: 2px 0 0 0;
+  font-size: 14pt;
+  color: var(--muted-color);
+}

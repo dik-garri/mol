@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вера и страх</title>
+
+  <!-- Reveal.js core -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Chart.js for data visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section id="title" class="section-divider" data-state="is-section-divider">
+        <p class="text-uppercase text-muted" style="letter-spacing: 0.2em; font-size: 14pt; margin-bottom: 10px;">
+          <i class="fa-solid fa-cross" style="color: var(--primary-color); margin-right: 8px;"></i>Молодёжка
+        </p>
+        <h1 style="margin-bottom: 15px;">Вера и страх</h1>
+        <p style="font-size: 22pt; color: var(--text-color); font-weight: 300; max-width: 800px;">
+          Кто управляет моей жизнью — <strong style="color: var(--faith-color);">вера</strong> или <strong style="color: var(--fear-color);">страх</strong>?
+        </p>
+      </section>
+
+      <section id="icebreaker">
+        <h2><i class="fa-solid fa-comments" style="color: var(--primary-color); margin-right: 10px;"></i>Ледокол</h2>
+        <div class="content" style="justify-content: center; gap: 35px;">
+          <div style="background: rgba(212, 168, 67, 0.1); border: 1px solid var(--line-color); border-radius: var(--box-radius); padding: 30px 40px; text-align: center;">
+            <p class="text-2xl" style="margin: 0 0 10px 0; font-weight: 600; color: var(--primary-color);">По шкале от 1 до 10:</p>
+            <p class="text-xl" style="margin: 0;">Насколько часто страх влияет на твои решения?</p>
+          </div>
+          <div style="text-align: center;">
+            <p style="font-size: 48pt; font-weight: 800; color: var(--muted-color); letter-spacing: 12px; margin: 0;">1 &mdash; &mdash; &mdash; &mdash; 10</p>
+          </div>
+          <p class="text-lg text-muted" style="text-align: center; margin: 0;">Назови число и коротко поясни</p>
+        </div>
+      </section>
+
+      <section id="divider-systems" class="section-divider" data-state="is-section-divider">
+        <h1>Две системы</h1>
+      </section>
+
+      <section id="two-chains">
+        <h2>Два пути</h2>
+        <div class="content" style="justify-content: center; gap: 40px;">
+          <div style="background: rgba(199, 91, 91, 0.1); border: 1px solid rgba(199, 91, 91, 0.3); border-radius: var(--box-radius); padding: 28px 35px;">
+            <p style="font-size: 14pt; text-transform: uppercase; letter-spacing: 0.15em; color: var(--fear-color); margin: 0 0 12px 0; font-weight: 700;">
+              <i class="fa-solid fa-lock" style="margin-right: 8px;"></i>Система страха
+            </p>
+            <div class="chain-item" style="color: var(--fear-color);">
+              <span>СТРАХ</span>
+              <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+              <span>Контроль</span>
+              <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+              <span>Напряжение</span>
+              <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+              <span>Усталость</span>
+            </div>
+          </div>
+          <div style="background: rgba(91, 168, 140, 0.1); border: 1px solid rgba(91, 168, 140, 0.3); border-radius: var(--box-radius); padding: 28px 35px;">
+            <p style="font-size: 14pt; text-transform: uppercase; letter-spacing: 0.15em; color: var(--faith-color); margin: 0 0 12px 0; font-weight: 700;">
+              <i class="fa-solid fa-dove" style="margin-right: 8px;"></i>Система веры
+            </p>
+            <div class="chain-item" style="color: var(--faith-color);">
+              <span>ВЕРА</span>
+              <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+              <span>Доверие</span>
+              <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+              <span>Мир</span>
+              <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+              <span>Свобода</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fear-vs-faith">
+        <h2>Что делает каждая система?</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; flex: 1;">
+            <div style="background: rgba(199, 91, 91, 0.08); border-radius: var(--box-radius); padding: 25px 30px; border-top: 3px solid var(--fear-color);">
+              <h3 style="color: var(--fear-color); margin: 0 0 15px 0;">
+                <i class="fa-solid fa-lock" style="margin-right: 8px;"></i>Страх заставляет
+              </h3>
+              <ul>
+                <li style="font-size: 18pt;"><strong>Всё просчитывать</strong> &mdash; бесконечный анализ</li>
+                <li style="font-size: 18pt;"><strong>Всё контролировать</strong> &mdash; невозможно отпустить</li>
+                <li style="font-size: 18pt;"><strong>Переживать</strong> &mdash; тревога без конца</li>
+              </ul>
+            </div>
+            <div style="background: rgba(91, 168, 140, 0.08); border-radius: var(--box-radius); padding: 25px 30px; border-top: 3px solid var(--faith-color);">
+              <h3 style="color: var(--faith-color); margin: 0 0 15px 0;">
+                <i class="fa-solid fa-dove" style="margin-right: 8px;"></i>Вера позволяет
+              </h3>
+              <ul>
+                <li style="font-size: 18pt;"><strong>Доверять Богу</strong> &mdash; Он держит ситуацию</li>
+                <li style="font-size: 18pt;"><strong>Действовать</strong> &mdash; несмотря на неизвестность</li>
+                <li style="font-size: 18pt;"><strong>Сохранять мир</strong> &mdash; покой внутри</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="divider-systems-2" class="section-divider" data-state="is-section-divider">
+        <h1>Две системы</h1>
+        <p>Какая система управляет тобой?</p>
+      </section>
+
+      <section id="divider-peter" class="section-divider" data-state="is-section-divider">
+        <p style="font-size: 14pt;" class="text-uppercase text-muted">Библейский пример</p>
+        <h1>Пётр на воде</h1>
+        <p>Матфея 14:25&ndash;32</p>
+      </section>
+
+      <section id="scripture-peter">
+        <h2><i class="fa-solid fa-book-bible" style="color: var(--primary-color); margin-right: 10px;"></i>Матфея 14:25&ndash;32</h2>
+        <div class="content" style="justify-content: center;">
+          <blockquote style="font-size: 18pt; line-height: 1.5;">
+            <p><sup style="color: var(--primary-color); font-weight: 700;">25</sup> В четвертую же стражу ночи пошел к ним Иисус, идя по морю.</p>
+            <p><sup style="color: var(--primary-color); font-weight: 700;">26</sup> И ученики, увидев Его идущего по морю, встревожились и говорили: это призрак; и от страха вскричали.</p>
+            <p><sup style="color: var(--primary-color); font-weight: 700;">27</sup> Но Иисус тотчас заговорил с ними и сказал: ободритесь; это Я, не бойтесь.</p>
+            <p><sup style="color: var(--primary-color); font-weight: 700;">28</sup> Петр сказал Ему в ответ: Господи! если это Ты, повели мне придти к Тебе по воде.</p>
+            <p><sup style="color: var(--primary-color); font-weight: 700;">29</sup> Он же сказал: иди. И, выйдя из лодки, Петр пошел по воде, чтобы подойти к Иисусу,</p>
+            <p><sup style="color: var(--primary-color); font-weight: 700;">30</sup> но, видя сильный ветер, испугался и, начав утопать, закричал: Господи! спаси меня.</p>
+            <p><sup style="color: var(--primary-color); font-weight: 700;">31</sup> Иисус тотчас простер руку, поддержал его и говорит ему: маловерный! зачем ты усомнился?</p>
+            <p><sup style="color: var(--primary-color); font-weight: 700;">32</sup> И, когда вошли они в лодку, ветер утих.</p>
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="four-concepts">
+        <h2>Четыре ключевых слова</h2>
+        <div class="content" style="justify-content: center;">
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+            <div class="concept-card fragment" style="border-color: var(--muted-color);">
+              <p class="icon"><i class="fa-solid fa-ship" style="color: var(--muted-color);"></i></p>
+              <h3 style="color: var(--text-color);">Лодка</h3>
+              <p>Зона комфорта</p>
+            </div>
+            <div class="concept-card fragment" style="border-color: var(--faith-color);">
+              <p class="icon"><i class="fa-solid fa-cross" style="color: var(--faith-color);"></i></p>
+              <h3 style="color: var(--faith-color);">Иисус</h3>
+              <p>Призвание и доверие</p>
+            </div>
+            <div class="concept-card fragment" style="border-color: var(--fear-color);">
+              <p class="icon"><i class="fa-solid fa-wind" style="color: var(--fear-color);"></i></p>
+              <h3 style="color: var(--fear-color);">Ветер</h3>
+              <p>Обстоятельства</p>
+            </div>
+            <div class="concept-card fragment" style="border-color: var(--primary-color);">
+              <p class="icon"><i class="fa-solid fa-eye" style="color: var(--primary-color);"></i></p>
+              <h3 style="color: var(--primary-color);">Фокус</h3>
+              <p>Куда я смотрю?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="key-question" class="section-divider" data-state="is-section-divider">
+        <p style="font-size: 14pt;" class="text-uppercase text-muted"><i class="fa-solid fa-circle-question" style="color: var(--primary-color); margin-right: 8px;"></i>Ключевой вопрос</p>
+        <h1 style="font-size: 44pt;">Когда Пётр начал тонуть?</h1>
+      </section>
+
+      <section id="key-answer">
+        <h2><i class="fa-solid fa-circle-question" style="color: var(--primary-color); margin-right: 10px;"></i>Ключевой вопрос</h2>
+        <div class="content" style="justify-content: center; gap: 35px; align-items: center; text-align: center;">
+          <p class="text-2xl text-muted" style="margin: 0;">Когда перевёл взгляд с Иисуса на ветер</p>
+          <div style="background: rgba(212, 168, 67, 0.12); border: 1px solid rgba(212, 168, 67, 0.3); border-radius: var(--box-radius); padding: 25px 40px; max-width: 800px;">
+            <p style="font-size: 22pt; font-weight: 600; color: var(--primary-color); margin: 0;">
+              <i class="fa-solid fa-lightbulb" style="margin-right: 10px;"></i>
+              Страх начинается там, где заканчивается фокус на Боге
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="divider-deep" class="section-divider" data-state="is-section-divider">
+        <h1>Твоя лодка</h1>
+        <p>Что страшнее: выйти или остаться?</p>
+      </section>
+
+      <section id="deep-questions">
+        <h2><i class="fa-solid fa-brain" style="color: var(--primary-color); margin-right: 10px;"></i>Подумай честно</h2>
+        <div class="content" style="justify-content: center; gap: 30px;">
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--line-color); border-radius: var(--box-radius); padding: 30px 35px;">
+            <p class="text-2xl" style="margin: 0; font-weight: 600; color: var(--primary-color);">
+              Что страшнее: выйти из лодки или остаться в ней?
+            </p>
+          </div>
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--line-color); border-radius: var(--box-radius); padding: 30px 35px;">
+            <p class="text-xl" style="margin: 0 0 15px 0; font-weight: 600;">Какие &laquo;лодки&raquo; есть в твоей жизни?</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+              <p style="background: rgba(212, 168, 67, 0.12); padding: 8px 18px; border-radius: 20px; font-size: 14pt; margin: 0;">Работа</p>
+              <p style="background: rgba(212, 168, 67, 0.12); padding: 8px 18px; border-radius: 20px; font-size: 14pt; margin: 0;">Отношения</p>
+              <p style="background: rgba(212, 168, 67, 0.12); padding: 8px 18px; border-radius: 20px; font-size: 14pt; margin: 0;">Служение</p>
+              <p style="background: rgba(212, 168, 67, 0.12); padding: 8px 18px; border-radius: 20px; font-size: 14pt; margin: 0;">Переезд</p>
+              <p style="background: rgba(212, 168, 67, 0.12); padding: 8px 18px; border-radius: 20px; font-size: 14pt; margin: 0;">Новый проект</p>
+              <p style="background: rgba(212, 168, 67, 0.12); padding: 8px 18px; border-radius: 20px; font-size: 14pt; margin: 0;">Прощение</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="exercise">
+        <h2><i class="fa-solid fa-pen-to-square" style="color: var(--primary-color); margin-right: 10px;"></i>Шаг веры &mdash; упражнение</h2>
+        <div class="content" style="justify-content: center; gap: 20px;">
+          <p class="text-lg text-muted" style="margin: 0;">Напиши на листочке (можно не делиться):</p>
+          <div style="display: flex; flex-direction: column; gap: 18px;">
+            <div class="exercise-card">
+              <p><span class="number">1.</span> Чего я сейчас боюсь?</p>
+            </div>
+            <div class="exercise-card">
+              <p><span class="number">2.</span> Что Бог от меня просит сделать?</p>
+            </div>
+            <div class="exercise-card">
+              <p><span class="number">3.</span> Какой маленький шаг веры я могу сделать на этой неделе?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="scripture-timothy">
+        <h2><i class="fa-solid fa-book-bible" style="color: var(--primary-color); margin-right: 10px;"></i>Противоядие от страха</h2>
+        <div class="content" style="justify-content: center;">
+          <blockquote style="font-size: 20pt; line-height: 1.8;">
+            <p>Ибо дал нам Бог духа не боязни, но силы и любви и целомудрия.</p>
+            <cite>2 Тимофею 1:7 &mdash; СИН</cite>
+          </blockquote>
+          <blockquote style="font-size: 20pt; line-height: 1.8; margin-top: 15px;">
+            <p>Ведь Бог дал нам не дух страха, а дух силы, любви и благоразумия.</p>
+            <cite>2 Тимофею 1:7 &mdash; НРП</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="breakdown">
+        <h2>Что Бог даёт вместо страха</h2>
+        <div class="content" style="justify-content: center; gap: 18px;">
+          <div style="background: rgba(199, 91, 91, 0.1); border: 1px solid rgba(199, 91, 91, 0.25); border-radius: var(--box-radius); padding: 18px 28px; display: flex; align-items: center; gap: 20px;">
+            <p style="font-size: 28pt; margin: 0; flex-shrink: 0;"><i class="fa-solid fa-xmark" style="color: var(--fear-color);"></i></p>
+            <div>
+              <h3 style="color: var(--fear-color); margin: 0; font-size: 20pt;">Не боязнь</h3>
+              <p style="color: var(--muted-color); margin: 3px 0 0 0; font-size: 14pt;">Страх парализует и отнимает силы</p>
+            </div>
+          </div>
+          <div class="breakdown-step" style="border-color: rgba(91, 168, 140, 0.3);">
+            <p class="step-icon" style="margin: 0;"><i class="fa-solid fa-bolt" style="color: var(--faith-color);"></i></p>
+            <div>
+              <h3 style="color: var(--faith-color);">Сила</h3>
+              <p>Действовать, когда страшно</p>
+            </div>
+          </div>
+          <div class="breakdown-step" style="border-color: rgba(212, 168, 67, 0.3);">
+            <p class="step-icon" style="margin: 0;"><i class="fa-solid fa-heart" style="color: var(--primary-color);"></i></p>
+            <div>
+              <h3 style="color: var(--primary-color);">Любовь</h3>
+              <p>Любовь изгоняет страх</p>
+            </div>
+          </div>
+          <div class="breakdown-step" style="border-color: rgba(232, 197, 114, 0.3);">
+            <p class="step-icon" style="margin: 0;"><i class="fa-solid fa-brain" style="color: var(--secondary-color);"></i></p>
+            <div>
+              <h3 style="color: var(--secondary-color);">Здравый ум</h3>
+              <p>Ясность мышления вместо паники</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="closing" class="section-divider" data-state="is-section-divider">
+        <p style="font-size: 14pt;" class="text-uppercase text-muted">Запомни</p>
+        <h1 style="font-size: 40pt; max-width: 900px; line-height: 1.4;">Страх парализует.<br>Вера включает силу, любовь и ясность.</h1>
+        <p style="font-size: 18pt; margin-top: 25px; color: var(--text-color);">
+          <i class="fa-solid fa-cross" style="color: var(--primary-color); margin-right: 8px;"></i>
+          Сделай свой шаг веры на этой неделе
+        </p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chart/plugin.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1280,
+      height: 720,
+      margin: 0,
+      controls: true,
+      progress: true,
+      slideNumber: false,
+      hash: true,
+      transition: 'slide',
+      center: false,
+      plugins: [ RevealChart ],
+      chart: {
+        defaults: Object.assign({
+          color: 'rgba(0, 0, 0, 0.8)',
+          borderColor: 'rgba(0, 0, 0, 0.8)',
+          devicePixelRatio: 2
+        }, window.location.search.includes('export') ? { animation: false } : {})
+      }
+    });
+  </script>
+</body>
+</html>

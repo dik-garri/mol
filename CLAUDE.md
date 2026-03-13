@@ -15,6 +15,8 @@ mol/
 │       ├── konspekt.md                # Study notes (конспект)
 │       ├── presentation.pdf           # PDF export (optional)
 │       └── anons.png                  # Social media announcement image (optional)
+├── templates/
+│   └── anons-template.html            # HTML template for social media announcements
 ├── CLAUDE.md
 └── README.md
 ```
@@ -44,7 +46,7 @@ mol/
 Для каждой презентации можно создать картинку-анонс (`anons.png`) для публикации в Instagram/Telegram.
 
 ### Процесс
-1. Создать `anons.html` – HTML-шаблон с фиксированными размерами (1080×1350 для Instagram 4:5)
+1. Скопировать шаблон `templates/anons-template.html` в папку презентации как `anons.html` и заменить: эмодзи, заголовок, цитату и ссылку на стих
 2. Рендер в PNG через Chrome headless:
    ```bash
    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
@@ -56,7 +58,7 @@ mol/
    ```bash
    sips --cropToHeightWidth 1080 864 --cropOffset 135 108 anons.png
    ```
-4. Удалить временный `anons.html`
+4. Удалить временный `anons.html` из папки презентации
 
 ### Шаблон анонса
 - Фон: `#0F1B2D` (как в презентации)

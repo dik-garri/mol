@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1350px;
+    background: #0F1B2D;
+    font-family: "Montserrat", sans-serif;
+    color: #F0EBE0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Decorative background circles */
+  .bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.07;
+  }
+  .bg-circle.c1 {
+    width: 800px; height: 800px;
+    background: #D4A843;
+    top: -250px; right: -200px;
+  }
+  .bg-circle.c2 {
+    width: 600px; height: 600px;
+    background: #5B8CA8;
+    bottom: -200px; left: -150px;
+  }
+  .bg-circle.c3 {
+    width: 350px; height: 350px;
+    background: #D4A843;
+    bottom: 250px; right: -20px;
+  }
+
+  .icon {
+    font-size: 120px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .title {
+    font-size: 110px;
+    font-weight: 800;
+    color: #D4A843;
+    text-align: center;
+    line-height: 1.15;
+    margin-bottom: 45px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .divider {
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(90deg, #D4A843, #5B8CA8);
+    border-radius: 3px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .scripture {
+    font-family: "Lora", Georgia, serif;
+    font-style: italic;
+    font-size: 38px;
+    color: #F0EBE0;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 850px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    opacity: 0.9;
+  }
+
+  .scripture-ref {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 26px;
+    color: #7A8BA8;
+    position: relative;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+  <div class="bg-circle c1"></div>
+  <div class="bg-circle c2"></div>
+  <div class="bg-circle c3"></div>
+
+  <div class="icon">🤝</div>
+  <div class="title">Настоящая<br>дружба</div>
+  <div class="divider"></div>
+  <div class="scripture">«Друг любит во всякое время<br>и, как брат, явится во время несчастья»</div>
+  <div class="scripture-ref">Притчи 17:17</div>
+</body>
+</html>

@@ -13,3 +13,4 @@
 | Тема | Ссылка |
 |------|--------|
 | Вера и страх | [presentations/vera-i-strah/](presentations/vera-i-strah/) |
+| Настоящая дружба | [presentations/nastoyashchaya-druzhba/](presentations/nastoyashchaya-druzhba/) |

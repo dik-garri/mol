@@ -1,5 +1,5 @@
-/* Вера и страх – Faith & Fear presentation
- * Dark blue theme with gold/coral/teal accents
+/* Настоящая дружба – True Friendship presentation
+ * Dark blue theme matching project design system
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
@@ -25,8 +25,9 @@
   /* Colors */
   --primary-color: #D4A843;
   --secondary-color: #E8C572;
-  --fear-color: #C75B5B;
-  --faith-color: #5BA88C;
+  --friendship-color: #5B8CA8;
+  --loyalty-color: #5BA88C;
+  --warning-color: #C75B5B;
   --text-color: #F0EBE0;
   --muted-color: #7A8BA8;
   --line-color: #2A3A52;
@@ -225,102 +226,55 @@
 }
 
 /* ===========================================
-   CUSTOM: Chain / flow arrows
+   CUSTOM: Trait cards (David & Jonathan)
    =========================================== */
 
-.chain-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 20pt;
-  font-weight: 600;
-}
-
-.chain-item .arrow {
-  color: var(--muted-color);
-  font-size: 18pt;
-}
-
-/* ===========================================
-   CUSTOM: Concept cards (4 concepts slide)
-   =========================================== */
-
-.concept-card {
-  background: rgba(255, 255, 255, 0.05);
+.trait-card {
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--line-color);
   border-radius: var(--box-radius);
-  padding: 20px;
-  text-align: center;
-  transition: border-color 0.3s;
+  padding: 14px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
 }
 
-.concept-card .icon {
-  font-size: 28pt;
-  margin-bottom: 8px;
-}
-
-.concept-card h3 {
-  margin: 0 0 6px 0;
+.trait-card .trait-icon {
   font-size: 20pt;
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
-.concept-card p {
+.trait-card h3 {
+  margin: 0;
+  font-size: 17pt;
+}
+
+.trait-card p {
+  margin: 2px 0 0 0;
   font-size: 13pt;
   color: var(--muted-color);
-  margin: 0;
 }
 
 /* ===========================================
-   CUSTOM: Exercise question cards
+   CUSTOM: Step cards
    =========================================== */
 
-.exercise-card {
+.step-card {
   background: rgba(212, 168, 67, 0.08);
   border-left: 4px solid var(--primary-color);
   border-radius: 0 var(--box-radius) var(--box-radius) 0;
-  padding: 18px 24px;
+  padding: 14px 20px;
 }
 
-.exercise-card p {
+.step-card p {
   margin: 0;
-  font-size: 18pt;
+  font-size: 17pt;
 }
 
-.exercise-card .number {
+.step-card .number {
   color: var(--primary-color);
   font-weight: 700;
-  font-size: 20pt;
+  font-size: 19pt;
   margin-right: 10px;
-}
-
-/* ===========================================
-   CUSTOM: Breakdown steps
-   =========================================== */
-
-.breakdown-step {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 16px 24px;
-  border-radius: var(--box-radius);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--line-color);
-}
-
-.breakdown-step .step-icon {
-  font-size: 26pt;
-  flex-shrink: 0;
-  width: 50px;
-  text-align: center;
-}
-
-.breakdown-step h3 {
-  margin: 0;
-  font-size: 20pt;
-}
-
-.breakdown-step p {
-  margin: 2px 0 0 0;
-  font-size: 14pt;
-  color: var(--muted-color);
 }

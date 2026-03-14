@@ -1,13 +1,14 @@
 # Молодёжка – Project Conventions
 
 ## Overview
-Презентации для молодёжных групп на русском языке, размещённые на GitHub Pages.
+Материалы для служения: презентации для молодёжных групп и конспекты проповедей для собрания. Размещены на GitHub Pages.
 
 ## Structure
 ```
 mol/
 ├── index.html                         # Landing page (GitHub Pages)
-├── BACKLOG.md                         # Backlog of 20 topics with key points
+├── BACKLOG.md                         # Backlog of youth group topics
+├── SERMONS_BACKLOG.md                 # Backlog of sermon topics (teachings of Jesus)
 ├── presentations/
 │   └── <slug>/                        # One folder per presentation
 │       ├── index.html                 # Reveal.js presentation
@@ -15,6 +16,8 @@ mol/
 │       ├── konspekt.md                # Study notes (конспект)
 │       ├── presentation.pdf           # PDF export (optional)
 │       └── anons.png                  # Social media announcement image (optional)
+├── sermons/
+│   └── <slug>.md                      # Sermon notes (конспекты проповедей)
 ├── templates/
 │   └── anons-template.html            # HTML template for social media announcements
 ├── CLAUDE.md
@@ -31,6 +34,12 @@ mol/
   2. `README.md` – add row to the presentations table
   3. `BACKLOG.md` – mark topic status as ✅ Готова
   4. `CLAUDE.md` – update structure if it changed
+
+## Sermons (Конспекты проповедей)
+- Конспекты проповедей для собрания хранятся в `sermons/`
+- Каждый конспект – отдельный файл `<slug>.md` (транслитерация темы)
+- Формат: заголовок, ключевые тексты, план проповеди, выводы
+- Те же правила по цитатам из Библии и типографике
 
 ## Bible Quotes
 - All scripture texts MUST be exact copies from the Synodal translation (Синодальный перевод)

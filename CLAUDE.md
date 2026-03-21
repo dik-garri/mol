@@ -20,6 +20,8 @@ mol/
 │   └── <slug>.md                      # Sermon notes (конспекты проповедей)
 ├── luki/
 │   └── Луки-<глава>_<стихи>.md       # Разборы Евангелия от Луки по отрывкам
+├── data/
+│   └── synodal.json                   # Синодальный перевод (из church.kg) – 66 книг
 ├── templates/
 │   └── anons-template.html            # HTML template for social media announcements
 ├── CLAUDE.md
@@ -64,7 +66,12 @@ mol/
 
 ## Bible Quotes
 - All scripture texts MUST be exact copies from the Synodal translation (Синодальный перевод)
-- Verify quotes via bible.by or similar source before writing
+- **Primary source:** `data/synodal.json` – локальная копия Синодального перевода из проекта church.kg
+  - Структура: массив из 66 книг, каждая `{ "abbrev": "lk", "chapters": [[стих1, стих2, ...], ...] }`
+  - Индексы: книги с 0, главы с 0, стихи с 0
+  - Луки = индекс 41 (`lk`), глава 8 = `chapters[7]`, стих 15 = `[14]`
+  - Пример: `data["lk"].chapters[7][14]` → Луки 8:15
+- НЕ использовать WebFetch для получения текстов Библии – он обрезает текст
 - Never paraphrase or quote from memory
 
 ## Typography

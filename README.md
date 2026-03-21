@@ -14,3 +14,4 @@
 |------|--------|
 | Вера и страх | [presentations/vera-i-strah/](presentations/vera-i-strah/) |
 | Настоящая дружба | [presentations/nastoyashchaya-druzhba/](presentations/nastoyashchaya-druzhba/) |
+| Кто я во Христе | [presentations/kto-ya-vo-khriste/](presentations/kto-ya-vo-khriste/) |

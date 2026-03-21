@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кто я во Христе</title>
+
+  <!-- Reveal.js core -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Chart.js for data visualization -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section id="title" class="section-divider" data-state="is-section-divider">
+        <p class="text-uppercase text-muted" style="letter-spacing: 0.2em; font-size: 14pt; margin-bottom: 10px;">
+          <i class="fa-solid fa-cross" style="color: var(--primary-color); margin-right: 8px;"></i>Молодёжка
+        </p>
+        <h1 style="margin-bottom: 15px;">Кто я во Христе</h1>
+        <p style="font-size: 22pt; color: var(--text-color); font-weight: 300; max-width: 800px;">
+          Идентичность &ndash; не в оценках и лайках
+        </p>
+      </section>
+
+      <section id="icebreaker">
+        <h2><i class="fa-solid fa-fingerprint" style="color: var(--primary-color); margin-right: 10px;"></i>Идентичность</h2>
+        <div class="content" style="justify-content: center; gap: 30px;">
+          <div class="fragment" style="background: rgba(212, 168, 67, 0.1); border: 1px solid var(--line-color); border-radius: var(--box-radius); padding: 28px 40px; text-align: center;">
+            <p class="text-2xl" style="margin: 0; font-weight: 600; color: var(--primary-color);">Что такое идентичность?</p>
+            <p class="text-lg" style="margin: 12px 0 0 0;">Это ответ на вопрос <strong>«Кто я?»</strong> &ndash; то, как я себя определяю.</p>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px;">
+            <div class="fragment" style="background: rgba(155, 107, 158, 0.08); border-radius: var(--box-radius); padding: 20px 25px;">
+              <p style="font-size: 15pt; color: var(--world-color); font-weight: 700; margin: 0 0 8px 0;">
+                <i class="fa-solid fa-bullhorn" style="margin-right: 6px;"></i>Откуда люди берут идентичность?
+              </p>
+              <p style="font-size: 16pt; margin: 0;">Работа, внешность, оценки, отношения, соцсети, мнение друзей...</p>
+            </div>
+            <div class="fragment" style="background: rgba(212, 168, 67, 0.08); border-radius: var(--box-radius); padding: 20px 25px;">
+              <p style="font-size: 15pt; color: var(--primary-color); font-weight: 700; margin: 0 0 8px 0;">
+                <i class="fa-solid fa-circle-question" style="margin-right: 6px;"></i>Вопрос для обсуждения
+              </p>
+              <p style="font-size: 16pt; margin: 0;">Если бы у тебя забрали телефон, оценки и мнение друзей &ndash; <strong>кто бы ты был?</strong></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="divider-voices" class="section-divider" data-state="is-section-divider">
+        <h1>Два голоса</h1>
+        <p>Кто определяет, кто я?</p>
+      </section>
+
+      <section id="two-voices">
+        <h2>Мир vs Бог</h2>
+        <div class="content" style="justify-content: center; gap: 30px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 35px; flex: 1;">
+            <div class="fragment" style="background: rgba(155, 107, 158, 0.1); border-radius: var(--box-radius); padding: 25px 30px; border-top: 3px solid var(--world-color);">
+              <h3 style="color: var(--world-color); margin: 0 0 15px 0;">
+                <i class="fa-solid fa-bullhorn" style="margin-right: 8px;"></i>Мир говорит
+              </h3>
+              <ul>
+                <li style="font-size: 20pt;">Ты &ndash; то, чего ты <strong>достиг</strong></li>
+                <li style="font-size: 20pt;">Ты &ndash; то, как ты <strong>выглядишь</strong></li>
+                <li style="font-size: 20pt;">Ты &ndash; то, что о тебе <strong>думают</strong></li>
+                <li style="font-size: 20pt;">Ты &ndash; твои <strong>оценки и лайки</strong></li>
+              </ul>
+            </div>
+            <div class="fragment" style="background: rgba(91, 168, 140, 0.1); border-radius: var(--box-radius); padding: 25px 30px; border-top: 3px solid var(--identity-color);">
+              <h3 style="color: var(--identity-color); margin: 0 0 15px 0;">
+                <i class="fa-solid fa-cross" style="margin-right: 8px;"></i>Бог говорит
+              </h3>
+              <ul>
+                <li style="font-size: 20pt;">Ты &ndash; <strong>Мой ребёнок</strong> (1 Ин. 3:1)</li>
+                <li style="font-size: 20pt;">Ты <strong>дивно устроен</strong> (Пс. 138:14)</li>
+                <li style="font-size: 20pt;">Ты <strong>принят и любим</strong> (Еф. 1:6)</li>
+                <li style="font-size: 20pt;">Ты &ndash; <strong>новое творение</strong> (2 Кор. 5:17)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="scripture-1john">
+        <h2><i class="fa-solid fa-book-bible" style="color: var(--primary-color); margin-right: 10px;"></i>1 Иоанна 3:1&ndash;2</h2>
+        <div class="content" style="justify-content: center;">
+          <blockquote style="font-size: 24pt; line-height: 1.8;">
+            <p><sup style="color: var(--primary-color); font-weight: 700;">1</sup> Смотрите, какую любовь дал нам Отец, чтобы нам называться и быть детьми Божиими. Мир потому не знает нас, что не познал Его.</p>
+            <p><sup style="color: var(--primary-color); font-weight: 700;">2</sup> Возлюбленные! мы теперь дети Божии; но ещё не открылось, что будем. Знаем только, что, когда откроется, будем подобны Ему, потому что увидим Его, как Он есть.</p>
+            <cite style="font-size: 15pt;">1 Иоанна 3:1&ndash;2</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="divider-new" class="section-divider" data-state="is-section-divider">
+        <p style="font-size: 14pt;" class="text-uppercase text-muted">Что изменилось</p>
+        <h1>Новое творение</h1>
+        <p>2 Коринфянам 5:17</p>
+      </section>
+
+      <section id="scripture-eph2">
+        <h2><i class="fa-solid fa-book-bible" style="color: var(--primary-color); margin-right: 10px;"></i>Ефесянам 2:1&ndash;2, 4&ndash;5</h2>
+        <div class="content" style="justify-content: center; gap: 20px;">
+          <blockquote style="font-size: 22pt; line-height: 1.7; border-left-color: var(--world-color);">
+            <p><sup style="color: var(--world-color); font-weight: 700;">1</sup> И вас, мёртвых по преступлениям и грехам вашим, <sup style="color: var(--world-color); font-weight: 700;">2</sup> в которых вы некогда жили, по обычаю мира сего, по воле князя, господствующего в воздухе, духа, действующего ныне в сынах противления...</p>
+            <cite style="color: var(--world-color); font-size: 15pt;">Вот кем мы были</cite>
+          </blockquote>
+          <blockquote style="font-size: 22pt; line-height: 1.7; border-left-color: var(--identity-color);">
+            <p><sup style="color: var(--identity-color); font-weight: 700;">4</sup> Бог, богатый милостью, по Своей великой любви, которою возлюбил нас, <sup style="color: var(--identity-color); font-weight: 700;">5</sup> и нас, мёртвых по преступлениям, оживотворил со Христом, &ndash; благодатью вы спасены.</p>
+            <cite style="color: var(--identity-color); font-size: 15pt;">Вот что Бог сделал</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="before-after">
+        <h2>До и после Христа</h2>
+        <div class="content" style="justify-content: center; gap: 30px;">
+          <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 25px; align-items: center;">
+            <div style="background: rgba(155, 107, 158, 0.1); border: 1px solid rgba(155, 107, 158, 0.25); border-radius: var(--box-radius); padding: 25px; text-align: center;">
+              <p style="font-size: 14pt; text-transform: uppercase; letter-spacing: 0.15em; color: var(--world-color); margin: 0 0 12px 0; font-weight: 700;">
+                <i class="fa-solid fa-xmark" style="margin-right: 8px;"></i>Было
+              </p>
+              <p class="text-lg" style="margin: 8px 0;">Мёртвые по грехам</p>
+              <p class="text-lg" style="margin: 8px 0;">Без надежды</p>
+              <p class="text-lg" style="margin: 8px 0;">Чужие Богу</p>
+            </div>
+            <div style="text-align: center;">
+              <p style="font-size: 36pt; color: var(--primary-color); margin: 0;"><i class="fa-solid fa-arrow-right"></i></p>
+            </div>
+            <div style="background: rgba(91, 168, 140, 0.1); border: 1px solid rgba(91, 168, 140, 0.25); border-radius: var(--box-radius); padding: 25px; text-align: center;">
+              <p style="font-size: 14pt; text-transform: uppercase; letter-spacing: 0.15em; color: var(--identity-color); margin: 0 0 12px 0; font-weight: 700;">
+                <i class="fa-solid fa-check" style="margin-right: 8px;"></i>Стало
+              </p>
+              <p class="text-lg" style="margin: 8px 0;">Оживлены со Христом</p>
+              <p class="text-lg" style="margin: 8px 0;">Новое творение</p>
+              <p class="text-lg" style="margin: 8px 0;">Дети Божии</p>
+            </div>
+          </div>
+          <div style="background: rgba(212, 168, 67, 0.12); border: 1px solid rgba(212, 168, 67, 0.3); border-radius: var(--box-radius); padding: 20px 30px; text-align: center;">
+            <p style="font-size: 20pt; font-weight: 600; color: var(--primary-color); margin: 0;">
+              <i class="fa-solid fa-lightbulb" style="margin-right: 10px;"></i>
+              Кто я &ndash; определяется не прошлым, а тем, что Бог уже сделал
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="identity-1">
+        <h2><i class="fa-solid fa-crown" style="color: var(--primary-color); margin-right: 10px;"></i>Кто я по Писанию</h2>
+        <div class="content" style="justify-content: center;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="identity-card-full fragment">
+              <h3><i class="fa-solid fa-child-reaching" style="margin-right: 8px;"></i>Дитя Божие</h3>
+              <p class="verse">«Смотрите, какую любовь дал нам Отец, чтобы нам называться и быть детьми Божиими»</p>
+              <p class="ref">1 Иоанна 3:1</p>
+            </div>
+            <div class="identity-card-full fragment">
+              <h3><i class="fa-solid fa-hand-holding-heart" style="margin-right: 8px;"></i>Прощён</h3>
+              <p class="verse">«В Котором мы имеем искупление Кровию Его, прощение грехов, по богатству благодати Его»</p>
+              <p class="ref">Ефесянам 1:7</p>
+            </div>
+            <div class="identity-card-full fragment">
+              <h3><i class="fa-solid fa-heart" style="margin-right: 8px;"></i>Любим</h3>
+              <p class="verse">«Ни смерть, ни жизнь, ни Ангелы, ни Начала, ни Силы... не может отлучить нас от любви Божией во Христе Иисусе»</p>
+              <p class="ref">Римлянам 8:38&ndash;39</p>
+            </div>
+            <div class="identity-card-full fragment">
+              <h3><i class="fa-solid fa-star" style="margin-right: 8px;"></i>Избран</h3>
+              <p class="verse">«Он избрал нас в Нём прежде создания мира, чтобы мы были святы и непорочны пред Ним в любви»</p>
+              <p class="ref">Ефесянам 1:4</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="identity-2">
+        <h2><i class="fa-solid fa-crown" style="color: var(--primary-color); margin-right: 10px;"></i>Кто я по Писанию</h2>
+        <div class="content" style="justify-content: center;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div class="identity-card-full fragment">
+              <h3><i class="fa-solid fa-seedling" style="margin-right: 8px;"></i>Новое творение</h3>
+              <p class="verse">«Кто во Христе, тот новая тварь; древнее прошло, теперь всё новое»</p>
+              <p class="ref">2 Коринфянам 5:17</p>
+            </div>
+            <div class="identity-card-full fragment">
+              <h3><i class="fa-solid fa-check-circle" style="margin-right: 8px;"></i>Принят</h3>
+              <p class="verse">«Принимайте друг друга, как и Христос принял вас в славу Божию»</p>
+              <p class="ref">Римлянам 15:7</p>
+            </div>
+            <div class="identity-card-full fragment">
+              <h3><i class="fa-solid fa-shield-halved" style="margin-right: 8px;"></i>Свободен</h3>
+              <p class="verse">«Если Сын освободит вас, то истинно свободны будете»</p>
+              <p class="ref">Иоанна 8:36</p>
+            </div>
+            <div class="identity-card-full fragment">
+              <h3><i class="fa-solid fa-gem" style="margin-right: 8px;"></i>Дивно устроен</h3>
+              <p class="verse">«Славлю Тебя, потому что я дивно устроен. Дивны дела Твои, и душа моя вполне сознаёт это»</p>
+              <p class="ref">Псалом 138:14</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="divider-shield" class="section-divider" data-state="is-section-divider">
+        <h1>Защита</h1>
+        <p>Зачем знать, кто я во Христе?</p>
+      </section>
+
+      <section id="shield">
+        <h2><i class="fa-solid fa-shield-halved" style="color: var(--primary-color); margin-right: 10px;"></i>Идентичность &ndash; это щит</h2>
+        <div class="content" style="justify-content: center; gap: 14px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+            <div class="shield-card fragment">
+              <p style="font-size: 15pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--world-color); margin: 0 0 6px 0; font-weight: 700;">
+                <i class="fa-solid fa-users" style="margin-right: 6px;"></i>Давление сверстников
+              </p>
+              <p style="font-size: 16pt; color: var(--muted-color); margin: 0 0 8px 0;">«Все так делают» &ndash; но я не определяюсь толпой</p>
+              <p style="font-size: 15pt; color: var(--identity-color); margin: 0; font-style: italic;">
+                <i class="fa-solid fa-shield-halved" style="margin-right: 5px;"></i>«Чтобы нам называться и быть детьми Божиими» &ndash; 1 Ин. 3:1
+              </p>
+            </div>
+            <div class="shield-card fragment">
+              <p style="font-size: 15pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--world-color); margin: 0 0 6px 0; font-weight: 700;">
+                <i class="fa-solid fa-mobile-screen" style="margin-right: 6px;"></i>Оценки и лайки
+              </p>
+              <p style="font-size: 16pt; color: var(--muted-color); margin: 0 0 8px 0;">Моя ценность не в цифрах. Бог любит меня не за результат</p>
+              <p style="font-size: 15pt; color: var(--identity-color); margin: 0; font-style: italic;">
+                <i class="fa-solid fa-shield-halved" style="margin-right: 5px;"></i>«Я дивно устроен. Дивны дела Твои» &ndash; Пс. 138:14
+              </p>
+            </div>
+            <div class="shield-card fragment">
+              <p style="font-size: 15pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--world-color); margin: 0 0 6px 0; font-weight: 700;">
+                <i class="fa-solid fa-masks-theater" style="margin-right: 6px;"></i>Манипуляции
+              </p>
+              <p style="font-size: 16pt; color: var(--muted-color); margin: 0 0 8px 0;">Когда знаешь, кто ты &ndash; тобой сложнее управлять</p>
+              <p style="font-size: 15pt; color: var(--identity-color); margin: 0; font-style: italic;">
+                <i class="fa-solid fa-shield-halved" style="margin-right: 5px;"></i>«Если Сын освободит вас, то истинно свободны будете» &ndash; Ин. 8:36
+              </p>
+            </div>
+            <div class="shield-card fragment">
+              <p style="font-size: 15pt; text-transform: uppercase; letter-spacing: 0.1em; color: var(--world-color); margin: 0 0 6px 0; font-weight: 700;">
+                <i class="fa-solid fa-face-sad-tear" style="margin-right: 6px;"></i>Стыд и самокритика
+              </p>
+              <p style="font-size: 16pt; color: var(--muted-color); margin: 0 0 8px 0;">Моё прошлое не определяет меня</p>
+              <p style="font-size: 15pt; color: var(--identity-color); margin: 0; font-style: italic;">
+                <i class="fa-solid fa-shield-halved" style="margin-right: 5px;"></i>«Кто во Христе, тот новая тварь; древнее прошло» &ndash; 2 Кор. 5:17
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="exercise">
+        <h2><i class="fa-solid fa-pen-to-square" style="color: var(--primary-color); margin-right: 10px;"></i>Мой паспорт во Христе</h2>
+        <div class="content" style="justify-content: center; gap: 20px;">
+          <p class="text-lg text-muted" style="margin: 0;">Заполни свой «духовный паспорт» &ndash; напиши на листочке:</p>
+          <div style="display: flex; flex-direction: column; gap: 18px;">
+            <div class="exercise-card">
+              <p><span class="number">1.</span> Кем Бог называет меня? <span class="text-muted" style="font-size: 14pt;">(выбери 3 истины из Писания)</span></p>
+            </div>
+            <div class="exercise-card">
+              <p><span class="number">2.</span> Какую ложь о себе я чаще всего слышу?</p>
+            </div>
+            <div class="exercise-card">
+              <p><span class="number">3.</span> Какой стих я буду вспоминать, когда эта ложь придёт?</p>
+            </div>
+          </div>
+          <p class="text-muted" style="text-align: center; margin: 0; font-size: 14pt;">
+            <i class="fa-solid fa-lightbulb" style="color: var(--primary-color); margin-right: 6px;"></i>
+            Повесь листок на зеркало или поставь стих на заставку телефона
+          </p>
+        </div>
+      </section>
+
+      <section id="scripture-2cor">
+        <h2><i class="fa-solid fa-book-bible" style="color: var(--primary-color); margin-right: 10px;"></i>Ключевой стих</h2>
+        <div class="content" style="justify-content: center;">
+          <blockquote style="font-size: 22pt; line-height: 1.8;">
+            <p>Итак, кто во Христе, тот новая тварь; древнее прошло, теперь всё новое.</p>
+            <cite>2 Коринфянам 5:17</cite>
+          </blockquote>
+          <blockquote style="font-size: 22pt; line-height: 1.8; margin-top: 15px;">
+            <p>Ибо мы &ndash; Его творение, созданы во Христе Иисусе на добрые дела, которые Бог предназначил нам исполнять.</p>
+            <cite>Ефесянам 2:10</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="closing" class="section-divider" data-state="is-section-divider">
+        <p style="font-size: 14pt;" class="text-uppercase text-muted">Запомни</p>
+        <h1 style="font-size: 40pt; max-width: 900px; line-height: 1.4;">Моя ценность &ndash; не в оценках,<br>внешности или мнении людей.<br>Я &ndash; дитя Божие.</h1>
+        <p style="font-size: 18pt; margin-top: 25px; color: var(--text-color);">
+          <i class="fa-solid fa-crown" style="color: var(--primary-color); margin-right: 8px;"></i>
+          На этой неделе помни, кто ты во Христе
+        </p>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/chart/plugin.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1280,
+      height: 720,
+      margin: 0,
+      controls: true,
+      progress: true,
+      slideNumber: false,
+      hash: true,
+      transition: 'slide',
+      center: false,
+      plugins: [ RevealChart ],
+      chart: {
+        defaults: Object.assign({
+          color: 'rgba(0, 0, 0, 0.8)',
+          borderColor: 'rgba(0, 0, 0, 0.8)',
+          devicePixelRatio: 2
+        }, window.location.search.includes('export') ? { animation: false } : {})
+      }
+    });
+  </script>
+</body>
+</html>

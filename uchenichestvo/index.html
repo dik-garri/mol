@@ -10,12 +10,33 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    :root {
+      --bg: #0F1B2D;
+      --text: #F0EBE0;
+      --text-muted: #7A8BA8;
+      --gold: #D4A843;
+      --border: #2A3A52;
+      --hover-bg: rgba(212, 168, 67, 0.08);
+      --text-secondary: #D0C9BC;
+    }
+
+    :root.light {
+      --bg: #F5F3EF;
+      --text: #1A1A1A;
+      --text-muted: #6B7280;
+      --gold: #9A7B2D;
+      --border: #D4CFC5;
+      --hover-bg: rgba(154, 123, 45, 0.08);
+      --text-secondary: #4A4A4A;
+    }
+
     body {
       font-family: "Montserrat", Helvetica, sans-serif;
-      background: #0F1B2D;
-      color: #F0EBE0;
+      background: var(--bg);
+      color: var(--text);
       min-height: 100vh;
       padding: 40px 20px;
+      transition: background 0.3s, color 0.3s;
     }
 
     .container {
@@ -23,15 +44,25 @@
       margin: 0 auto;
     }
 
-    .back-link {
-      display: inline-block;
-      color: #7A8BA8;
-      text-decoration: none;
-      font-size: 14px;
-      margin-bottom: 30px;
-      transition: color 0.2s;
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--border);
+      border: none;
+      color: var(--text-muted);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s, color 0.3s;
+      z-index: 10;
     }
-    .back-link:hover { color: #D4A843; }
+    .theme-toggle:hover { color: var(--gold); }
 
     header {
       text-align: center;
@@ -41,13 +72,13 @@
     header h1 {
       font-size: 42px;
       font-weight: 800;
-      color: #D4A843;
+      color: var(--gold);
       margin-bottom: 10px;
     }
 
     header p {
       font-size: 16px;
-      color: #7A8BA8;
+      color: var(--text-muted);
       font-weight: 300;
       font-family: "Lora", serif;
       font-style: italic;
@@ -58,11 +89,11 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: #7A8BA8;
+      color: var(--text-muted);
       margin-top: 35px;
       margin-bottom: 15px;
       padding-bottom: 8px;
-      border-bottom: 1px solid #2A3A52;
+      border-bottom: 1px solid var(--border);
     }
 
     .topics {
@@ -78,20 +109,20 @@
       align-items: baseline;
       gap: 14px;
       text-decoration: none;
-      color: #F0EBE0;
+      color: var(--text);
       padding: 14px 18px;
       border-radius: 8px;
       transition: background 0.2s, color 0.2s;
     }
 
     .topics a:hover {
-      background: rgba(212, 168, 67, 0.08);
+      background: var(--hover-bg);
     }
 
     .topic-num {
       font-size: 14px;
       font-weight: 700;
-      color: #D4A843;
+      color: var(--gold);
       min-width: 26px;
       text-align: right;
     }
@@ -103,7 +134,7 @@
 
     .topic-ref {
       font-size: 13px;
-      color: #7A8BA8;
+      color: var(--text-muted);
       font-weight: 300;
       margin-left: auto;
       white-space: nowrap;
@@ -114,13 +145,16 @@
       .topics a { padding: 12px 12px; gap: 10px; }
       .topic-title { font-size: 15px; }
       .topic-ref { display: none; }
+      .theme-toggle { top: 12px; right: 12px; width: 36px; height: 36px; font-size: 16px; }
     }
   </style>
 </head>
 <body>
+  <button class="theme-toggle" id="themeToggle" title="Сменить тему">
+    <i class="fas fa-sun"></i>
+  </button>
+
   <div class="container">
-
-
     <header>
       <h1>Ученичество</h1>
       <p>Преображающее знакомство со Христом &ndash; Джонатан Д. Бёрнэм</p>
@@ -223,5 +257,22 @@
       </a></li>
     </ul>
   </div>
+
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const icon = toggle.querySelector('i');
+    const saved = localStorage.getItem('theme');
+
+    if (saved === 'light') {
+      document.documentElement.classList.add('light');
+      icon.classList.replace('fa-sun', 'fa-moon');
+    }
+
+    toggle.addEventListener('click', () => {
+      const isLight = document.documentElement.classList.toggle('light');
+      icon.classList.replace(isLight ? 'fa-sun' : 'fa-moon', isLight ? 'fa-moon' : 'fa-sun');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+  </script>
 </body>
 </html>

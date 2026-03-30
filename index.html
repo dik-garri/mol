@@ -15,27 +15,30 @@
       background: #0F1B2D;
       color: #F0EBE0;
       min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 60px 40px;
     }
 
     .container {
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 800px;
+      width: 100%;
     }
 
     header {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
     }
 
     header .icon {
-      font-size: 32px;
+      font-size: 36px;
       color: #D4A843;
       margin-bottom: 15px;
     }
 
     header h1 {
-      font-size: 48px;
+      font-size: 52px;
       font-weight: 800;
       color: #D4A843;
       margin-bottom: 10px;
@@ -47,136 +50,55 @@
       font-weight: 300;
     }
 
-    .presentations {
+    .hub-cards {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-      gap: 25px;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
     }
 
-    .card {
+    .hub-card {
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid #2A3A52;
-      border-radius: 12px;
-      padding: 30px;
+      border-radius: 16px;
+      padding: 50px 36px;
       text-decoration: none;
       color: inherit;
-      transition: border-color 0.3s, transform 0.2s;
+      transition: border-color 0.3s, transform 0.2s, background 0.3s;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      align-items: center;
+      text-align: center;
+      gap: 18px;
     }
 
-    .card:hover {
+    .hub-card:hover {
       border-color: #D4A843;
-      transform: translateY(-3px);
+      transform: translateY(-4px);
+      background: rgba(212, 168, 67, 0.05);
     }
 
-    .card .date {
-      font-size: 13px;
-      color: #7A8BA8;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+    .hub-card .card-icon {
+      font-size: 48px;
+      color: #D4A843;
     }
 
-    .card h2 {
-      font-size: 22px;
-      font-weight: 700;
+    .hub-card h2 {
+      font-size: 26px;
+      font-weight: 800;
       color: #F0EBE0;
     }
 
-    .card .description {
+    .hub-card .card-subtitle {
       font-size: 15px;
       color: #7A8BA8;
       line-height: 1.5;
-    }
-
-    .card .tags {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 5px;
-    }
-
-    .card .tag {
-      background: rgba(212, 168, 67, 0.12);
-      color: #D4A843;
-      padding: 4px 12px;
-      border-radius: 15px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .card .arrow {
-      color: #D4A843;
-      font-size: 14px;
-      margin-top: auto;
-      padding-top: 10px;
-    }
-
-    .section-header {
-      text-align: center;
-      margin: 60px 0 30px;
-    }
-
-    .section-header h2 {
-      font-size: 32px;
-      font-weight: 800;
-      color: #D4A843;
-      margin-bottom: 8px;
-    }
-
-    .section-header p {
-      font-size: 15px;
-      color: #7A8BA8;
       font-weight: 300;
     }
 
-    .lesson-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .lesson-list li a {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid #2A3A52;
-      border-left: 3px solid #D4A843;
-      border-radius: 8px;
-      padding: 14px 20px;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.3s, background 0.2s;
-    }
-
-    .lesson-list li a:hover {
-      background: rgba(212, 168, 67, 0.06);
-      border-color: #D4A843;
-    }
-
-    .lesson-num {
-      font-size: 13px;
-      font-weight: 700;
+    .hub-card .card-arrow {
       color: #D4A843;
-      min-width: 28px;
-      text-align: right;
-      flex-shrink: 0;
-    }
-
-    .lesson-title {
-      font-size: 16px;
-      font-weight: 600;
-      color: #F0EBE0;
-      flex: 1;
-    }
-
-    .lesson-arrow {
-      color: #7A8BA8;
-      font-size: 13px;
-      flex-shrink: 0;
+      font-size: 14px;
+      margin-top: 10px;
     }
 
     footer {
@@ -185,6 +107,16 @@
       color: #7A8BA8;
       font-size: 14px;
     }
+
+    @media (max-width: 640px) {
+      body { padding: 40px 20px; }
+      header h1 { font-size: 40px; }
+      .hub-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .hub-card { padding: 40px 28px; }
+    }
   </style>
 </head>
 <body>
@@ -192,140 +124,26 @@
     <header>
       <div class="icon"><i class="fa-solid fa-cross"></i></div>
       <h1>Молодёжка</h1>
-      <p>Презентации для молодёжных групп</p>
+      <p>Материалы для служения</p>
     </header>
 
-    <div class="presentations">
+    <div class="hub-cards">
 
-      <a class="card" href="presentations/vera-i-strah/">
-        <span class="date">Февраль 2026</span>
-        <h2>Вера и страх</h2>
-        <p class="description">Кто управляет моей жизнью – вера или страх? Пётр на воде, две системы, шаг веры.</p>
-        <div class="tags">
-          <span class="tag">Матфея 14</span>
-          <span class="tag">2 Тимофею 1:7</span>
-        </div>
-        <span class="arrow">Открыть <i class="fa-solid fa-arrow-right"></i></span>
+      <a class="hub-card" href="presentations/">
+        <div class="card-icon"><i class="fa-solid fa-people-group"></i></div>
+        <h2>Молодёжка</h2>
+        <p class="card-subtitle">Презентации для молодёжных групп</p>
+        <span class="card-arrow">Открыть <i class="fa-solid fa-arrow-right"></i></span>
       </a>
 
-      <a class="card" href="presentations/nastoyashchaya-druzhba/">
-        <span class="date">Март 2026</span>
-        <h2>Настоящая дружба</h2>
-        <p class="description">Что Библия говорит о выборе друзей? Давид и Ионафан, признаки настоящего друга, Иисус – высший пример.</p>
-        <div class="tags">
-          <span class="tag">1 Царств 18–20</span>
-          <span class="tag">Иоанна 15:13–15</span>
-          <span class="tag">Притчи</span>
-        </div>
-        <span class="arrow">Открыть <i class="fa-solid fa-arrow-right"></i></span>
-      </a>
-
-      <a class="card" href="presentations/kto-ya-vo-khriste/">
-        <span class="date">Март 2026</span>
-        <h2>Кто я во Христе</h2>
-        <p class="description">Идентичность &ndash; не в оценках и лайках. Два голоса, новое творение, духовный паспорт.</p>
-        <div class="tags">
-          <span class="tag">1 Иоанна 3:1</span>
-          <span class="tag">2 Кор. 5:17</span>
-          <span class="tag">Ефесянам 2:10</span>
-        </div>
-        <span class="arrow">Открыть <i class="fa-solid fa-arrow-right"></i></span>
+      <a class="hub-card" href="uchenichestvo/">
+        <div class="card-icon"><i class="fa-solid fa-book-bible"></i></div>
+        <h2>Ученичество</h2>
+        <p class="card-subtitle">Преображающее знакомство со Христом</p>
+        <span class="card-arrow">Открыть <i class="fa-solid fa-arrow-right"></i></span>
       </a>
 
     </div>
-
-    <div class="section-header">
-      <h2>Ученичество</h2>
-      <p>Преображающее знакомство со Христом &ndash; Джонатан Д. Бёрнэм</p>
-    </div>
-
-    <ul class="lesson-list">
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/01-сотворение.md" target="_blank" rel="noopener">
-        <span class="lesson-num">1</span>
-        <span class="lesson-title">Сотворение</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/02-грехопадение.md" target="_blank" rel="noopener">
-        <span class="lesson-num">2</span>
-        <span class="lesson-title">Грехопадение</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/03-завет.md" target="_blank" rel="noopener">
-        <span class="lesson-num">3</span>
-        <span class="lesson-title">Завет</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/04-исход.md" target="_blank" rel="noopener">
-        <span class="lesson-num">4</span>
-        <span class="lesson-title">Исход</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/05-закон.md" target="_blank" rel="noopener">
-        <span class="lesson-num">5</span>
-        <span class="lesson-title">Закон</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/06-жертвоприношения.md" target="_blank" rel="noopener">
-        <span class="lesson-num">6</span>
-        <span class="lesson-title">Жертвоприношения</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/07-цари.md" target="_blank" rel="noopener">
-        <span class="lesson-num">7</span>
-        <span class="lesson-title">Цари</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/08-пророки-и-пророчества.md" target="_blank" rel="noopener">
-        <span class="lesson-num">8</span>
-        <span class="lesson-title">Пророки и пророчества</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/09-иудейский-мир-первого-века.md" target="_blank" rel="noopener">
-        <span class="lesson-num">9</span>
-        <span class="lesson-title">Иудейский мир первого века</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/10-воплощение.md" target="_blank" rel="noopener">
-        <span class="lesson-num">10</span>
-        <span class="lesson-title">Воплощение</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/11-царство-божье.md" target="_blank" rel="noopener">
-        <span class="lesson-num">11</span>
-        <span class="lesson-title">Царство Божье</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/12-крест.md" target="_blank" rel="noopener">
-        <span class="lesson-num">12</span>
-        <span class="lesson-title">Крест</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/13-воскресение-и-вознесение.md" target="_blank" rel="noopener">
-        <span class="lesson-num">13</span>
-        <span class="lesson-title">Воскресение и вознесение</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/14-спасение.md" target="_blank" rel="noopener">
-        <span class="lesson-num">14</span>
-        <span class="lesson-title">Спасение</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/15-святой-дух.md" target="_blank" rel="noopener">
-        <span class="lesson-num">15</span>
-        <span class="lesson-title">Святой Дух</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/16-церковь.md" target="_blank" rel="noopener">
-        <span class="lesson-num">16</span>
-        <span class="lesson-title">Церковь: тело Христово</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-      <li><a href="https://github.com/dik-garri/mol/blob/main/uchenichestvo/17-возвращение-царя.md" target="_blank" rel="noopener">
-        <span class="lesson-num">17</span>
-        <span class="lesson-title">Возвращение Царя</span>
-        <span class="lesson-arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-      </a></li>
-    </ul>
 
     <footer>
       <i class="fa-solid fa-cross" style="margin-right: 5px;"></i> Молодёжка

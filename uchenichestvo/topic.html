@@ -197,7 +197,7 @@
     const icon = toggle.querySelector('i');
     const saved = localStorage.getItem('theme');
 
-    if (saved === 'light') {
+    if (saved !== 'dark') {
       document.documentElement.classList.add('light');
       icon.classList.replace('fa-sun', 'fa-moon');
     }

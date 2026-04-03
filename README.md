@@ -15,6 +15,7 @@
 | Вера и страх | [presentations/vera-i-strah/](presentations/vera-i-strah/) |
 | Настоящая дружба | [presentations/nastoyashchaya-druzhba/](presentations/nastoyashchaya-druzhba/) |
 | Кто я во Христе | [presentations/kto-ya-vo-khriste/](presentations/kto-ya-vo-khriste/) |
+| Сомнения – не грех | [presentations/somneniya-ne-grekh/](presentations/somneniya-ne-grekh/) |
 
 ## Ученичество
 

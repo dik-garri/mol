@@ -17,6 +17,13 @@
 | Кто я во Христе | [presentations/kto-ya-vo-khriste/](presentations/kto-ya-vo-khriste/) |
 | Сомнения – не грех | [presentations/somneniya-ne-grekh/](presentations/somneniya-ne-grekh/) |
 
+## Проповеди
+
+| Тема | Ссылка |
+|------|--------|
+| Царство Божие | [sermons/tsarstvo-bozhie.md](sermons/tsarstvo-bozhie.md) |
+| Царь на осле (Вербное воскресенье) | [sermons/tsar-na-osle.md](sermons/tsar-na-osle.md) |
+
 ## Ученичество
 
 Вынесено в отдельный проект: [dik-garri/uchenichestvo](https://github.com/dik-garri/uchenichestvo)

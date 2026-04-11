@@ -23,6 +23,7 @@
 |------|--------|
 | Царство Божие | [sermons/tsarstvo-bozhie.md](sermons/tsarstvo-bozhie.md) |
 | Царь на осле (Вербное воскресенье) | [sermons/tsar-na-osle.md](sermons/tsar-na-osle.md) |
+| Клятва, которая стоила жизни (Страстная пятница) | [sermons/klyatva-kotoraya-stoila-zhizni.md](sermons/klyatva-kotoraya-stoila-zhizni.md) |
 
 ## Ученичество
 

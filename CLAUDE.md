@@ -49,6 +49,12 @@ mol/
 │   └── <slug>.md                      # Sermon notes (конспекты проповедей)
 ├── luki/
 │   └── Луки-<глава>_<стихи>.md       # Разборы Евангелия от Луки по отрывкам
+├── pesni/                             # Songs for projector display
+│   ├── index.html                     # SPA: search list + verse-by-verse viewer
+│   ├── styles.css                     # Switchable dark/light theme
+│   ├── app.js                         # Hash routing, search, navigation, theme/chord toggles
+│   ├── import.py                      # Importer from sbornik.sbena.net (run manually)
+│   └── data/songs.json                # All songs from "Молодёжный" album mol_FVZflEV
 ├── uchenichestvo/
 │   └── index.html                     # Редирект на https://dik-garri.github.io/uchenichestvo/
 ├── data/
@@ -139,6 +145,15 @@ mol/
 ## Ученичество
 - Вынесено в отдельный проект: https://github.com/dik-garri/uchenichestvo
 - В `uchenichestvo/index.html` – редирект на https://dik-garri.github.io/uchenichestvo/
+
+## Песни (молодёжный сборник)
+- Статический SPA в `pesni/` – без бэкенда, всё в JSON и vanilla JS
+- Источник: https://sbornik.sbena.net/album/mol_FVZflEV/<номер> (альбом «Молодёжный»)
+- Импортёр – `pesni/import.py` (Python 3, без зависимостей). Запуск вручную: `python3 pesni/import.py`
+- Логика парсинга `{chord}` маркеров и блоков verse/repeat/part – портирована из `band/src/lib/sbornikImporter.ts` (там полноценная React-версия для группы)
+- Скрипт идёт по номерам с 1 до 30 пустых ответов подряд → стоп
+- Результат – `pesni/data/songs.json` (~1 МБ для 300 песен), коммитим в репо
+- UI: hash-routing (`#5` = песня №5), стрелки клавиатуры для навигации, тема и аккорды – через `localStorage`
 
 ## Bible Quotes
 - All scripture texts MUST be exact copies from the Synodal translation (Синодальный перевод)

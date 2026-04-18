@@ -28,6 +28,16 @@
 | Клятва, которая стоила жизни (Страстная пятница) | [sermons/klyatva-kotoraya-stoila-zhizni.md](sermons/klyatva-kotoraya-stoila-zhizni.md) |
 | Любовь – наибольшая заповедь | [sermons/lyubov-naibolshaya-zapoved.md](sermons/lyubov-naibolshaya-zapoved.md) |
 
+## Песни
+
+Молодёжный сборник для проектора – `pesni/` (импортирован из [sbornik.sbena.net](https://sbornik.sbena.net/album/mol_FVZflEV/1)).
+
+- Поиск по номеру / названию / тексту
+- Просмотр куплет за куплетом (стрелки `←` / `→` или кнопки)
+- Аккорды: показать/скрыть
+- Тёмная / светлая тема (запоминается)
+- Обновить песни: `python3 pesni/import.py` → коммит `data/songs.json`
+
 ## Ученичество
 
 Вынесено в отдельный проект: [dik-garri/uchenichestvo](https://github.com/dik-garri/uchenichestvo)

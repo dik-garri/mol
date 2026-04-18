@@ -52,7 +52,7 @@
 
     .hub-cards {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
     }
 
@@ -140,6 +140,13 @@
         <div class="card-icon"><i class="fa-solid fa-book-bible"></i></div>
         <h2>Ученичество</h2>
         <p class="card-subtitle">Преображающее знакомство со Христом</p>
+        <span class="card-arrow">Открыть <i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+
+      <a class="hub-card" href="pesni/">
+        <div class="card-icon"><i class="fa-solid fa-music"></i></div>
+        <h2>Песни</h2>
+        <p class="card-subtitle">Молодёжный сборник для проектора</p>
         <span class="card-arrow">Открыть <i class="fa-solid fa-arrow-right"></i></span>
       </a>
 

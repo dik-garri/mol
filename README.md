@@ -17,6 +17,7 @@
 | Кто я во Христе | [presentations/kto-ya-vo-khriste/](presentations/kto-ya-vo-khriste/) |
 | Сомнения – не грех | [presentations/somneniya-ne-grekh/](presentations/somneniya-ne-grekh/) |
 | Он жив – и я живой (Пасха) | [presentations/on-zhiv-i-ya-zhivoy/](presentations/on-zhiv-i-ya-zhivoy/) |
+| Молитва без фильтров | [presentations/molitva-bez-filtrov/](presentations/molitva-bez-filtrov/) |
 
 ## Проповеди
 

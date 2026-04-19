@@ -3,6 +3,12 @@
 
 const STORAGE_THEME = 'pesni-theme';
 const STORAGE_CHORDS = 'pesni-chords';
+const STORAGE_FONT_SIZE = 'pesni-font-size';
+
+const FONT_SIZE_DEFAULT = 40;
+const FONT_SIZE_MIN = 14;
+const FONT_SIZE_MAX = 160;
+const FONT_SIZE_STEP = 4;
 
 const state = {
   songs: [],
@@ -33,6 +39,8 @@ const els = {
   blockCounter: $('#block-counter'),
   prevBtn: $('#prev-block'),
   nextBtn: $('#next-block'),
+  fontDecrease: $('#font-decrease'),
+  fontIncrease: $('#font-increase'),
 };
 
 // ============ THEME / SETTINGS ============
@@ -59,6 +67,23 @@ function applyChords(visible) {
 function toggleChords() {
   const wasVisible = !els.blockContent.classList.contains('no-chords');
   applyChords(!wasVisible);
+}
+
+function applyFontSize(size) {
+  const clamped = Math.max(FONT_SIZE_MIN, Math.min(FONT_SIZE_MAX, size));
+  els.blockContent.style.fontSize = clamped + 'px';
+  localStorage.setItem(STORAGE_FONT_SIZE, String(clamped));
+  els.fontDecrease.disabled = clamped <= FONT_SIZE_MIN;
+  els.fontIncrease.disabled = clamped >= FONT_SIZE_MAX;
+  return clamped;
+}
+
+function getFontSize() {
+  return parseFloat(els.blockContent.style.fontSize) || FONT_SIZE_DEFAULT;
+}
+
+function changeFontSize(delta) {
+  applyFontSize(getFontSize() + delta);
 }
 
 // ============ LIST VIEW ============
@@ -205,10 +230,16 @@ function init() {
   const chordsVisible = chordsSaved === null ? true : chordsSaved === '1';
   applyChords(chordsVisible);
 
+  // Font size
+  const savedSize = parseFloat(localStorage.getItem(STORAGE_FONT_SIZE));
+  applyFontSize(isNaN(savedSize) ? FONT_SIZE_DEFAULT : savedSize);
+
   // Listeners
   els.themeToggleList.addEventListener('click', toggleTheme);
   els.themeToggleSong.addEventListener('click', toggleTheme);
   els.chordsToggle.addEventListener('click', toggleChords);
+  els.fontDecrease.addEventListener('click', () => changeFontSize(-FONT_SIZE_STEP));
+  els.fontIncrease.addEventListener('click', () => changeFontSize(FONT_SIZE_STEP));
   els.prevBtn.addEventListener('click', prevBlock);
   els.nextBtn.addEventListener('click', nextBlock);
   $('[data-action="back"]').addEventListener('click', () => {
@@ -230,6 +261,12 @@ function init() {
         prevBlock();
       } else if (e.key === 'Escape') {
         location.hash = '';
+      } else if (e.key === '+' || e.key === '=') {
+        e.preventDefault();
+        changeFontSize(FONT_SIZE_STEP);
+      } else if (e.key === '-' || e.key === '_') {
+        e.preventDefault();
+        changeFontSize(-FONT_SIZE_STEP);
       }
     } else {
       if (e.key === '/' && document.activeElement !== els.search) {

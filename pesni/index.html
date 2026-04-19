@@ -14,8 +14,8 @@
     <header class="list-header">
       <a class="back-link" href="../"><i class="fa-solid fa-arrow-left"></i> Главная</a>
       <h1>Песни</h1>
-      <button id="theme-toggle-list" class="icon-btn" title="Сменить тему">
-        <i class="fa-solid fa-moon"></i>
+      <button id="settings-toggle" class="icon-btn" title="Настройки стиля">
+        <i class="fa-solid fa-gear"></i>
       </button>
     </header>
 
@@ -39,6 +39,15 @@
         <h2 id="song-title"></h2>
         <span id="song-key" class="song-key"></span>
       </div>
+      <div class="song-nav">
+        <button id="prev-block" class="icon-btn" title="Предыдущий блок (←)">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <span id="block-counter" class="block-counter"></span>
+        <button id="next-block" class="icon-btn" title="Следующий блок (→)">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
       <button id="font-decrease" class="icon-btn" title="Уменьшить шрифт">
         <i class="fa-solid fa-minus"></i>
       </button>
@@ -48,26 +57,65 @@
       <button id="chords-toggle" class="icon-btn" title="Показать/скрыть аккорды">
         <i class="fa-solid fa-music"></i>
       </button>
-      <button id="theme-toggle-song" class="icon-btn" title="Сменить тему">
-        <i class="fa-solid fa-moon"></i>
-      </button>
     </header>
 
     <section class="song-stage" id="song-stage">
       <div id="block-label" class="block-label"></div>
       <div id="block-content" class="block-content"></div>
     </section>
-
-    <footer class="song-nav">
-      <button id="prev-block" class="nav-btn" title="Предыдущий блок (←)">
-        <i class="fa-solid fa-chevron-left"></i>
-      </button>
-      <span id="block-counter" class="block-counter"></span>
-      <button id="next-block" class="nav-btn" title="Следующий блок (→)">
-        <i class="fa-solid fa-chevron-right"></i>
-      </button>
-    </footer>
   </main>
+
+  <!-- SETTINGS MODAL -->
+  <div id="settings-modal" class="modal hidden" role="dialog" aria-labelledby="settings-title" aria-hidden="true">
+    <div class="modal-backdrop" data-action="close-settings"></div>
+    <div class="modal-content">
+      <header class="modal-header">
+        <h3 id="settings-title">Стиль</h3>
+        <button class="icon-btn" data-action="close-settings" title="Закрыть">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </header>
+
+      <section class="modal-section">
+        <div class="section-label">Пресет</div>
+        <div id="preset-grid" class="preset-grid"></div>
+      </section>
+
+      <section class="modal-section">
+        <div class="section-label">Тонкая подстройка</div>
+        <label class="setting-row">
+          <span>Шрифт</span>
+          <select id="setting-font">
+            <option value="Montserrat">Montserrat</option>
+            <option value="Lora">Lora</option>
+            <option value="Inter">Inter</option>
+            <option value="Playfair Display">Playfair Display</option>
+            <option value="Menlo">Menlo (моно)</option>
+          </select>
+        </label>
+        <label class="setting-row">
+          <span>Фон</span>
+          <input type="color" id="setting-bg">
+        </label>
+        <label class="setting-row">
+          <span>Текст</span>
+          <input type="color" id="setting-text">
+        </label>
+        <label class="setting-row">
+          <span>Акцент</span>
+          <input type="color" id="setting-accent">
+        </label>
+        <label class="setting-row">
+          <span>Аккорды</span>
+          <input type="color" id="setting-chord">
+        </label>
+      </section>
+
+      <footer class="modal-footer">
+        <button id="settings-reset" class="text-btn" type="button">Сбросить к пресету</button>
+      </footer>
+    </div>
+  </div>
 
   <script src="data/songs.js"></script>
   <script src="app.js"></script>

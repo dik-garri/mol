@@ -1,9 +1,45 @@
 // Песни – SPA: list + viewer
 // Hash routing: '' = list, '#5' = song number 5
 
-const STORAGE_THEME = 'pesni-theme';
+const STORAGE_THEME = 'pesni-theme'; // legacy, used только для миграции
 const STORAGE_CHORDS = 'pesni-chords';
 const STORAGE_FONT_SIZE = 'pesni-font-size';
+const STORAGE_STYLE = 'pesni-style';
+
+const PRESETS = {
+  'classic-dark': {
+    name: 'Классика тёмная',
+    bg: '#0F1B2D', text: '#F0EBE0', accent: '#D4A843', chord: '#5B8CA8',
+    font: 'Montserrat',
+  },
+  'classic-light': {
+    name: 'Классика светлая',
+    bg: '#FAFAF7', text: '#1A1F2E', accent: '#B8901F', chord: '#2B6B8C',
+    font: 'Montserrat',
+  },
+  'projector': {
+    name: 'Проектор контраст',
+    bg: '#000000', text: '#FFFFFF', accent: '#FFD700', chord: '#F0A500',
+    font: 'Montserrat',
+  },
+  'sepia': {
+    name: 'Сепия',
+    bg: '#F4EBD0', text: '#3E2F1C', accent: '#8B2E2E', chord: '#7B6640',
+    font: 'Lora',
+  },
+  'mono': {
+    name: 'Монохром',
+    bg: '#EEEEEE', text: '#1A1A1A', accent: '#555555', chord: '#777777',
+    font: 'Inter',
+  },
+  'night': {
+    name: 'Ночной минимализм',
+    bg: '#15161A', text: '#E8E8E8', accent: '#9A9A9A', chord: '#7A7A7A',
+    font: 'Inter',
+  },
+};
+const PRESET_ORDER = ['classic-dark', 'classic-light', 'projector', 'sepia', 'mono', 'night'];
+const DEFAULT_PRESET = 'classic-dark';
 
 const FONT_SIZE_DEFAULT = 40;
 const FONT_SIZE_MIN = 14;
@@ -28,8 +64,6 @@ const els = {
   search: $('#search'),
   searchCount: $('#search-count'),
   songsList: $('#songs-list'),
-  themeToggleList: $('#theme-toggle-list'),
-  themeToggleSong: $('#theme-toggle-song'),
   chordsToggle: $('#chords-toggle'),
   songNumber: $('#song-number'),
   songTitle: $('#song-title'),
@@ -41,21 +75,155 @@ const els = {
   nextBtn: $('#next-block'),
   fontDecrease: $('#font-decrease'),
   fontIncrease: $('#font-increase'),
+  settingsToggle: $('#settings-toggle'),
+  settingsModal: $('#settings-modal'),
+  presetGrid: $('#preset-grid'),
+  settingFont: $('#setting-font'),
+  settingBg: $('#setting-bg'),
+  settingText: $('#setting-text'),
+  settingAccent: $('#setting-accent'),
+  settingChord: $('#setting-chord'),
+  settingsReset: $('#settings-reset'),
 };
 
-// ============ THEME / SETTINGS ============
-function applyTheme(theme) {
-  document.body.dataset.theme = theme;
-  localStorage.setItem(STORAGE_THEME, theme);
-  const icon = theme === 'dark' ? 'fa-moon' : 'fa-sun';
-  $$('.icon-btn[id^="theme-toggle"] i').forEach((i) => {
-    i.className = `fa-solid ${icon}`;
+// ============ STYLE (presets + overrides) ============
+function hexToRgba(hex, alpha) {
+  let h = String(hex || '').replace('#', '');
+  if (h.length === 3) h = h.split('').map((c) => c + c).join('');
+  if (h.length !== 6) return `rgba(0,0,0,${alpha})`;
+  const r = parseInt(h.slice(0, 2), 16);
+  const g = parseInt(h.slice(2, 4), 16);
+  const b = parseInt(h.slice(4, 6), 16);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
+function isDarkBg(hex) {
+  let h = String(hex || '').replace('#', '');
+  if (h.length === 3) h = h.split('').map((c) => c + c).join('');
+  if (h.length !== 6) return true;
+  const r = parseInt(h.slice(0, 2), 16);
+  const g = parseInt(h.slice(2, 4), 16);
+  const b = parseInt(h.slice(4, 6), 16);
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b < 128;
+}
+
+function resolveStyle(style) {
+  const preset = PRESETS[style.preset] || PRESETS[DEFAULT_PRESET];
+  const ov = style.overrides || {};
+  return {
+    bg: ov.bg || preset.bg,
+    text: ov.text || preset.text,
+    accent: ov.accent || preset.accent,
+    chord: ov.chord || preset.chord,
+    font: ov.font || preset.font,
+  };
+}
+
+function applyStyle(style) {
+  const r = resolveStyle(style);
+  const root = document.documentElement.style;
+  root.setProperty('--bg', r.bg);
+  root.setProperty('--text', r.text);
+  root.setProperty('--accent', r.accent);
+  root.setProperty('--chord', r.chord);
+  root.setProperty('--font-body', `"${r.font}", Helvetica, sans-serif`);
+
+  // Derived overlays — подбираем исходя из яркости фона.
+  const dark = isDarkBg(r.bg);
+  root.setProperty('--bg-elevated', dark ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.04)');
+  root.setProperty('--bg-input',    dark ? 'rgba(255,255,255,0.07)' : '#FFFFFF');
+  root.setProperty('--text-muted',  hexToRgba(r.text, 0.55));
+  root.setProperty('--line',        dark ? 'rgba(255,255,255,0.10)' : 'rgba(0,0,0,0.10)');
+  root.setProperty('--shadow',      dark ? 'rgba(0,0,0,0.45)'       : 'rgba(0,0,0,0.12)');
+
+  state.style = style;
+  localStorage.setItem(STORAGE_STYLE, JSON.stringify(style));
+  syncSettingsUI();
+}
+
+function loadStyle() {
+  try {
+    const raw = localStorage.getItem(STORAGE_STYLE);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === 'object' && parsed.preset) return parsed;
+    }
+  } catch (_) { /* fall through to migration */ }
+
+  // Migration from old pesni-theme (light/dark) — runs once.
+  const legacy = localStorage.getItem(STORAGE_THEME);
+  if (legacy === 'light') return { preset: 'classic-light', overrides: {} };
+  return { preset: DEFAULT_PRESET, overrides: {} };
+}
+
+function setPreset(name) {
+  if (!PRESETS[name]) return;
+  applyStyle({ preset: name, overrides: {} });
+}
+
+function setOverride(key, value) {
+  const current = state.style || { preset: DEFAULT_PRESET, overrides: {} };
+  const next = { preset: current.preset, overrides: { ...(current.overrides || {}) } };
+  if (value == null || value === '') {
+    delete next.overrides[key];
+  } else {
+    next.overrides[key] = value;
+  }
+  applyStyle(next);
+}
+
+function resetOverrides() {
+  const current = state.style || { preset: DEFAULT_PRESET, overrides: {} };
+  applyStyle({ preset: current.preset, overrides: {} });
+}
+
+// ============ SETTINGS MODAL ============
+function renderPresetGrid() {
+  els.presetGrid.innerHTML = PRESET_ORDER.map((key) => {
+    const p = PRESETS[key];
+    return `
+      <button type="button" class="preset-card" data-preset="${key}">
+        <div class="preset-swatches">
+          <span style="background:${p.bg}"></span>
+          <span style="background:${p.text}"></span>
+          <span style="background:${p.accent}"></span>
+          <span style="background:${p.chord}"></span>
+        </div>
+        <span class="preset-name">${escapeHtml(p.name)}</span>
+      </button>
+    `;
+  }).join('');
+
+  els.presetGrid.querySelectorAll('.preset-card').forEach((btn) => {
+    btn.addEventListener('click', () => setPreset(btn.dataset.preset));
   });
 }
 
-function toggleTheme() {
-  const next = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
-  applyTheme(next);
+function syncSettingsUI() {
+  if (!state.style) return;
+  const r = resolveStyle(state.style);
+  // Highlight active preset card
+  if (els.presetGrid) {
+    els.presetGrid.querySelectorAll('.preset-card').forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.preset === state.style.preset);
+    });
+  }
+  if (els.settingFont)   els.settingFont.value   = r.font;
+  if (els.settingBg)     els.settingBg.value     = r.bg;
+  if (els.settingText)   els.settingText.value   = r.text;
+  if (els.settingAccent) els.settingAccent.value = r.accent;
+  if (els.settingChord)  els.settingChord.value  = r.chord;
+}
+
+function openSettings() {
+  els.settingsModal.classList.remove('hidden');
+  els.settingsModal.setAttribute('aria-hidden', 'false');
+  syncSettingsUI();
+}
+
+function closeSettings() {
+  els.settingsModal.classList.add('hidden');
+  els.settingsModal.setAttribute('aria-hidden', 'true');
 }
 
 function applyChords(visible) {
@@ -221,9 +389,9 @@ function handleRoute() {
 
 // ============ INIT ============
 function init() {
-  // Theme
-  const savedTheme = localStorage.getItem(STORAGE_THEME) || 'dark';
-  applyTheme(savedTheme);
+  // Style (presets + overrides) — перед остальным UI, чтобы шрифт применился до рендера
+  renderPresetGrid();
+  applyStyle(loadStyle());
 
   // Chords default visible
   const chordsSaved = localStorage.getItem(STORAGE_CHORDS);
@@ -234,9 +402,19 @@ function init() {
   const savedSize = parseFloat(localStorage.getItem(STORAGE_FONT_SIZE));
   applyFontSize(isNaN(savedSize) ? FONT_SIZE_DEFAULT : savedSize);
 
-  // Listeners
-  els.themeToggleList.addEventListener('click', toggleTheme);
-  els.themeToggleSong.addEventListener('click', toggleTheme);
+  // Settings modal
+  els.settingsToggle.addEventListener('click', openSettings);
+  els.settingsModal.querySelectorAll('[data-action="close-settings"]').forEach((el) => {
+    el.addEventListener('click', closeSettings);
+  });
+  els.settingFont.addEventListener('change', (e) => setOverride('font', e.target.value));
+  els.settingBg.addEventListener('input', (e) => setOverride('bg', e.target.value));
+  els.settingText.addEventListener('input', (e) => setOverride('text', e.target.value));
+  els.settingAccent.addEventListener('input', (e) => setOverride('accent', e.target.value));
+  els.settingChord.addEventListener('input', (e) => setOverride('chord', e.target.value));
+  els.settingsReset.addEventListener('click', resetOverrides);
+
+  // Other listeners
   els.chordsToggle.addEventListener('click', toggleChords);
   els.fontDecrease.addEventListener('click', () => changeFontSize(-FONT_SIZE_STEP));
   els.fontIncrease.addEventListener('click', () => changeFontSize(FONT_SIZE_STEP));
@@ -252,6 +430,10 @@ function init() {
   });
 
   document.addEventListener('keydown', (e) => {
+    if (!els.settingsModal.classList.contains('hidden')) {
+      if (e.key === 'Escape') { e.preventDefault(); closeSettings(); }
+      return;
+    }
     if (state.currentSong) {
       if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
         e.preventDefault();

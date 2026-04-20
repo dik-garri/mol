@@ -49,12 +49,13 @@ mol/
 │   └── <slug>.md                      # Sermon notes (конспекты проповедей)
 ├── luki/
 │   └── Луки-<глава>_<стихи>.md       # Разборы Евангелия от Луки по отрывкам
-├── pesni/                             # Songs for projector display
-│   ├── index.html                     # SPA: search list + verse-by-verse viewer
-│   ├── styles.css                     # Switchable dark/light theme
-│   ├── app.js                         # Hash routing, search, navigation, theme/chord toggles
+├── pesni/                             # Songs for projector display (presenter + projector windows)
+│   ├── index.html                     # SPA: list + song viewer + settings modal + projector popup
+│   ├── styles.css                     # Themable via CSS vars (6 presets + overrides), presenter 3-column layout
+│   ├── app.js                         # Routing, search, navigation, style presets, BroadcastChannel sync
 │   ├── import.py                      # Importer from sbornik.sbena.net (run manually)
-│   └── data/songs.json                # All songs from "Молодёжный" album mol_FVZflEV
+│   ├── data/songs.json                # All songs from "Молодёжный" album mol_FVZflEV (canonical)
+│   └── data/songs.js                  # Same data as `window.SONGS_DATA` (для работы через file://)
 ├── uchenichestvo/
 │   └── index.html                     # Редирект на https://dik-garri.github.io/uchenichestvo/
 ├── data/
@@ -147,13 +148,43 @@ mol/
 - В `uchenichestvo/index.html` – редирект на https://dik-garri.github.io/uchenichestvo/
 
 ## Песни (молодёжный сборник)
-- Статический SPA в `pesni/` – без бэкенда, всё в JSON и vanilla JS
-- Источник: https://sbornik.sbena.net/album/mol_FVZflEV/<номер> (альбом «Молодёжный»)
-- Импортёр – `pesni/import.py` (Python 3, без зависимостей). Запуск вручную: `python3 pesni/import.py`
-- Логика парсинга `{chord}` маркеров и блоков verse/repeat/part – портирована из `band/src/lib/sbornikImporter.ts` (там полноценная React-версия для группы)
-- Скрипт идёт по номерам с 1 до 30 пустых ответов подряд → стоп
-- Результат – `pesni/data/songs.json` (~1 МБ для 300 песен), коммитим в репо
-- UI: hash-routing (`#5` = песня №5), стрелки клавиатуры для навигации, тема и аккорды – через `localStorage`
+
+Статический SPA в `pesni/` – без бэкенда, vanilla JS, всё хранится в JSON и в `localStorage`.
+
+### Источник данных
+- Альбом «Молодёжный» на https://sbornik.sbena.net/album/mol_FVZflEV/<номер>
+- Импортёр `pesni/import.py` (Python 3, без зависимостей): `python3 pesni/import.py`
+  - Идёт по номерам с 1 до 30 пустых ответов подряд → стоп
+  - Логика парсинга `{chord}` маркеров и блоков verse/repeat/part – портирована из `band/src/lib/sbornikImporter.ts`
+  - Результат: `pesni/data/songs.json` (~1 МБ, 300 песен) **и** `pesni/data/songs.js` (`window.SONGS_DATA = [...]` – нужно для `file://`, т.к. fetch оттуда заблокирован). Оба файла коммитим.
+
+### UI
+- **Роутинг**: `#N` = песня №N, `` = список, `?projector=1` = окно проектора.
+- **Список** (`#list-view`): поиск по номеру/названию/тексту (игнорирует `ё↔е`). Список скроллится внутри страницы (`.view { height: 100vh; overflow: hidden }`, `.songs-list { flex: 1; overflow-y: auto }`) – страница по высоте не растягивается.
+- **Режим песни** (`#song-view`): одна шапка (header + nav в одной линии). Стрелки клавиатуры / пробел / PageUp / PageDown – листать блоки.
+- **Шрифт песни**: кнопки `+`/`-` в шапке (ещё клавиши `+`/`-` в режиме песни). Диапазон 14–160 px, шаг 4 px, сохраняется в `localStorage` (`pesni-font-size`). Auto-fit был удалён – пользователь сам выставляет размер под свой экран.
+- **Аккорды**: кнопка-переключатель в шапке. `.line` использует `--font-body` (пресетный), `.chord-line` – всегда моно `Menlo` (чтобы хоть как-то выравнивалось).
+
+### Настройки стиля (модалка, открывается шестерёнкой в обеих шапках)
+Хранится в `localStorage` как `pesni-style = { preset: string, overrides: { font?, bg?, text?, accent?, chord? } }`.
+
+- **6 пресетов** (объект `PRESETS` в `app.js`): classic-dark, classic-light, projector (чёрный+жёлтый), sepia, mono, night. Каждый задаёт 4 цвета + шрифт.
+- **Тонкая подстройка** поверх пресета: dropdown шрифта (Montserrat / Lora / Inter / Playfair Display / Menlo) + 4 color inputs (bg, text, accent, chord). Overrides сбрасываются при смене пресета или кнопкой «Сбросить к пресету».
+- **Применение**: `applyStyle()` ставит CSS-переменные на `document.documentElement.style`. `--text-muted`/`--line`/`--bg-elevated` derived из фона (isDarkBg) и из текста через `hexToRgba(text, 0.55)`.
+- **Миграция**: старый ключ `pesni-theme = 'light'/'dark'` автоматически превращается в `classic-light`/`classic-dark` при первом запуске после обновления.
+
+### Режим докладчика (проектор)
+Кнопка `📺` в шапке – toggle: открывает/закрывает отдельное popup-окно проектора (тот же `index.html?projector=1`).
+
+- **Окно проектора**: `body.projector-mode` – скрыты все chrome-элементы, показан только `.block-label` + `.block-content`, центрирован на полный экран. Клавиши: `F` – fullscreen, `←`/`→`/`Space` – отправляют `nav` обратно на presenter через BroadcastChannel.
+- **Presenter 3-колоночная раскладка** (`body.presenter-active`, активно когда проектор открыт): **25% поиск+список песен | 50% текущий блок | 25% превью блоков (как в PowerPoint)**. Правая колонка – карточки с меткой + первые 6 строк + scroll-into-view активной карточки. При <900px viewport раскладка схлопывается в 1 колонку.
+- **Синхронизация через `BroadcastChannel('pesni-projector')`**:
+  - Presenter → Projector: `{type:'state', song, block, chords, style, fontSize}` (полный дамп), `{type:'song'|'block'|'chords'|'style'|'fontSize', ...}` (инкременты).
+  - Projector → Presenter: `{type:'ready'}` (на старте + в ответ на `hello`), `{type:'nav', dir:'next'|'prev'}`, `{type:'closed'}` (в beforeunload).
+  - Рукопожатие: presenter на старте шлёт `{type:'hello'}` (чтобы projector, открытый раньше, переотослал `ready` и получил state).
+- **Флаг `pesni-projector-open`** в localStorage – чтобы индикатор восстанавливался после перезагрузки presenter. Heartbeat 2с проверяет `state.projectorWindow.closed` для case'ов force-close.
+- **Hint для подсказки про блок дальше**: `· Далее: Припев` рядом со счётчиком – видно только когда проектор открыт.
+- **Popup-blocker**: при `window.open === null` показываем alert.
 
 ## Bible Quotes
 - All scripture texts MUST be exact copies from the Synodal translation (Синодальный перевод)

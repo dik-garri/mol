@@ -93,7 +93,6 @@ const els = {
   settingAccent: $('#setting-accent'),
   settingChord: $('#setting-chord'),
   settingsReset: $('#settings-reset'),
-  openProjectorBtn: $('#open-projector'),
   nextBlockHint: $('#next-block-hint'),
   presenterSearch: $('#presenter-search'),
   presenterSongsList: $('#presenter-songs-list'),
@@ -266,7 +265,10 @@ function setProjectorOpen(open) {
     state.projectorWindow = null;
   }
   document.body.classList.toggle('presenter-active', open && !IS_PROJECTOR);
-  $$('.projector-indicator').forEach((btn) => btn.classList.toggle('hidden', !open));
+  $$('.projector-btn').forEach((btn) => {
+    btn.classList.toggle('active', open);
+    btn.title = open ? 'Проектор открыт — клик, чтобы закрыть' : 'Открыть окно проектора';
+  });
   updateNextBlockHint();
   renderPresenterSongsList();
   renderPresenterBlocksList();
@@ -312,14 +314,28 @@ function renderPresenterBlocksList() {
     els.presenterBlocksList.innerHTML = '<li class="empty-state">Выберите песню</li>';
     return;
   }
+  const total = song.blocks.length;
   els.presenterBlocksList.innerHTML = song.blocks
-    .map((b, i) => `
-      <li class="${i === state.currentBlockIdx ? 'active' : ''}" data-idx="${i}">
-        <span class="block-num">${i + 1}</span>
-        <span class="block-label-text">${escapeHtml(b.label || '…')}</span>
-      </li>
-    `)
+    .map((b, i) => {
+      const previewLines = b.lines
+        .slice(0, 6)
+        .map(([chord, text]) => {
+          const c = chord && chord.trim() ? `<span class="pc">${escapeHtml(chord)}</span>` : '';
+          return `${c}<span class="pl">${escapeHtml(text)}</span>`;
+        })
+        .join('');
+      return `
+        <li class="${i === state.currentBlockIdx ? 'active' : ''}" data-idx="${i}">
+          <div class="block-preview-header">
+            <span class="block-preview-label">${escapeHtml(b.label || '…')}</span>
+            <span class="block-preview-num">${i + 1} / ${total}</span>
+          </div>
+          <div class="block-preview-body">${previewLines}</div>
+        </li>
+      `;
+    })
     .join('');
+
   els.presenterBlocksList.querySelectorAll('li[data-idx]').forEach((li) => {
     li.addEventListener('click', () => {
       const idx = parseInt(li.dataset.idx, 10);
@@ -329,6 +345,10 @@ function renderPresenterBlocksList() {
       }
     });
   });
+
+  // Автоскролл активной карточки в видимую область
+  const active = els.presenterBlocksList.querySelector('li.active');
+  if (active) active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
 }
 
 function openProjector() {
@@ -697,11 +717,13 @@ function initPresenter() {
   els.settingAccent.addEventListener('input', (e) => setOverride('accent', e.target.value));
   els.settingChord.addEventListener('input', (e) => setOverride('chord', e.target.value));
   els.settingsReset.addEventListener('click', resetOverrides);
-  els.openProjectorBtn.addEventListener('click', openProjector);
 
-  // Projector indicators (both в списке и в song-view) — клик закрывает
-  $$('[data-action="close-projector"]').forEach((el) => {
-    el.addEventListener('click', closeProjector);
+  // Projector toggle (кнопка в обеих шапках): клик по TV — открыть или закрыть
+  $$('[data-action="toggle-projector"]').forEach((el) => {
+    el.addEventListener('click', () => {
+      if (state.projectorOpen) closeProjector();
+      else openProjector();
+    });
   });
 
   // Other listeners

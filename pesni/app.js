@@ -5,6 +5,10 @@ const STORAGE_THEME = 'pesni-theme'; // legacy, used только для миг�
 const STORAGE_CHORDS = 'pesni-chords';
 const STORAGE_FONT_SIZE = 'pesni-font-size';
 const STORAGE_STYLE = 'pesni-style';
+const STORAGE_PROJECTOR_OPEN = 'pesni-projector-open';
+
+const PROJECTOR_CHANNEL = 'pesni-projector';
+const IS_PROJECTOR = new URLSearchParams(location.search).has('projector');
 
 const PRESETS = {
   'classic-dark': {
@@ -52,7 +56,12 @@ const state = {
   currentSong: null,
   currentBlockIdx: 0,
   search: '',
+  style: null,
+  projectorOpen: false,
+  projectorWindow: null,
 };
+
+let projectorChannel = null; // BroadcastChannel
 
 // ============ DOM ============
 const $ = (sel) => document.querySelector(sel);
@@ -84,6 +93,8 @@ const els = {
   settingAccent: $('#setting-accent'),
   settingChord: $('#setting-chord'),
   settingsReset: $('#settings-reset'),
+  openProjectorBtn: $('#open-projector'),
+  nextBlockHint: $('#next-block-hint'),
 };
 
 // ============ STYLE (presets + overrides) ============
@@ -139,6 +150,7 @@ function applyStyle(style) {
   state.style = style;
   localStorage.setItem(STORAGE_STYLE, JSON.stringify(style));
   syncSettingsUI();
+  broadcast({ type: 'style', style });
 }
 
 function loadStyle() {
@@ -226,10 +238,198 @@ function closeSettings() {
   els.settingsModal.setAttribute('aria-hidden', 'true');
 }
 
+// ============ PROJECTOR (presenter side) ============
+function broadcast(msg) {
+  if (projectorChannel && !IS_PROJECTOR) projectorChannel.postMessage(msg);
+}
+
+function sendFullState() {
+  broadcast({
+    type: 'state',
+    song: state.currentSong ? state.currentSong.number : null,
+    block: state.currentBlockIdx,
+    chords: !els.blockContent.classList.contains('no-chords'),
+    style: state.style,
+    fontSize: getFontSize(),
+  });
+}
+
+function setProjectorOpen(open) {
+  state.projectorOpen = open;
+  if (open) {
+    localStorage.setItem(STORAGE_PROJECTOR_OPEN, '1');
+  } else {
+    localStorage.removeItem(STORAGE_PROJECTOR_OPEN);
+    state.projectorWindow = null;
+  }
+  $$('.projector-indicator').forEach((btn) => btn.classList.toggle('hidden', !open));
+  updateNextBlockHint();
+}
+
+function updateNextBlockHint() {
+  if (!els.nextBlockHint) return;
+  const song = state.currentSong;
+  const next = song && song.blocks[state.currentBlockIdx + 1];
+  const show = state.projectorOpen && next;
+  els.nextBlockHint.classList.toggle('hidden', !show);
+  if (show) {
+    const label = next.label || '';
+    els.nextBlockHint.textContent = label ? `· Далее: ${label}` : '· Далее';
+  }
+}
+
+function openProjector() {
+  const url = location.pathname + '?projector=1';
+  const win = window.open(url, 'pesni-projector', 'popup,width=1280,height=800');
+  if (!win) {
+    alert('Браузер заблокировал всплывающее окно. Разрешите pop-ups для этого сайта и попробуй снова.');
+    return;
+  }
+  state.projectorWindow = win;
+  setProjectorOpen(true);
+  closeSettings();
+  // sendFullState() подтянется когда projector пришлёт 'ready'
+}
+
+function closeProjector() {
+  if (state.projectorWindow && !state.projectorWindow.closed) {
+    state.projectorWindow.close();
+  }
+  setProjectorOpen(false);
+}
+
+function initPresenterChannel() {
+  projectorChannel = new BroadcastChannel(PROJECTOR_CHANNEL);
+  projectorChannel.onmessage = (event) => {
+    const msg = event.data || {};
+    if (msg.type === 'ready') {
+      setProjectorOpen(true);
+      sendFullState();
+    } else if (msg.type === 'nav') {
+      if (msg.dir === 'next') nextBlock();
+      else if (msg.dir === 'prev') prevBlock();
+    } else if (msg.type === 'closed') {
+      setProjectorOpen(false);
+    }
+  };
+
+  // Heartbeat: если у нас есть ссылка на projectorWindow и он закрылся без
+  // beforeunload (force-close, kill tab) — сбрасываем флаг.
+  setInterval(() => {
+    if (state.projectorOpen && state.projectorWindow && state.projectorWindow.closed) {
+      setProjectorOpen(false);
+    }
+  }, 2000);
+
+  // На случай, если presenter перезагрузился при уже открытом projector'е
+  if (localStorage.getItem(STORAGE_PROJECTOR_OPEN) === '1') {
+    setProjectorOpen(true);
+    sendFullState();
+  }
+}
+
+// ============ PROJECTOR (projector side) ============
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch(() => {});
+  } else {
+    document.exitFullscreen();
+  }
+}
+
+function initProjectorView() {
+  document.body.classList.add('projector-mode');
+
+  // Load songs data (нужно для рендера блока, когда придёт state)
+  try {
+    if (!window.SONGS_DATA) throw new Error('Файл data/songs.js не загружен');
+    state.songs = window.SONGS_DATA;
+    state.byNumber = new Map(state.songs.map((s) => [s.number, s]));
+  } catch (e) {
+    document.body.textContent = 'Ошибка загрузки: ' + e.message;
+    return;
+  }
+
+  applyStyle(loadStyle());
+
+  // Apply saved font size
+  const savedSize = parseFloat(localStorage.getItem(STORAGE_FONT_SIZE));
+  els.blockContent.style.fontSize = (isNaN(savedSize) ? FONT_SIZE_DEFAULT : savedSize) + 'px';
+
+  // Show song-view with placeholder
+  els.listView.classList.add('hidden');
+  els.songView.classList.remove('hidden');
+  els.blockLabel.textContent = '';
+  els.blockLabel.style.display = 'none';
+  els.blockContent.innerHTML = '<span class="projector-hint">Ожидание песни…</span>';
+
+  // Channel: listen for state, announce readiness, announce close
+  projectorChannel = new BroadcastChannel(PROJECTOR_CHANNEL);
+  projectorChannel.onmessage = (event) => {
+    const msg = event.data || {};
+    if (msg.type === 'state') {
+      if (msg.style) applyStyle(msg.style);
+      if (typeof msg.fontSize === 'number') els.blockContent.style.fontSize = msg.fontSize + 'px';
+      els.blockContent.classList.toggle('no-chords', msg.chords === false);
+      if (msg.song != null) {
+        const song = state.byNumber.get(msg.song);
+        if (song) {
+          state.currentSong = song;
+          state.currentBlockIdx = msg.block || 0;
+          renderBlock();
+        }
+      } else {
+        state.currentSong = null;
+        els.blockLabel.textContent = '';
+        els.blockLabel.style.display = 'none';
+        els.blockContent.innerHTML = '<span class="projector-hint">Ожидание песни…</span>';
+      }
+    } else if (msg.type === 'song') {
+      const song = state.byNumber.get(msg.number);
+      if (song) {
+        state.currentSong = song;
+        state.currentBlockIdx = 0;
+        renderBlock();
+      }
+    } else if (msg.type === 'block') {
+      if (state.currentSong) {
+        state.currentBlockIdx = msg.idx;
+        renderBlock();
+      }
+    } else if (msg.type === 'chords') {
+      els.blockContent.classList.toggle('no-chords', !msg.visible);
+    } else if (msg.type === 'style') {
+      applyStyle(msg.style);
+    } else if (msg.type === 'fontSize') {
+      els.blockContent.style.fontSize = msg.px + 'px';
+    }
+  };
+  projectorChannel.postMessage({ type: 'ready' });
+  window.addEventListener('beforeunload', () => {
+    try { projectorChannel.postMessage({ type: 'closed' }); } catch (_) {}
+  });
+
+  // Keyboard: F fullscreen, arrows broadcast nav to presenter
+  document.addEventListener('keydown', (e) => {
+    const k = e.key;
+    if (k === 'f' || k === 'F' || k === 'а' || k === 'А') {
+      e.preventDefault();
+      toggleFullscreen();
+    } else if (k === 'ArrowRight' || k === 'PageDown' || k === ' ') {
+      e.preventDefault();
+      projectorChannel.postMessage({ type: 'nav', dir: 'next' });
+    } else if (k === 'ArrowLeft' || k === 'PageUp') {
+      e.preventDefault();
+      projectorChannel.postMessage({ type: 'nav', dir: 'prev' });
+    }
+  });
+}
+
 function applyChords(visible) {
   els.blockContent.classList.toggle('no-chords', !visible);
   els.chordsToggle.classList.toggle('active', visible);
   localStorage.setItem(STORAGE_CHORDS, visible ? '1' : '0');
+  broadcast({ type: 'chords', visible });
 }
 
 function toggleChords() {
@@ -241,8 +441,9 @@ function applyFontSize(size) {
   const clamped = Math.max(FONT_SIZE_MIN, Math.min(FONT_SIZE_MAX, size));
   els.blockContent.style.fontSize = clamped + 'px';
   localStorage.setItem(STORAGE_FONT_SIZE, String(clamped));
-  els.fontDecrease.disabled = clamped <= FONT_SIZE_MIN;
-  els.fontIncrease.disabled = clamped >= FONT_SIZE_MAX;
+  if (els.fontDecrease) els.fontDecrease.disabled = clamped <= FONT_SIZE_MIN;
+  if (els.fontIncrease) els.fontIncrease.disabled = clamped >= FONT_SIZE_MAX;
+  broadcast({ type: 'fontSize', px: clamped });
   return clamped;
 }
 
@@ -327,6 +528,7 @@ function showSong(number) {
   els.songKey.textContent = song.key || '';
   els.songKey.style.display = song.key ? '' : 'none';
 
+  broadcast({ type: 'song', number: song.number });
   renderBlock();
 }
 
@@ -356,8 +558,10 @@ function renderBlock() {
 
   els.blockContent.innerHTML = html;
   els.blockCounter.textContent = `${state.currentBlockIdx + 1} / ${song.blocks.length}`;
-  els.prevBtn.disabled = state.currentBlockIdx === 0;
-  els.nextBtn.disabled = state.currentBlockIdx >= song.blocks.length - 1;
+  if (els.prevBtn) els.prevBtn.disabled = state.currentBlockIdx === 0;
+  if (els.nextBtn) els.nextBtn.disabled = state.currentBlockIdx >= song.blocks.length - 1;
+  updateNextBlockHint();
+  broadcast({ type: 'block', idx: state.currentBlockIdx });
 }
 
 function nextBlock() {
@@ -389,7 +593,19 @@ function handleRoute() {
 
 // ============ INIT ============
 function init() {
-  // Style (presets + overrides) — перед остальным UI, чтобы шрифт применился до рендера
+  if (IS_PROJECTOR) {
+    initProjectorView();
+    return;
+  }
+  initPresenter();
+}
+
+function initPresenter() {
+  // Projector channel first — тогда applyStyle/applyFontSize сразу транслируют
+  // в случае, если projector уже открыт (пережил перезагрузку presenter'а).
+  initPresenterChannel();
+
+  // Style (presets + overrides) — до остального UI, чтобы шрифт применился до рендера
   renderPresetGrid();
   applyStyle(loadStyle());
 
@@ -402,8 +618,10 @@ function init() {
   const savedSize = parseFloat(localStorage.getItem(STORAGE_FONT_SIZE));
   applyFontSize(isNaN(savedSize) ? FONT_SIZE_DEFAULT : savedSize);
 
-  // Settings modal
-  els.settingsToggle.addEventListener('click', openSettings);
+  // Settings modal — кнопки в обеих шапках
+  $$('[data-action="open-settings"], #settings-toggle').forEach((el) => {
+    el.addEventListener('click', openSettings);
+  });
   els.settingsModal.querySelectorAll('[data-action="close-settings"]').forEach((el) => {
     el.addEventListener('click', closeSettings);
   });
@@ -413,6 +631,12 @@ function init() {
   els.settingAccent.addEventListener('input', (e) => setOverride('accent', e.target.value));
   els.settingChord.addEventListener('input', (e) => setOverride('chord', e.target.value));
   els.settingsReset.addEventListener('click', resetOverrides);
+  els.openProjectorBtn.addEventListener('click', openProjector);
+
+  // Projector indicators (both в списке и в song-view) — клик закрывает
+  $$('[data-action="close-projector"]').forEach((el) => {
+    el.addEventListener('click', closeProjector);
+  });
 
   // Other listeners
   els.chordsToggle.addEventListener('click', toggleChords);

@@ -14,6 +14,9 @@
     <header class="list-header">
       <a class="back-link" href="../"><i class="fa-solid fa-arrow-left"></i> Главная</a>
       <h1>Песни</h1>
+      <button class="icon-btn projector-indicator hidden" data-action="close-projector" title="Проектор открыт — клик, чтобы закрыть">
+        <i class="fa-solid fa-tv"></i>
+      </button>
       <button id="settings-toggle" class="icon-btn" title="Настройки стиля">
         <i class="fa-solid fa-gear"></i>
       </button>
@@ -44,10 +47,17 @@
           <i class="fa-solid fa-chevron-left"></i>
         </button>
         <span id="block-counter" class="block-counter"></span>
+        <span id="next-block-hint" class="next-block-hint hidden"></span>
         <button id="next-block" class="icon-btn" title="Следующий блок (→)">
           <i class="fa-solid fa-chevron-right"></i>
         </button>
       </div>
+      <button class="icon-btn projector-indicator hidden" data-action="close-projector" title="Проектор открыт — клик, чтобы закрыть">
+        <i class="fa-solid fa-tv"></i>
+      </button>
+      <button id="settings-toggle-song" class="icon-btn" data-action="open-settings" title="Настройки стиля">
+        <i class="fa-solid fa-gear"></i>
+      </button>
       <button id="font-decrease" class="icon-btn" title="Уменьшить шрифт">
         <i class="fa-solid fa-minus"></i>
       </button>
@@ -109,6 +119,14 @@
           <span>Аккорды</span>
           <input type="color" id="setting-chord">
         </label>
+      </section>
+
+      <section class="modal-section">
+        <div class="section-label">Проектор</div>
+        <button id="open-projector" class="text-btn text-btn-primary" type="button">
+          <i class="fa-solid fa-tv"></i> Открыть окно проектора
+        </button>
+        <p class="setting-hint">Перетащи окно на второй экран и нажми <kbd>F</kbd> для fullscreen. Клавиши <kbd>←</kbd>/<kbd>→</kbd> в любом окне листают блоки.</p>
       </section>
 
       <footer class="modal-footer">

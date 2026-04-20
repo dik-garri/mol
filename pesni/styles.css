@@ -34,9 +34,10 @@ html, body {
 }
 
 .view {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .hidden { display: none !important; }
@@ -115,6 +116,9 @@ html, body {
   max-width: 900px;
   margin: 0 auto;
   width: 100%;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
 }
 
 .song-row {
@@ -582,13 +586,21 @@ body.projector-mode #songs-list,
 body.projector-mode #list-view,
 body.projector-mode .song-header,
 body.projector-mode #settings-modal,
-body.projector-mode .projector-indicator {
+body.projector-mode .projector-indicator,
+body.projector-mode .presenter-aside {
   display: none !important;
 }
 
 body.projector-mode #song-view {
   display: flex;
   min-height: 100vh;
+}
+
+body.projector-mode .presenter-body {
+  flex-direction: column;
+  flex: 1;
+  display: flex;
+  min-height: 0;
 }
 
 body.projector-mode .song-stage {
@@ -600,6 +612,159 @@ body.projector-mode .block-label {
   font-size: 20px;
   margin-bottom: 28px;
   opacity: 0.75;
+}
+
+/* ============ PRESENTER 3-COLUMN LAYOUT (только когда projector открыт) ============ */
+
+.presenter-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.presenter-aside { display: none; }
+
+body.presenter-active .presenter-body {
+  flex-direction: row;
+}
+
+body.presenter-active .presenter-aside {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 25%;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+body.presenter-active .presenter-aside.presenter-songs {
+  border-right: 1px solid var(--line);
+}
+
+body.presenter-active .presenter-aside.presenter-blocks {
+  border-left: 1px solid var(--line);
+}
+
+body.presenter-active .song-stage {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.aside-header {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.aside-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+#presenter-search {
+  flex: 1;
+  background: var(--bg-input);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 13px;
+  outline: none;
+  min-width: 0;
+}
+
+#presenter-search:focus { border-color: var(--accent); }
+
+#presenter-songs-list {
+  overflow-y: auto;
+  flex: 1;
+  list-style: none;
+  padding: 4px 0;
+  margin: 0;
+  max-width: none;
+  width: auto;
+}
+
+.songs-list.compact .song-row {
+  padding: 8px 12px;
+  gap: 10px;
+}
+
+.songs-list.compact .song-row .num {
+  min-width: 32px;
+  font-size: 13px;
+}
+
+.songs-list.compact .song-row .title {
+  font-size: 13px;
+}
+
+.songs-list.compact .song-row .key {
+  font-size: 11px;
+  padding: 2px 6px;
+  min-width: 28px;
+}
+
+.songs-list.compact .song-row.active {
+  background: var(--bg-elevated);
+  border-left: 3px solid var(--accent);
+  padding-left: 9px;
+}
+
+.blocks-list {
+  overflow-y: auto;
+  flex: 1;
+  list-style: none;
+  padding: 4px 0;
+  margin: 0;
+}
+
+.blocks-list li {
+  padding: 10px 14px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-muted);
+  font-size: 13px;
+  transition: background var(--transition), color var(--transition);
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.blocks-list li:hover {
+  background: var(--bg-elevated);
+  color: var(--text);
+}
+
+.blocks-list li.active {
+  background: var(--bg-elevated);
+  color: var(--text);
+  border-left: 3px solid var(--accent);
+  padding-left: 11px;
+  font-weight: 600;
+}
+
+.blocks-list .block-num {
+  color: var(--accent);
+  font-weight: 600;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  flex-shrink: 0;
+  min-width: 22px;
+}
+
+@media (max-width: 900px) {
+  body.presenter-active .presenter-body { flex-direction: column; }
+  body.presenter-active .presenter-aside { display: none; }
+  body.presenter-active .song-stage { flex: 1; }
 }
 
 .projector-hint {

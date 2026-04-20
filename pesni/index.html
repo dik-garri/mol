@@ -69,10 +69,27 @@
       </button>
     </header>
 
-    <section class="song-stage" id="song-stage">
-      <div id="block-label" class="block-label"></div>
-      <div id="block-content" class="block-content"></div>
-    </section>
+    <div class="presenter-body">
+      <aside class="presenter-aside presenter-songs">
+        <div class="aside-header">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input id="presenter-search" type="search" placeholder="Поиск..." autocomplete="off">
+        </div>
+        <ul id="presenter-songs-list" class="songs-list compact"></ul>
+      </aside>
+
+      <section class="song-stage" id="song-stage">
+        <div id="block-label" class="block-label"></div>
+        <div id="block-content" class="block-content"></div>
+      </section>
+
+      <aside class="presenter-aside presenter-blocks">
+        <div class="aside-header">
+          <span class="aside-label">Блоки</span>
+        </div>
+        <ol id="presenter-blocks-list" class="blocks-list"></ol>
+      </aside>
+    </div>
   </main>
 
   <!-- SETTINGS MODAL -->

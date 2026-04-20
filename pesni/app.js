@@ -95,6 +95,9 @@ const els = {
   settingsReset: $('#settings-reset'),
   openProjectorBtn: $('#open-projector'),
   nextBlockHint: $('#next-block-hint'),
+  presenterSearch: $('#presenter-search'),
+  presenterSongsList: $('#presenter-songs-list'),
+  presenterBlocksList: $('#presenter-blocks-list'),
 };
 
 // ============ STYLE (presets + overrides) ============
@@ -262,8 +265,11 @@ function setProjectorOpen(open) {
     localStorage.removeItem(STORAGE_PROJECTOR_OPEN);
     state.projectorWindow = null;
   }
+  document.body.classList.toggle('presenter-active', open && !IS_PROJECTOR);
   $$('.projector-indicator').forEach((btn) => btn.classList.toggle('hidden', !open));
   updateNextBlockHint();
+  renderPresenterSongsList();
+  renderPresenterBlocksList();
 }
 
 function updateNextBlockHint() {
@@ -276,6 +282,53 @@ function updateNextBlockHint() {
     const label = next.label || '';
     els.nextBlockHint.textContent = label ? `· Далее: ${label}` : '· Далее';
   }
+}
+
+function renderPresenterSongsList() {
+  if (!els.presenterSongsList || !state.projectorOpen) return;
+  const query = (state.search || '').trim();
+  const filtered = query ? state.songs.filter((s) => songMatchesSearch(s, query)) : state.songs;
+  const currentNum = state.currentSong ? state.currentSong.number : null;
+
+  if (filtered.length === 0) {
+    els.presenterSongsList.innerHTML = '<li class="empty-state">Ничего не найдено</li>';
+    return;
+  }
+  els.presenterSongsList.innerHTML = filtered
+    .map((s) => `
+      <a class="song-row ${s.number === currentNum ? 'active' : ''}" href="#${s.number}">
+        <span class="num">${s.number}</span>
+        <span class="title">${escapeHtml(s.title)}</span>
+        ${s.key ? `<span class="key">${escapeHtml(s.key)}</span>` : ''}
+      </a>
+    `)
+    .join('');
+}
+
+function renderPresenterBlocksList() {
+  if (!els.presenterBlocksList || !state.projectorOpen) return;
+  const song = state.currentSong;
+  if (!song) {
+    els.presenterBlocksList.innerHTML = '<li class="empty-state">Выберите песню</li>';
+    return;
+  }
+  els.presenterBlocksList.innerHTML = song.blocks
+    .map((b, i) => `
+      <li class="${i === state.currentBlockIdx ? 'active' : ''}" data-idx="${i}">
+        <span class="block-num">${i + 1}</span>
+        <span class="block-label-text">${escapeHtml(b.label || '…')}</span>
+      </li>
+    `)
+    .join('');
+  els.presenterBlocksList.querySelectorAll('li[data-idx]').forEach((li) => {
+    li.addEventListener('click', () => {
+      const idx = parseInt(li.dataset.idx, 10);
+      if (!isNaN(idx) && state.currentSong) {
+        state.currentBlockIdx = idx;
+        renderBlock();
+      }
+    });
+  });
 }
 
 function openProjector() {
@@ -312,6 +365,10 @@ function initPresenterChannel() {
       setProjectorOpen(false);
     }
   };
+
+  // «Hello» на случай, если projector уже открыт и пропустил свой ранний 'ready'
+  // (race при reload presenter-а). Projector ответит свежим 'ready'.
+  projectorChannel.postMessage({ type: 'hello' });
 
   // Heartbeat: если у нас есть ссылка на projectorWindow и он закрылся без
   // beforeunload (force-close, kill tab) — сбрасываем флаг.
@@ -367,6 +424,11 @@ function initProjectorView() {
   projectorChannel = new BroadcastChannel(PROJECTOR_CHANNEL);
   projectorChannel.onmessage = (event) => {
     const msg = event.data || {};
+    if (msg.type === 'hello') {
+      // Presenter подключился/перезагрузился — пересылаем 'ready', пусть пришлёт state.
+      projectorChannel.postMessage({ type: 'ready' });
+      return;
+    }
     if (msg.type === 'state') {
       if (msg.style) applyStyle(msg.style);
       if (typeof msg.fontSize === 'number') els.blockContent.style.fontSize = msg.fontSize + 'px';
@@ -500,6 +562,7 @@ function renderList() {
       `
     )
     .join('');
+  renderPresenterSongsList();
 }
 
 function escapeHtml(s) {
@@ -529,6 +592,8 @@ function showSong(number) {
   els.songKey.style.display = song.key ? '' : 'none';
 
   broadcast({ type: 'song', number: song.number });
+  renderPresenterSongsList();
+  renderPresenterBlocksList();
   renderBlock();
 }
 
@@ -561,6 +626,7 @@ function renderBlock() {
   if (els.prevBtn) els.prevBtn.disabled = state.currentBlockIdx === 0;
   if (els.nextBtn) els.nextBtn.disabled = state.currentBlockIdx >= song.blocks.length - 1;
   updateNextBlockHint();
+  renderPresenterBlocksList();
   broadcast({ type: 'block', idx: state.currentBlockIdx });
 }
 
@@ -650,8 +716,19 @@ function initPresenter() {
 
   els.search.addEventListener('input', (e) => {
     state.search = e.target.value;
+    if (els.presenterSearch && els.presenterSearch.value !== state.search) {
+      els.presenterSearch.value = state.search;
+    }
     renderList();
   });
+
+  if (els.presenterSearch) {
+    els.presenterSearch.addEventListener('input', (e) => {
+      state.search = e.target.value;
+      if (els.search.value !== state.search) els.search.value = state.search;
+      renderList();
+    });
+  }
 
   document.addEventListener('keydown', (e) => {
     if (!els.settingsModal.classList.contains('hidden')) {

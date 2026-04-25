@@ -27,6 +27,7 @@
 | Царь на осле (Вербное воскресенье) | [sermons/tsar-na-osle.md](sermons/tsar-na-osle.md) |
 | Клятва, которая стоила жизни (Страстная пятница) | [sermons/klyatva-kotoraya-stoila-zhizni.md](sermons/klyatva-kotoraya-stoila-zhizni.md) |
 | Любовь – наибольшая заповедь | [sermons/lyubov-naibolshaya-zapoved.md](sermons/lyubov-naibolshaya-zapoved.md) |
+| Перед крещением (≈15 мин) | [sermons/pered-kresheniem.md](sermons/pered-kresheniem.md) |
 
 ## Песни
 

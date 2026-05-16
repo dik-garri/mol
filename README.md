@@ -18,6 +18,7 @@
 | Сомнения – не грех | [presentations/somneniya-ne-grekh/](presentations/somneniya-ne-grekh/) |
 | Он жив – и я живой (Пасха) | [presentations/on-zhiv-i-ya-zhivoy/](presentations/on-zhiv-i-ya-zhivoy/) |
 | Молитва без фильтров | [presentations/molitva-bez-filtrov/](presentations/molitva-bez-filtrov/) |
+| Где Бог, когда больно? | [presentations/gde-bog-kogda-bolno/](presentations/gde-bog-kogda-bolno/) |
 
 ## Проповеди
 

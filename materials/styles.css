@@ -1,0 +1,502 @@
+/* Материалы – проповеди + разборы Луки */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0F1B2D;
+  --bg-elevated: rgba(255, 255, 255, 0.04);
+  --bg-hover: rgba(212, 168, 67, 0.08);
+  --primary: #D4A843;
+  --secondary: #E8C572;
+  --trust: #5B8CA8;
+  --text: #F0EBE0;
+  --muted: #7A8BA8;
+  --line: #2A3A52;
+  --tag-bg: rgba(91, 140, 168, 0.12);
+  --tag-border: rgba(91, 140, 168, 0.35);
+  --tag-active-bg: rgba(212, 168, 67, 0.18);
+  --tag-active-border: var(--primary);
+  --quote-bg: rgba(212, 168, 67, 0.06);
+}
+
+:root[data-theme="light"] {
+  --bg: #FAF7F0;
+  --bg-elevated: #FFFFFF;
+  --bg-hover: rgba(168, 128, 48, 0.08);
+  --primary: #A88030;
+  --secondary: #C49A4A;
+  --trust: #3E6E8E;
+  --text: #1A2742;
+  --muted: #6B7B92;
+  --line: #E0DBCC;
+  --tag-bg: rgba(62, 110, 142, 0.10);
+  --tag-border: rgba(62, 110, 142, 0.30);
+  --tag-active-bg: rgba(168, 128, 48, 0.14);
+  --tag-active-border: var(--primary);
+  --quote-bg: rgba(168, 128, 48, 0.07);
+}
+
+body {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* ===========================================
+   THEME TOGGLE (fixed top-right)
+   =========================================== */
+
+.theme-toggle {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  color: var(--primary);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.theme-toggle:hover { border-color: var(--primary); }
+
+/* Default (dark): show sun to suggest switching to light. Light: show moon. */
+.theme-toggle .icon-dark { display: none; }
+
+:root[data-theme="light"] .theme-toggle .icon-light { display: none; }
+:root[data-theme="light"] .theme-toggle .icon-dark { display: inline; }
+
+.view { min-height: 100vh; }
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 30px 60px;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 25px;
+  transition: color 0.2s;
+}
+
+.back-link:hover { color: var(--primary); }
+
+header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+header h1 {
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+header p {
+  font-size: 16px;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+/* ===========================================
+   TABS
+   =========================================== */
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.tab {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 20px;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tab:hover { color: var(--text); }
+
+.tab.active {
+  color: var(--primary);
+}
+
+.tab.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--primary);
+}
+
+.tab-count {
+  background: var(--bg-elevated);
+  color: var(--muted);
+  padding: 2px 9px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 24px;
+  text-align: center;
+}
+
+.tab.active .tab-count {
+  background: var(--tag-active-bg);
+  color: var(--primary);
+}
+
+/* ===========================================
+   SEARCH
+   =========================================== */
+
+.search-row { margin-bottom: 18px; }
+
+.search-wrap {
+  position: relative;
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  transition: border-color 0.2s;
+}
+
+.search-wrap:focus-within { border-color: var(--primary); }
+
+.search-wrap > i {
+  color: var(--muted);
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+#search {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 15px;
+  padding: 14px 0;
+  outline: none;
+}
+
+#search::placeholder { color: var(--muted); }
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  display: none;
+}
+
+.clear-btn:hover { color: var(--text); }
+
+.search-wrap.has-text .clear-btn { display: block; }
+
+/* ===========================================
+   ACTIVE TAGS (filter chips)
+   =========================================== */
+
+.active-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+  min-height: 0;
+}
+
+.active-tags:empty { display: none; }
+
+.active-tag {
+  background: var(--tag-active-bg);
+  border: 1px solid var(--tag-active-border);
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.active-tag::after {
+  content: "×";
+  font-size: 16px;
+  line-height: 1;
+  opacity: 0.7;
+}
+
+.active-tag:hover::after { opacity: 1; }
+
+/* ===========================================
+   MATERIALS LIST
+   =========================================== */
+
+.materials-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 22px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.card:hover {
+  border-color: var(--primary);
+  background: var(--bg-hover);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.card-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--text);
+  flex: 1;
+  min-width: 0;
+}
+
+.card-date {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 300;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  color: var(--trust);
+  padding: 3px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.tag:hover {
+  background: var(--tag-active-bg);
+  border-color: var(--tag-active-border);
+  color: var(--primary);
+}
+
+.tag.match {
+  background: var(--tag-active-bg);
+  border-color: var(--tag-active-border);
+  color: var(--primary);
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--muted);
+  font-size: 15px;
+  padding: 40px 0;
+}
+
+/* ===========================================
+   READER VIEW
+   =========================================== */
+
+.reader-container {
+  max-width: 760px;
+}
+
+.reader-meta {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.reader-date {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.reader-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.reader-content {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.reader-content h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0 0 24px;
+  line-height: 1.2;
+}
+
+.reader-content h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 38px 0 14px;
+  line-height: 1.3;
+}
+
+.reader-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--secondary);
+  margin: 28px 0 10px;
+}
+
+.reader-content p {
+  margin: 0 0 16px;
+}
+
+.reader-content ul, .reader-content ol {
+  margin: 0 0 18px;
+  padding-left: 24px;
+}
+
+.reader-content li {
+  margin-bottom: 8px;
+}
+
+.reader-content blockquote {
+  border-left: 4px solid var(--primary);
+  background: var(--quote-bg);
+  padding: 14px 22px;
+  margin: 20px 0;
+  font-family: "Lora", Georgia, serif;
+  font-style: italic;
+  color: var(--text);
+  border-radius: 0 8px 8px 0;
+}
+
+.reader-content blockquote p { margin-bottom: 6px; }
+.reader-content blockquote p:last-child { margin-bottom: 0; }
+
+.reader-content strong { color: var(--text); font-weight: 700; }
+.reader-content em { font-style: italic; }
+
+.reader-content hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 32px 0;
+}
+
+.reader-content code {
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: Menlo, monospace;
+}
+
+.reader-content table {
+  border-collapse: collapse;
+  margin: 18px 0;
+  width: 100%;
+  font-size: 15px;
+}
+
+.reader-content th, .reader-content td {
+  border: 1px solid var(--line);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.reader-content th {
+  background: var(--bg-elevated);
+  font-weight: 700;
+}
+
+.reader-content a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ===========================================
+   RESPONSIVE
+   =========================================== */
+
+@media (max-width: 640px) {
+  .container { padding: 30px 18px 50px; }
+  header h1 { font-size: 32px; }
+  .card-top { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .reader-content h1 { font-size: 28px; }
+  .reader-content h2 { font-size: 22px; }
+  .reader-content { font-size: 16px; }
+  .tab { padding: 12px 14px; font-size: 15px; }
+}

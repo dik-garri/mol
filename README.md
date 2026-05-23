@@ -30,6 +30,15 @@
 | Клятва, которая стоила жизни (Страстная пятница) | [sermons/klyatva-kotoraya-stoila-zhizni.md](sermons/klyatva-kotoraya-stoila-zhizni.md) |
 | Любовь – наибольшая заповедь | [sermons/lyubov-naibolshaya-zapoved.md](sermons/lyubov-naibolshaya-zapoved.md) |
 | Перед крещением (≈15 мин) | [sermons/pered-kresheniem.md](sermons/pered-kresheniem.md) |
+| Лицемерие и религиозность | [sermons/litsemerie-i-religioznost.md](sermons/litsemerie-i-religioznost.md) |
+
+## Материалы (веб-интерфейс)
+
+Статический SPA в `materials/` – список проповедей и разборов Луки с поиском, фильтром по тегам, тёмной/светлой темой и читалкой markdown.
+
+- **Открыть**: https://dik-garri.github.io/mol/materials/
+- **Источник данных**: YAML-frontmatter в `sermons/*.md` и `luki/Луки-*.md`
+- **Пересобрать индекс** (после добавления/правки тегов): `python3 materials/build.py`
 
 ## Песни
 

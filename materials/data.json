@@ -349,6 +349,98 @@
   "archive": [
     {
       "type": "archive",
+      "title": "Лицемерие и религиозность",
+      "subtitle": "Фарисей и мытарь – зеркало для религиозного человека",
+      "date": "2026-05",
+      "tags": [
+        "лицемерие",
+        "фарисейство",
+        "смирение",
+        "Лк. 18",
+        "Мф. 23",
+        "проповедь"
+      ],
+      "path": "archive/litsemerie-i-religioznost.md",
+      "slug": "litsemerie-i-religioznost"
+    },
+    {
+      "type": "archive",
+      "title": "Перед крещением",
+      "subtitle": "Деяния 2:37–41 – порядок Божий: услышать, поверить, покаяться, креститься",
+      "date": "2026-04",
+      "tags": [
+        "Деян. 2",
+        "крещение",
+        "покаяние",
+        "Рим. 6",
+        "проповедь"
+      ],
+      "path": "archive/pered-kreshcheniem.md",
+      "slug": "pered-kreshcheniem"
+    },
+    {
+      "type": "archive",
+      "title": "Любовь – наибольшая заповедь",
+      "subtitle": "Любовь к Богу и к ближнему как сердце всего закона",
+      "date": "2026-04",
+      "tags": [
+        "любовь",
+        "наибольшая заповедь",
+        "Мф. 22",
+        "1 Кор. 13",
+        "проповедь"
+      ],
+      "path": "archive/lyubov-naibolshaya-zapoved.md",
+      "slug": "lyubov-naibolshaya-zapoved"
+    },
+    {
+      "type": "archive",
+      "title": "Похороны",
+      "subtitle": "Дрюпина Галина Петровна",
+      "date": "2026-02",
+      "tags": [
+        "проповедь",
+        "похороны",
+        "смерть",
+        "вечная жизнь",
+        "1 Фес. 4",
+        "спасение"
+      ],
+      "path": "archive/pokhorony.md",
+      "slug": "pokhorony"
+    },
+    {
+      "type": "archive",
+      "title": "Новый год",
+      "subtitle": "Размышления на стыке года – Божья верность и упование",
+      "date": "2026-01",
+      "tags": [
+        "новый год",
+        "благодарность",
+        "упование",
+        "размышление",
+        "тема"
+      ],
+      "path": "archive/novyy-god.md",
+      "slug": "novyy-god"
+    },
+    {
+      "type": "archive",
+      "title": "Крещение Христово 2026",
+      "subtitle": "Луки 3:21–22 – зачем Иисусу было креститься",
+      "date": "2026-01",
+      "tags": [
+        "крещение Христа",
+        "Лк. 3",
+        "молитва",
+        "идентичность",
+        "проповедь"
+      ],
+      "path": "archive/kreshchenie-khristovo-2026.md",
+      "slug": "kreshchenie-khristovo-2026"
+    },
+    {
+      "type": "archive",
       "title": "Группа Руфь",
       "subtitle": "Вопросы для разбора книги Руфь по персонажам",
       "date": "2026-01",
@@ -361,6 +453,20 @@
       ],
       "path": "archive/gruppa-ruf.md",
       "slug": "gruppa-ruf"
+    },
+    {
+      "type": "archive",
+      "title": "Мир Божий, пришедший на землю",
+      "subtitle": "Рождество как Мир, пришедший на землю",
+      "date": "2025-12",
+      "tags": [
+        "Лк. 2",
+        "Рождество",
+        "мир",
+        "проповедь"
+      ],
+      "path": "archive/mir-bozhiy-prishedshiy-na-zemlyu.md",
+      "slug": "mir-bozhiy-prishedshiy-na-zemlyu"
     },
     {
       "type": "archive",
@@ -377,6 +483,21 @@
       ],
       "path": "archive/bog-sredi-nas-emmanuil.md",
       "slug": "bog-sredi-nas-emmanuil"
+    },
+    {
+      "type": "archive",
+      "title": "Миссия и технологии",
+      "subtitle": "Семинар: «Нейросети и христианское служение»",
+      "date": "2025-11",
+      "tags": [
+        "технологии",
+        "ИИ",
+        "служение",
+        "миссия",
+        "тема"
+      ],
+      "path": "archive/missiya-i-tekhnologii.md",
+      "slug": "missiya-i-tekhnologii"
     },
     {
       "type": "archive",
@@ -518,6 +639,69 @@
     },
     {
       "type": "archive",
+      "title": "Крещение (2)",
+      "subtitle": "Крещение и жизнь после воды",
+      "date": "2025-05",
+      "tags": [
+        "крещение",
+        "новая жизнь",
+        "освящение",
+        "Рим. 6",
+        "проповедь"
+      ],
+      "path": "archive/kreshchenie-2.md",
+      "slug": "kreshchenie-2"
+    },
+    {
+      "type": "archive",
+      "title": "Иакова 5:14–20",
+      "subtitle": "Молитва веры, исповедание, восстановление",
+      "date": "2025-05",
+      "tags": [
+        "Иак. 5",
+        "молитва",
+        "исцеление",
+        "исповедание",
+        "Илия",
+        "разбор"
+      ],
+      "path": "archive/iakova-5-14-20.md",
+      "slug": "iakova-5-14-20"
+    },
+    {
+      "type": "archive",
+      "title": "Предназначение",
+      "subtitle": "Как найти своё предназначение?",
+      "date": "2025-04",
+      "tags": [
+        "проповедь",
+        "предназначение",
+        "призвание",
+        "Иер. 29",
+        "Еф. 2",
+        "тема"
+      ],
+      "path": "archive/prednaznachenie.md",
+      "slug": "prednaznachenie"
+    },
+    {
+      "type": "archive",
+      "title": "Иакова 5:13",
+      "subtitle": "Страдание и радость – молитва и хвала",
+      "date": "2025-03",
+      "tags": [
+        "Иак. 5",
+        "молитва",
+        "страдание",
+        "радость",
+        "хвала",
+        "разбор"
+      ],
+      "path": "archive/iakova-5-13.md",
+      "slug": "iakova-5-13"
+    },
+    {
+      "type": "archive",
       "title": "Второзаконие 31",
       "subtitle": "«Будь тверд и мужествен» – передача руководства и закон народу",
       "date": "2025-03",
@@ -531,6 +715,21 @@
       ],
       "path": "archive/vtorozakonie-31.md",
       "slug": "vtorozakonie-31"
+    },
+    {
+      "type": "archive",
+      "title": "Мальчик, хлеб и рыба",
+      "subtitle": "Иоанна 6:5-13",
+      "date": "2025-02",
+      "tags": [
+        "Ин. 6",
+        "дети",
+        "щедрость",
+        "чудо",
+        "разбор"
+      ],
+      "path": "archive/malchik-khleb-i-ryba.md",
+      "slug": "malchik-khleb-i-ryba"
     },
     {
       "type": "archive",
@@ -610,6 +809,36 @@
     },
     {
       "type": "archive",
+      "title": "Иакова 5:1–11",
+      "subtitle": "",
+      "date": "2024-12",
+      "tags": [
+        "Иак. 5",
+        "богатство",
+        "терпение",
+        "пришествие",
+        "разбор"
+      ],
+      "path": "archive/iakova-5-1-11.md",
+      "slug": "iakova-5-1-11"
+    },
+    {
+      "type": "archive",
+      "title": "Иакова 5:12",
+      "subtitle": "Честность в словах",
+      "date": "2024-12",
+      "tags": [
+        "Иак. 5",
+        "честность",
+        "клятва",
+        "слово",
+        "разбор"
+      ],
+      "path": "archive/iakova-5-12.md",
+      "slug": "iakova-5-12"
+    },
+    {
+      "type": "archive",
       "title": "Иакова 4:13–17",
       "subtitle": "Смирение перед волей Божьей и хрупкость жизни",
       "date": "2024-12",
@@ -623,6 +852,34 @@
       ],
       "path": "archive/iakova-4-13-17.md",
       "slug": "iakova-4-13-17"
+    },
+    {
+      "type": "archive",
+      "title": "Молитва за страны",
+      "subtitle": "Список стран для молитвы о гонимых христианах и о Кыргызстане",
+      "date": "2024-11",
+      "tags": [
+        "молитва",
+        "гонения",
+        "Кыргызстан",
+        "тема"
+      ],
+      "path": "archive/molitva-za-strany.md",
+      "slug": "molitva-za-strany"
+    },
+    {
+      "type": "archive",
+      "title": "Молитва за гонимых христиан",
+      "subtitle": "Страны, где вера во Христа стоит дороже всего",
+      "date": "2024-11",
+      "tags": [
+        "молитва",
+        "гонения",
+        "миссия",
+        "тема"
+      ],
+      "path": "archive/molitva-za-gonimykh-khristian.md",
+      "slug": "molitva-za-gonimykh-khristian"
     },
     {
       "type": "archive",
@@ -657,6 +914,22 @@
     },
     {
       "type": "archive",
+      "title": "Призыв радоваться",
+      "subtitle": "Радость — радость совершенная",
+      "date": "2024-05",
+      "tags": [
+        "Флп. 4",
+        "Ин. 15",
+        "1 Ин. 1",
+        "тема",
+        "радость",
+        "проповедь"
+      ],
+      "path": "archive/prizyv-radovatsya.md",
+      "slug": "prizyv-radovatsya"
+    },
+    {
+      "type": "archive",
       "title": "Иакова 2:1–9 – Лицеприятие",
       "subtitle": "Лицеприятие – оказывать предпочтения одним людям перед другими",
       "date": "2024-05",
@@ -670,6 +943,22 @@
       ],
       "path": "archive/iakova-2-1-9-litsepriyatie.md",
       "slug": "iakova-2-1-9-litsepriyatie"
+    },
+    {
+      "type": "archive",
+      "title": "Предательство",
+      "subtitle": "Матфея 26 – ученики оставляют Иисуса",
+      "date": "2024-04",
+      "tags": [
+        "Мф. 26",
+        "проповедь",
+        "верность",
+        "ученичество",
+        "Пётр",
+        "Гефсимания"
+      ],
+      "path": "archive/predatelstvo.md",
+      "slug": "predatelstvo"
     },
     {
       "type": "archive",
@@ -854,6 +1143,51 @@
     },
     {
       "type": "archive",
+      "title": "Пятница 24.11.23",
+      "subtitle": "Псалом 1 и насыщение пяти тысяч",
+      "date": "2023-11",
+      "tags": [
+        "Пс. 1",
+        "Ин. 6",
+        "разбор",
+        "плод",
+        "посвящение"
+      ],
+      "path": "archive/pyatnitsa-24-11-23.md",
+      "slug": "pyatnitsa-24-11-23"
+    },
+    {
+      "type": "archive",
+      "title": "Письмо Христово",
+      "subtitle": "2 Коринфянам 3:2-3",
+      "date": "2023-11",
+      "tags": [
+        "2 Кор. 3",
+        "проповедь",
+        "свидетельство",
+        "характер Христа",
+        "любовь"
+      ],
+      "path": "archive/pismo-khristovo.md",
+      "slug": "pismo-khristovo"
+    },
+    {
+      "type": "archive",
+      "title": "Не унывай",
+      "subtitle": "Вечернее слово – Гал. 6:9",
+      "date": "2023-11",
+      "tags": [
+        "Гал. 6",
+        "уныние",
+        "служение",
+        "добро",
+        "проповедь"
+      ],
+      "path": "archive/ne-unyvay-vecher.md",
+      "slug": "ne-unyvay-vecher"
+    },
+    {
+      "type": "archive",
       "title": "Жить в ожидании Христа",
       "subtitle": "",
       "date": "2023-11",
@@ -883,6 +1217,20 @@
       ],
       "path": "archive/bud-detem-khrista.md",
       "slug": "bud-detem-khrista"
+    },
+    {
+      "type": "archive",
+      "title": "Иисус – Царь! А я Раб",
+      "subtitle": "Иоанна 12:12-19",
+      "date": "2023-07",
+      "tags": [
+        "Ин. 12",
+        "царь",
+        "господство",
+        "проповедь"
+      ],
+      "path": "archive/iisus-tsar-a-ya-rab.md",
+      "slug": "iisus-tsar-a-ya-rab"
     },
     {
       "type": "archive",
@@ -978,6 +1326,22 @@
     },
     {
       "type": "archive",
+      "title": "Привычки",
+      "subtitle": "Формирование добрых привычек у христианина",
+      "date": "2023-01",
+      "tags": [
+        "1 Тим. 4",
+        "Еф. 4",
+        "Кол. 3",
+        "тема",
+        "благочестие",
+        "освящение"
+      ],
+      "path": "archive/privychki.md",
+      "slug": "privychki"
+    },
+    {
+      "type": "archive",
       "title": "Доверие Богу",
       "subtitle": "Доверие Его призыву и доверие своих проблем",
       "date": "2023-01",
@@ -1024,6 +1388,20 @@
     },
     {
       "type": "archive",
+      "title": "Иона 3",
+      "subtitle": "Покаяние Ниневии и милость Божья",
+      "date": "2022-11",
+      "tags": [
+        "Иона 3",
+        "покаяние",
+        "милость",
+        "разбор"
+      ],
+      "path": "archive/iona.md",
+      "slug": "iona"
+    },
+    {
+      "type": "archive",
       "title": "Божий план на мою жизнь",
       "subtitle": "Как узнать Божий план и живу ли я по Его плану?",
       "date": "2022-10",
@@ -1056,6 +1434,21 @@
     },
     {
       "type": "archive",
+      "title": "Искушение",
+      "subtitle": "Иакова 1:12-17",
+      "date": "2022-09",
+      "tags": [
+        "Иак. 1",
+        "искушение",
+        "похоть",
+        "молитва",
+        "тема"
+      ],
+      "path": "archive/iskushenie.md",
+      "slug": "iskushenie"
+    },
+    {
+      "type": "archive",
       "title": "2 Петра 2 – Лжеучения",
       "subtitle": "Лжеучители и распространённые лжеучения сегодня",
       "date": "2022-09",
@@ -1068,6 +1461,21 @@
       ],
       "path": "archive/2-petra-2-lzheucheniya.md",
       "slug": "2-petra-2-lzheucheniya"
+    },
+    {
+      "type": "archive",
+      "title": "Преображение Иисуса",
+      "subtitle": "Луки 9:28–36",
+      "date": "2022-08",
+      "tags": [
+        "Лк. 9",
+        "проповедь",
+        "разбор",
+        "слава Христа",
+        "ученичество"
+      ],
+      "path": "archive/preobrazhenie-iisusa.md",
+      "slug": "preobrazhenie-iisusa"
     },
     {
       "type": "archive",
@@ -1099,6 +1507,21 @@
       ],
       "path": "archive/v-nyom-mir.md",
       "slug": "v-nyom-mir"
+    },
+    {
+      "type": "archive",
+      "title": "Любящий Христос",
+      "subtitle": "Ефесянам 3:14–21 – познать любовь Христову",
+      "date": "2022-07",
+      "tags": [
+        "любовь Христа",
+        "Еф. 3",
+        "молитва Павла",
+        "познание Бога",
+        "разбор"
+      ],
+      "path": "archive/lyubyashchiy-khristos.md",
+      "slug": "lyubyashchiy-khristos"
     },
     {
       "type": "archive",
@@ -1148,6 +1571,50 @@
     },
     {
       "type": "archive",
+      "title": "Прощающий Бог – Притча о блудном сыне",
+      "subtitle": "Луки 15:11–24",
+      "date": "2022-05",
+      "tags": [
+        "Лк. 15",
+        "проповедь",
+        "прощение",
+        "покаяние",
+        "притча"
+      ],
+      "path": "archive/proshchayushchiy-bog-pritcha-o-bludnom-syne.md",
+      "slug": "proshchayushchiy-bog-pritcha-o-bludnom-syne"
+    },
+    {
+      "type": "archive",
+      "title": "Почему важно думать о Христе",
+      "subtitle": "Евреям 12:1-3",
+      "date": "2022-05",
+      "tags": [
+        "Евр. 12",
+        "проповедь",
+        "размышление",
+        "подражание Христу",
+        "духовная жизнь"
+      ],
+      "path": "archive/pochemu-vazhno-dumat-o-khriste.md",
+      "slug": "pochemu-vazhno-dumat-o-khriste"
+    },
+    {
+      "type": "archive",
+      "title": "Крещение",
+      "subtitle": "Что такое крещение и что ему предшествует",
+      "date": "2022-04",
+      "tags": [
+        "крещение",
+        "покаяние",
+        "вера",
+        "тема"
+      ],
+      "path": "archive/kreshchenie.md",
+      "slug": "kreshchenie"
+    },
+    {
+      "type": "archive",
       "title": "Вечеря – Halle",
       "subtitle": "Почему важно думать о Христе: жизнь с избытком, участие Бога, цена креста",
       "date": "2022-01",
@@ -1179,6 +1646,21 @@
     },
     {
       "type": "archive",
+      "title": "Притча о неразумном богаче",
+      "subtitle": "Луки 12:13–21",
+      "date": "2021-12",
+      "tags": [
+        "Лк. 12",
+        "разбор",
+        "проповедь",
+        "любостяжание",
+        "вечность"
+      ],
+      "path": "archive/pritcha-o-nerazumnom-bogache.md",
+      "slug": "pritcha-o-nerazumnom-bogache"
+    },
+    {
+      "type": "archive",
       "title": "Два сына",
       "subtitle": "Притча о двух сыновьях (Мф. 21:28–32) – черновик, материал не доработан",
       "date": "2021-12",
@@ -1191,6 +1673,36 @@
       ],
       "path": "archive/dva-syna-ne-gotovo.md",
       "slug": "dva-syna-ne-gotovo"
+    },
+    {
+      "type": "archive",
+      "title": "Пастырь добрый",
+      "subtitle": "Иоанна 10:1–16",
+      "date": "2021-11",
+      "tags": [
+        "Ин. 10",
+        "Христос-Пастырь",
+        "спасение",
+        "следование за Христом",
+        "проповедь"
+      ],
+      "path": "archive/pastyr-dobryy.md",
+      "slug": "pastyr-dobryy"
+    },
+    {
+      "type": "archive",
+      "title": "Прощать другим",
+      "subtitle": "Притча о рабе, который не хотел прощать (Матфея 18:21–35)",
+      "date": "2021-10",
+      "tags": [
+        "Мф. 18",
+        "разбор",
+        "проповедь",
+        "прощение",
+        "притча"
+      ],
+      "path": "archive/proshchat-drugim.md",
+      "slug": "proshchat-drugim"
     },
     {
       "type": "archive",
@@ -1207,6 +1719,22 @@
       ],
       "path": "archive/bozhya-zabota-angel-khranitel.md",
       "slug": "bozhya-zabota-angel-khranitel"
+    },
+    {
+      "type": "archive",
+      "title": "Пятидесятница",
+      "subtitle": "Сошествие Духа Святого – Деяния 2:1–13",
+      "date": "2021-06",
+      "tags": [
+        "Деян. 2",
+        "Ин. 14",
+        "Ин. 16",
+        "проповедь",
+        "Дух Святой",
+        "Пятидесятница"
+      ],
+      "path": "archive/pyatidesyatnitsa.md",
+      "slug": "pyatidesyatnitsa"
     },
     {
       "type": "archive",
@@ -1453,6 +1981,64 @@
     },
     {
       "type": "archive",
+      "title": "Радость",
+      "subtitle": "Радость совершенная – во Христе",
+      "date": "2019-12",
+      "tags": [
+        "Ин. 15",
+        "1 Ин. 1",
+        "Флп. 4",
+        "проповедь",
+        "радость",
+        "тема"
+      ],
+      "path": "archive/radost.md",
+      "slug": "radost"
+    },
+    {
+      "type": "archive",
+      "title": "Иисус – Бог любящий",
+      "subtitle": "",
+      "date": "2019-11",
+      "tags": [
+        "Иисус",
+        "любовь Божья",
+        "крест",
+        "проповедь"
+      ],
+      "path": "archive/iisus-bog-lyubyashchiy.md",
+      "slug": "iisus-bog-lyubyashchiy"
+    },
+    {
+      "type": "archive",
+      "title": "Оставить и следовать",
+      "subtitle": "Луки 9:57–62",
+      "date": "2019-10",
+      "tags": [
+        "Лк. 9",
+        "следование за Христом",
+        "ученичество",
+        "проповедь"
+      ],
+      "path": "archive/ostavit-i-sledovat.md",
+      "slug": "ostavit-i-sledovat"
+    },
+    {
+      "type": "archive",
+      "title": "Псалом 24",
+      "subtitle": "Молитва – анализ сердца перед Богом",
+      "date": "2019-09",
+      "tags": [
+        "Пс. 24",
+        "проповедь",
+        "молитва",
+        "покаяние"
+      ],
+      "path": "archive/psalom-24.md",
+      "slug": "psalom-24"
+    },
+    {
+      "type": "archive",
       "title": "Вифезда – Исцеление",
       "subtitle": "Исцеление больного в Вифезде – Иоанна 5:1-14",
       "date": "2019-09",
@@ -1465,6 +2051,67 @@
       ],
       "path": "archive/vifezda-istselenie.md",
       "slug": "vifezda-istselenie"
+    },
+    {
+      "type": "archive",
+      "title": "Иисус законодатель",
+      "subtitle": "",
+      "date": "2019-07",
+      "tags": [
+        "Иисус",
+        "закон",
+        "суд",
+        "Мф. 5",
+        "проповедь"
+      ],
+      "path": "archive/iisus-zakonodatel.md",
+      "slug": "iisus-zakonodatel"
+    },
+    {
+      "type": "archive",
+      "title": "Иисус судья",
+      "subtitle": "",
+      "date": "2019-06",
+      "tags": [
+        "Иисус",
+        "суд",
+        "спасение",
+        "Мф. 25",
+        "проповедь"
+      ],
+      "path": "archive/iisus-sudya.md",
+      "slug": "iisus-sudya"
+    },
+    {
+      "type": "archive",
+      "title": "Иисус спаситель (Крест)",
+      "subtitle": "",
+      "date": "2019-06",
+      "tags": [
+        "Иисус",
+        "крест",
+        "спасение",
+        "Гал. 3",
+        "проповедь"
+      ],
+      "path": "archive/iisus-spasitel-krest.md",
+      "slug": "iisus-spasitel-krest"
+    },
+    {
+      "type": "archive",
+      "title": "Иисус Учитель (Пасха 2019)",
+      "subtitle": "",
+      "date": "2019-04",
+      "tags": [
+        "Иисус",
+        "учитель",
+        "Пасха",
+        "вера",
+        "Ин. 20",
+        "проповедь"
+      ],
+      "path": "archive/iisus-uchitel-paskha-2019.md",
+      "slug": "iisus-uchitel-paskha-2019"
     },
     {
       "type": "archive",
@@ -1481,6 +2128,49 @@
       ],
       "path": "archive/verbnoe-voskresenie-2019-iisus-tsar.md",
       "slug": "verbnoe-voskresenie-2019-iisus-tsar"
+    },
+    {
+      "type": "archive",
+      "title": "Не всякий, говорящий Мне: «Господи! Господи!»",
+      "subtitle": "Мф. 7:21 – об отношении ко Христу как к Господу",
+      "date": "2019-02",
+      "tags": [
+        "Мф. 7",
+        "Мф. 19",
+        "Деян. 9",
+        "послушание",
+        "господство Христа",
+        "проповедь"
+      ],
+      "path": "archive/ne-vsyakiy-govoryashchiy-mne-gospodi.md",
+      "slug": "ne-vsyakiy-govoryashchiy-mne-gospodi"
+    },
+    {
+      "type": "archive",
+      "title": "От идолов к Богу",
+      "subtitle": "Цари Иудеи: Езекия, Манассия, Амнон, Иосия (2 Пар 29–34)",
+      "date": "2018-12",
+      "tags": [
+        "2 Пар.",
+        "идолы",
+        "покаяние",
+        "цари Иудеи",
+        "тема"
+      ],
+      "path": "archive/ot-idolov-k-bogu.md",
+      "slug": "ot-idolov-k-bogu"
+    },
+    {
+      "type": "archive",
+      "title": "Краски",
+      "subtitle": "",
+      "date": "2018-09",
+      "tags": [
+        "тема",
+        "иллюстрация"
+      ],
+      "path": "archive/kraski.md",
+      "slug": "kraski"
     },
     {
       "type": "archive",
@@ -1602,6 +2292,20 @@
     },
     {
       "type": "archive",
+      "title": "Мотивы в служении Богу",
+      "subtitle": "Мотивация служения Богу и жизни по Его воле",
+      "date": "2017-12",
+      "tags": [
+        "служение",
+        "мотивация",
+        "сердце",
+        "проповедь"
+      ],
+      "path": "archive/motivy-v-sluzhenii-bogu.md",
+      "slug": "motivy-v-sluzhenii-bogu"
+    },
+    {
+      "type": "archive",
       "title": "Елисей",
       "subtitle": "История призвания и посвящения пророка Елисея",
       "date": "2017-12",
@@ -1633,6 +2337,21 @@
     },
     {
       "type": "archive",
+      "title": "Отношение к Писанию",
+      "subtitle": "Серьёзное отношение к Слову Божьему – Притча о сеятеле (Лк. 8:5–15)",
+      "date": "2017-11",
+      "tags": [
+        "Лк. 8",
+        "Писание",
+        "притча о сеятеле",
+        "исполнение Слова",
+        "проповедь"
+      ],
+      "path": "archive/otnoshenie-k-pisaniyu.md",
+      "slug": "otnoshenie-k-pisaniyu"
+    },
+    {
+      "type": "archive",
       "title": "Жизнь – Христос",
       "subtitle": "Пример Иисуса Навина и призыв жить для Христа",
       "date": "2017-09",
@@ -1646,6 +2365,36 @@
       ],
       "path": "archive/zhizn-khristos.md",
       "slug": "zhizn-khristos"
+    },
+    {
+      "type": "archive",
+      "title": "Идеи",
+      "subtitle": "Страх Божий VS боязнь перед людьми; кротость, служение",
+      "date": "2017-07",
+      "tags": [
+        "идеи",
+        "кротость",
+        "служение",
+        "страх Божий",
+        "тема"
+      ],
+      "path": "archive/idei-2.md",
+      "slug": "idei-2"
+    },
+    {
+      "type": "archive",
+      "title": "Молитва о домостроительстве Церкви",
+      "subtitle": "Тема молитвенного собрания",
+      "date": "2016-07",
+      "tags": [
+        "молитва",
+        "церковь",
+        "единство",
+        "Слово Божие",
+        "тема"
+      ],
+      "path": "archive/molitva-o-domostroitelstve-tserkvi.md",
+      "slug": "molitva-o-domostroitelstve-tserkvi"
     }
   ]
 }

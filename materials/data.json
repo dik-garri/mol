@@ -3,15 +3,15 @@
     {
       "type": "sermon",
       "title": "Лицемерие и религиозность",
-      "subtitle": "",
+      "subtitle": "Фарисей и мытарь – зеркало для религиозного человека",
       "date": "2026-05",
       "tags": [
+        "лицемерие",
+        "фарисейство",
+        "смирение",
         "Лк. 18",
         "Мф. 23",
-        "фарисеи",
-        "лицемерие",
-        "сердце",
-        "мытарь"
+        "проповедь"
       ],
       "path": "sermons/litsemerie-i-religioznost.md",
       "slug": "litsemerie-i-religioznost"
@@ -19,42 +19,62 @@
     {
       "type": "sermon",
       "title": "Царь на осле",
-      "subtitle": "",
+      "subtitle": "Вербное воскресенье",
       "date": "2026-04",
       "tags": [
-        "Вербное воскресенье",
-        "Зах. 9",
         "Мф. 21",
-        "царь",
-        "смирение"
+        "Зах. 9",
+        "смирение",
+        "кротость",
+        "вербное воскресенье",
+        "проповедь"
       ],
       "path": "sermons/tsar-na-osle.md",
       "slug": "tsar-na-osle"
     },
     {
       "type": "sermon",
-      "title": "Перед крещением",
-      "subtitle": "",
+      "title": "Страстная пятница",
+      "subtitle": "Крест как исполнение заветной клятвы Бога",
       "date": "2026-04",
       "tags": [
-        "крещение",
-        "Деян. 2",
-        "покаяние",
-        "прощение"
+        "Страстная пятница",
+        "крест",
+        "Быт. 15",
+        "Иер. 31",
+        "Ис. 53",
+        "новый завет",
+        "проповедь"
       ],
-      "path": "sermons/pered-kresheniem.md",
-      "slug": "pered-kresheniem"
+      "path": "sermons/strastnaya-pyatnitsa.md",
+      "slug": "strastnaya-pyatnitsa"
+    },
+    {
+      "type": "sermon",
+      "title": "Перед крещением",
+      "subtitle": "Деяния 2:37–41 – порядок Божий: услышать, поверить, покаяться, креститься",
+      "date": "2026-04",
+      "tags": [
+        "Деян. 2",
+        "крещение",
+        "покаяние",
+        "Рим. 6",
+        "проповедь"
+      ],
+      "path": "sermons/pered-kreshcheniem.md",
+      "slug": "pered-kreshcheniem"
     },
     {
       "type": "sermon",
       "title": "Любовь – наибольшая заповедь",
-      "subtitle": "",
+      "subtitle": "Любовь к Богу и к ближнему как сердце всего закона",
       "date": "2026-04",
       "tags": [
-        "Мф. 22",
         "любовь",
-        "заповедь",
-        "ближний"
+        "наибольшая заповедь",
+        "Мф. 22",
+        "1 Кор. 13",
+        "проповедь"
       ],
       "path": "sermons/lyubov-naibolshaya-zapoved.md",
       "slug": "lyubov-naibolshaya-zapoved"
@@ -89,6 +109,81 @@
       ],
       "path": "sermons/tsarstvo-bozhie.md",
       "slug": "tsarstvo-bozhie"
+    },
+    {
+      "type": "sermon",
+      "title": "Самарянка",
+      "subtitle": "Разговор, который открыл правду и изменил жизнь",
+      "date": "2026-02",
+      "tags": [
+        "Ин. 4",
+        "свидетельство",
+        "жажда",
+        "проповедь"
+      ],
+      "path": "sermons/samaryanka.md",
+      "slug": "samaryanka"
+    },
+    {
+      "type": "sermon",
+      "title": "Похороны",
+      "subtitle": "Дрюпина Галина Петровна",
+      "date": "2026-02",
+      "tags": [
+        "проповедь",
+        "похороны",
+        "смерть",
+        "вечная жизнь",
+        "1 Фес. 4",
+        "спасение"
+      ],
+      "path": "sermons/pokhorony.md",
+      "slug": "pokhorony"
+    },
+    {
+      "type": "sermon",
+      "title": "Новый год",
+      "subtitle": "Размышления на стыке года – Божья верность и упование",
+      "date": "2026-01",
+      "tags": [
+        "новый год",
+        "благодарность",
+        "упование",
+        "размышление",
+        "тема"
+      ],
+      "path": "sermons/novyy-god.md",
+      "slug": "novyy-god"
+    },
+    {
+      "type": "sermon",
+      "title": "Крещение Христово 2026",
+      "subtitle": "Луки 3:21–22 – зачем Иисусу было креститься",
+      "date": "2026-01",
+      "tags": [
+        "крещение Христа",
+        "Лк. 3",
+        "молитва",
+        "идентичность",
+        "проповедь"
+      ],
+      "path": "sermons/kreshchenie-khristovo-2026.md",
+      "slug": "kreshchenie-khristovo-2026"
+    },
+    {
+      "type": "sermon",
+      "title": "Группа Руфь",
+      "subtitle": "Вопросы для разбора книги Руфь по персонажам",
+      "date": "2026-01",
+      "tags": [
+        "Руфь",
+        "разбор",
+        "Ноеминь",
+        "Вооз",
+        "искупление"
+      ],
+      "path": "sermons/gruppa-ruf.md",
+      "slug": "gruppa-ruf"
     }
   ],
   "luki": [
@@ -347,170 +442,6 @@
     }
   ],
   "archive": [
-    {
-      "type": "archive",
-      "title": "Лицемерие и религиозность",
-      "subtitle": "Фарисей и мытарь – зеркало для религиозного человека",
-      "date": "2026-05",
-      "tags": [
-        "лицемерие",
-        "фарисейство",
-        "смирение",
-        "Лк. 18",
-        "Мф. 23",
-        "проповедь"
-      ],
-      "path": "archive/litsemerie-i-religioznost.md",
-      "slug": "litsemerie-i-religioznost",
-      "category": "themes"
-    },
-    {
-      "type": "archive",
-      "title": "Царь на осле",
-      "subtitle": "Вербное воскресенье",
-      "date": "2026-04",
-      "tags": [
-        "Мф. 21",
-        "Зах. 9",
-        "смирение",
-        "кротость",
-        "вербное воскресенье",
-        "проповедь"
-      ],
-      "path": "archive/tsar-na-osle.md",
-      "slug": "tsar-na-osle",
-      "category": "themes"
-    },
-    {
-      "type": "archive",
-      "title": "Страстная пятница",
-      "subtitle": "Крест как исполнение заветной клятвы Бога",
-      "date": "2026-04",
-      "tags": [
-        "Страстная пятница",
-        "крест",
-        "Быт. 15",
-        "Иер. 31",
-        "Ис. 53",
-        "новый завет",
-        "проповедь"
-      ],
-      "path": "archive/strastnaya-pyatnitsa.md",
-      "slug": "strastnaya-pyatnitsa",
-      "category": "feasts"
-    },
-    {
-      "type": "archive",
-      "title": "Перед крещением",
-      "subtitle": "Деяния 2:37–41 – порядок Божий: услышать, поверить, покаяться, креститься",
-      "date": "2026-04",
-      "tags": [
-        "Деян. 2",
-        "крещение",
-        "покаяние",
-        "Рим. 6",
-        "проповедь"
-      ],
-      "path": "archive/pered-kreshcheniem.md",
-      "slug": "pered-kreshcheniem",
-      "category": "themes"
-    },
-    {
-      "type": "archive",
-      "title": "Любовь – наибольшая заповедь",
-      "subtitle": "Любовь к Богу и к ближнему как сердце всего закона",
-      "date": "2026-04",
-      "tags": [
-        "любовь",
-        "наибольшая заповедь",
-        "Мф. 22",
-        "1 Кор. 13",
-        "проповедь"
-      ],
-      "path": "archive/lyubov-naibolshaya-zapoved.md",
-      "slug": "lyubov-naibolshaya-zapoved",
-      "category": "themes"
-    },
-    {
-      "type": "archive",
-      "title": "Самарянка",
-      "subtitle": "Разговор, который открыл правду и изменил жизнь",
-      "date": "2026-02",
-      "tags": [
-        "Ин. 4",
-        "свидетельство",
-        "жажда",
-        "проповедь"
-      ],
-      "path": "archive/samaryanka.md",
-      "slug": "samaryanka",
-      "category": "themes"
-    },
-    {
-      "type": "archive",
-      "title": "Похороны",
-      "subtitle": "Дрюпина Галина Петровна",
-      "date": "2026-02",
-      "tags": [
-        "проповедь",
-        "похороны",
-        "смерть",
-        "вечная жизнь",
-        "1 Фес. 4",
-        "спасение"
-      ],
-      "path": "archive/pokhorony.md",
-      "slug": "pokhorony",
-      "category": "themes"
-    },
-    {
-      "type": "archive",
-      "title": "Новый год",
-      "subtitle": "Размышления на стыке года – Божья верность и упование",
-      "date": "2026-01",
-      "tags": [
-        "новый год",
-        "благодарность",
-        "упование",
-        "размышление",
-        "тема"
-      ],
-      "path": "archive/novyy-god.md",
-      "slug": "novyy-god",
-      "category": "feasts"
-    },
-    {
-      "type": "archive",
-      "title": "Крещение Христово 2026",
-      "subtitle": "Луки 3:21–22 – зачем Иисусу было креститься",
-      "date": "2026-01",
-      "tags": [
-        "крещение Христа",
-        "Лк. 3",
-        "молитва",
-        "идентичность",
-        "проповедь"
-      ],
-      "path": "archive/kreshchenie-khristovo-2026.md",
-      "slug": "kreshchenie-khristovo-2026",
-      "category": "feasts"
-    },
-    {
-      "type": "archive",
-      "title": "Группа Руфь",
-      "subtitle": "Вопросы для разбора книги Руфь по персонажам",
-      "date": "2026-01",
-      "tags": [
-        "Руфь",
-        "разбор",
-        "Ноеминь",
-        "Вооз",
-        "искупление"
-      ],
-      "path": "archive/gruppa-ruf.md",
-      "slug": "gruppa-ruf",
-      "category": "themes"
-    },
     {
       "type": "archive",
       "title": "Рождество как свет во тьме",

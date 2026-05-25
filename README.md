@@ -26,11 +26,17 @@
 | Тема | Ссылка |
 |------|--------|
 | Царство Божие | [sermons/tsarstvo-bozhie.md](sermons/tsarstvo-bozhie.md) |
-| Царь на осле (Вербное воскресенье) | [sermons/tsar-na-osle.md](sermons/tsar-na-osle.md) |
 | Клятва, которая стоила жизни (Страстная пятница) | [sermons/klyatva-kotoraya-stoila-zhizni.md](sermons/klyatva-kotoraya-stoila-zhizni.md) |
-| Любовь – наибольшая заповедь | [sermons/lyubov-naibolshaya-zapoved.md](sermons/lyubov-naibolshaya-zapoved.md) |
-| Перед крещением (≈15 мин) | [sermons/pered-kresheniem.md](sermons/pered-kresheniem.md) |
 | Лицемерие и религиозность | [sermons/litsemerie-i-religioznost.md](sermons/litsemerie-i-religioznost.md) |
+| Любовь – наибольшая заповедь | [sermons/lyubov-naibolshaya-zapoved.md](sermons/lyubov-naibolshaya-zapoved.md) |
+| Царь на осле (Вербное воскресенье) | [sermons/tsar-na-osle.md](sermons/tsar-na-osle.md) |
+| Страстная пятница | [sermons/strastnaya-pyatnitsa.md](sermons/strastnaya-pyatnitsa.md) |
+| Перед крещением | [sermons/pered-kreshcheniem.md](sermons/pered-kreshcheniem.md) |
+| Крещение Христово 2026 | [sermons/kreshchenie-khristovo-2026.md](sermons/kreshchenie-khristovo-2026.md) |
+| Новый год | [sermons/novyy-god.md](sermons/novyy-god.md) |
+| Похороны | [sermons/pokhorony.md](sermons/pokhorony.md) |
+| Самарянка | [sermons/samaryanka.md](sermons/samaryanka.md) |
+| Группа Руфь | [sermons/gruppa-ruf.md](sermons/gruppa-ruf.md) |
 
 ## Материалы (веб-интерфейс)
 

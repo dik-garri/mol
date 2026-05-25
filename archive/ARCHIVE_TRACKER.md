@@ -9,6 +9,7 @@
 - ✅ done
 - ⚠️ нужна ручная проверка
 - ❌ skip / нерелевантно
+- ➡️ перемещено в sermons/
 
 ## Список
 
@@ -74,7 +75,7 @@
 | 58 | ✅ | Второзаконие 31 | `vtorozakonie-31` | Второзаконие 31.docx | Второзаконие 31.pdf |
 | 59 | ✅ | Второзаконие 4 | `vtorozakonie-4` | Второзаконие 4.docx | Второзаконие 4.pdf |
 | 60 | ✅ | Второзаконие 6-10-25 | `vtorozakonie-6-10-25` | Второзаконие 6-10-25.docx | Второзаконие 6-10-25.pdf |
-| 61 | ✅ | Группа Руфь | `gruppa-ruf` | Группа Руфь.docx | — |
+| 61 | ➡️ | Группа Руфь | `gruppa-ruf` | Группа Руфь.docx | — | *moved to sermons/*
 | 62 | ✅ | Да будет воля твоя | `da-budet-volya-tvoya` | Да будет воля твоя.pages | — |
 | 63 | ✅ | Да будет воля твоя.docx | `da-budet-volya-tvoya-docx` | Да будет воля твоя.docx.docx | Да будет воля твоя.docx.pdf |
 | 64 | ✅ | Два сына - не готово | `dva-syna-ne-gotovo` | Два сына - не готово.docx | — |
@@ -116,9 +117,9 @@
 | 100 | ✅ | Краски | `kraski` | Краски.pptx | — |
 | 101 | ✅ | Крещение | `kreshchenie` | Крещение.docx | Крещение.pdf |
 | 102 | ✅ | Крещение (2) | `kreshchenie-2` | Крещение (2).docx | Крещение (2).pdf |
-| 103 | ✅ | Крещение Христово 2026 | `kreshchenie-khristovo-2026` | Крещение Христово 2026.docx | — |
-| 104 | ✅ | Лицемерие и религиозность | `litsemerie-i-religioznost` | Лицемерие и религиозность.docx | — |
-| 105 | ✅ | Любовь – наибольшая заповедь | `lyubov-naibolshaya-zapoved` | Любовь – наибольшая заповедь.docx | — |
+| 103 | ➡️ | Крещение Христово 2026 | `kreshchenie-khristovo-2026` | Крещение Христово 2026.docx | — | *moved to sermons/*
+| 104 | ➡️ | Лицемерие и религиозность | `litsemerie-i-religioznost` | Лицемерие и религиозность.docx | — | *moved to sermons/*
+| 105 | ➡️ | Любовь – наибольшая заповедь | `lyubov-naibolshaya-zapoved` | Любовь – наибольшая заповедь.docx | — | *moved to sermons/*
 | 106 | ✅ | Любящий Христос | `lyubyashchiy-khristos` | Любящий Христос.docx | Любящий Христос.pdf |
 | 107 | ✅ | Мальчик хлеб и рыба | `malchik-khleb-i-ryba` | Мальчик хлеб и рыба.docx | Мальчик хлеб и рыба.pdf |
 | 108 | ✅ | Мир Божий, пришедший на землю | `mir-bozhiy-prishedshiy-na-zemlyu` | Мир Божий, пришедший на землю.docx | — |
@@ -129,14 +130,14 @@
 | 113 | ✅ | Мотивы в служении Богу | `motivy-v-sluzhenii-bogu` | Мотивы в служении Богу.docx | — |
 | 114 | ✅ | Не всякий говорящий мне Господи  | `ne-vsyakiy-govoryashchiy-mne-gospodi` | Не всякий говорящий мне Господи .docx | — |
 | 115 | ✅ | Не унывай (вечер) | `ne-unyvay-vecher` | Не унывай (вечер).docx | Не унывай (вечер).pdf |
-| 116 | ✅ | новый год | `novyy-god` | новый год.docx | — |
+| 116 | ➡️ | новый год | `novyy-god` | новый год.docx | — | *moved to sermons/*
 | 117 | ✅ | Оставить и следовать | `ostavit-i-sledovat` | Оставить и следовать.docx | — |
 | 118 | ✅ | От идолов к Богу | `ot-idolov-k-bogu` | От идолов к Богу.docx | — |
 | 119 | ✅ | Отношение к Писанию | `otnoshenie-k-pisaniyu` | Отношение к Писанию.docx | — |
 | 120 | ✅ | Пастырь добрый | `pastyr-dobryy` | Пастырь добрый.docx | Пастырь добрый.pdf |
-| 121 | ✅ | Перед крещением | `pered-kreshcheniem` | Перед крещением.docx | — |
+| 121 | ➡️ | Перед крещением | `pered-kreshcheniem` | Перед крещением.docx | — | *moved to sermons/*
 | 122 | ✅ | Письмо Христово | `pismo-khristovo` | Письмо Христово.docx | Письмо Христово.pdf |
-| 123 | ✅ | похороны | `pokhorony` | похороны.docx | — |
+| 123 | ➡️ | похороны | `pokhorony` | похороны.docx | — | *moved to sermons/*
 | 124 | ✅ | Почему важно думать о Христе | `pochemu-vazhno-dumat-o-khriste` | Почему важно думать о Христе.docx | Почему важно думать о Христе.pdf |
 | 125 | ✅ | Предательство | `predatelstvo` | Предательство.docx | Предательство.pdf |
 | 126 | ✅ | Предназначение | `prednaznachenie` | Предназначение.docx | Предназначение.pdf |
@@ -167,7 +168,7 @@
 | 151 | ✅ | Рождество 2019 | `rozhdestvo-2019` | Рождество 2019.docx | — |
 | 152 | ✅ | Рождество 2022 | `rozhdestvo-2022` | Рождество 2022.docx | Рождество 2022.pdf |
 | 153 | ✅ | Рождество как свет во тьме | `rozhdestvo-kak-svet-vo-tme` | Рождество как свет во тьме.docx | — |
-| 154 | ✅ | Самарянка | `samaryanka` | Самарянка.docx | — |
+| 154 | ➡️ | Самарянка | `samaryanka` | Самарянка.docx | — | *moved to sermons/*
 | 155 | ✅ | Свет - церковь | `svet-tserkov` | Свет - церковь.docx | Свет - церковь.pdf |
 | 156 | ✅ | Свидетель - препятствия | `svidetel-prepyatstviya` | Свидетель - препятствия.docx | Свидетель - препятствия.pdf |
 | 157 | ✅ | семенар о Time Management | `semenar-o-time-management` | семенар о Time Management.docx | семенар о Time Management.pdf |
@@ -182,7 +183,7 @@
 | 166 | ✅ | Стих | `stikh` | Стих.pdf | — |
 | 167 | ✅ | Страдания Христа | `stradaniya-khrista` | Страдания Христа.docx | — |
 | 168 | ✅ | Страдания Христа_ размышление перед вечерей | `stradaniya-khrista-razmyshlenie-pered-vecherey` | Страдания Христа_ размышление перед вечерей.docx | — |
-| 169 | ✅ | Страстная пятница | `strastnaya-pyatnitsa` | Страстная пятница.docx | — |
+| 169 | ➡️ | Страстная пятница | `strastnaya-pyatnitsa` | Страстная пятница.docx | — | *moved to sermons/*
 | 170 | ✅ | Страстной вторник | `strastnoy-vtornik` | Страстной вторник.docx | Страстной вторник.pdf |
 | 171 | ✅ | Страстной понедельник | `strastnoy-ponedelnik` | Страстной понедельник.docx | Страстной понедельник.pdf |
 | 172 | ✅ | Страстной четверг | `strastnoy-chetverg` | Страстной четверг.docx | Страстной четверг.pdf |
@@ -203,7 +204,7 @@
 | 187 | ✅ | Ход вечери_ | `khod-vecheri` | Ход вечери_.docx | — |
 | 188 | ✅ | Хронология жизни Павла | `khronologiya-zhizni-pavla` | Хронология жизни Павла.docx | — |
 | 189 | ✅ | Царство небесное — его ценность и ожидание | `tsarstvo-nebesnoe-ego-tsennost-i-ozhidanie` | Царство небесное — его ценность и ожидание.docx | — |
-| 190 | ✅ | Царь на осле | `tsar-na-osle` | Царь на осле.docx | — |
+| 190 | ➡️ | Царь на осле | `tsar-na-osle` | Царь на осле.docx | — | *moved to sermons/*
 | 191 | ✅ | Церковь | `tserkov` | Церковь.docx | — |
 | 192 | ✅ | Что мешает мне быть учеником Христа | `chto-meshaet-mne-byt-uchenikom-khrista` | Что мешает мне быть учеником Христа.docx | Что мешает мне быть учеником Христа.pdf |
 | 193 | ✅ | Что посеешь то и пожнешь | `chto-poseesh-to-i-pozhnesh` | Что посеешь то и пожнешь.docx | — |

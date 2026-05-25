@@ -224,10 +224,12 @@ def ensure_frontmatter(path: Path, default_key: str) -> dict:
     return meta
 
 
+META_FILES = {"TEMPLATE.md", "AGENT_GUIDE.md", "ARCHIVE_TRACKER.md", "README.md"}
+
 def collect(dir_path: Path, kind: str, pattern: str) -> list[dict]:
     items = []
     for p in sorted(dir_path.glob(pattern)):
-        if p.name == "TEMPLATE.md":
+        if p.name in META_FILES:
             continue
         meta = ensure_frontmatter(p, p.name)
         if not meta:

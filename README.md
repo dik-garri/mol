@@ -35,7 +35,6 @@
 | Новый год | [sermons/novyy-god.md](sermons/novyy-god.md) |
 | Похороны | [sermons/pokhorony.md](sermons/pokhorony.md) |
 | Самарянка | [sermons/samaryanka.md](sermons/samaryanka.md) |
-| Группа Руфь | [sermons/gruppa-ruf.md](sermons/gruppa-ruf.md) |
 
 ## Материалы (веб-интерфейс)
 

@@ -184,6 +184,8 @@ header p {
   margin-bottom: 18px;
 }
 
+.subtabs[hidden] { display: none; }
+
 .subtab {
   background: var(--bg-elevated);
   border: 1.5px solid var(--line);

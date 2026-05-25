@@ -6,9 +6,12 @@ const $$ = (s, root = document) => Array.from(root.querySelectorAll(s));
 const state = {
   data: { sermons: [], luki: [], draft: [], archive: [] },
   tab: "sermons",
+  subtab: "all",
   query: "",
   activeTags: new Set(),
 };
+
+const SUBTAB_KEYS = ["all", "series-nt", "series-ot", "attributes", "feasts", "seminars", "themes"];
 
 const monthNames = [
   "", "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
@@ -42,11 +45,36 @@ function matchesActiveTags(item) {
   return true;
 }
 
+function matchesSubtab(item) {
+  if (state.tab !== "archive" || state.subtab === "all") return true;
+  return item.category === state.subtab;
+}
+
+function renderSubtabs() {
+  const box = $("#subtabs");
+  if (state.tab !== "archive") {
+    box.hidden = true;
+    return;
+  }
+  box.hidden = false;
+  const items = state.data.archive || [];
+  const counts = { all: items.length };
+  for (const it of items) {
+    const c = it.category || "themes";
+    counts[c] = (counts[c] || 0) + 1;
+  }
+  for (const key of SUBTAB_KEYS) {
+    const el = document.getElementById(`sub-${key}`);
+    if (el) el.textContent = counts[key] || 0;
+  }
+  $$(".subtab").forEach((b) => b.classList.toggle("active", b.dataset.subtab === state.subtab));
+}
+
 function renderList() {
   const list = $("#materials-list");
   const items = state.data[state.tab] || [];
   const q = normalize(state.query);
-  const filtered = items.filter((it) => matchesQuery(it, q) && matchesActiveTags(it));
+  const filtered = items.filter((it) => matchesQuery(it, q) && matchesActiveTags(it) && matchesSubtab(it));
 
   list.innerHTML = "";
   $("#empty-state").hidden = filtered.length > 0;
@@ -106,6 +134,8 @@ function renderList() {
   $("#count-draft").textContent = (state.data.draft || []).length;
   $("#count-archive").textContent = (state.data.archive || []).length;
 
+  renderSubtabs();
+
   renderActiveTags();
 }
 
@@ -130,7 +160,14 @@ function toggleTag(t) {
 
 function setTab(tab) {
   state.tab = tab;
+  // Reset subtab when leaving archive
+  if (tab !== "archive") state.subtab = "all";
   $$(".tab").forEach((el) => el.classList.toggle("active", el.dataset.tab === tab));
+  renderList();
+}
+
+function setSubtab(sub) {
+  state.subtab = sub;
   renderList();
 }
 
@@ -264,6 +301,11 @@ function init() {
   // Tabs
   $$(".tab").forEach((btn) => {
     btn.addEventListener("click", () => setTab(btn.dataset.tab));
+  });
+
+  // Subtabs (archive only)
+  $$(".subtab").forEach((btn) => {
+    btn.addEventListener("click", () => setSubtab(btn.dataset.subtab));
   });
 
   // Back to list

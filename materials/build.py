@@ -235,7 +235,7 @@ def collect(dir_path: Path, kind: str, pattern: str) -> list[dict]:
         if not meta:
             continue
         rel = p.relative_to(ROOT).as_posix()
-        items.append({
+        item = {
             "type": kind,
             "title": meta.get("title", p.stem),
             "subtitle": meta.get("subtitle", ""),
@@ -243,7 +243,10 @@ def collect(dir_path: Path, kind: str, pattern: str) -> list[dict]:
             "tags": meta.get("tags", []),
             "path": rel,
             "slug": p.stem,
-        })
+        }
+        if "category" in meta:
+            item["category"] = meta["category"]
+        items.append(item)
     return items
 
 

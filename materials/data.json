@@ -657,20 +657,6 @@
     },
     {
       "type": "archive",
-      "title": "Семинар о технологиях",
-      "subtitle": "Черновик-заготовка без содержания (расширенная версия в отдельном файле)",
-      "date": "2025-07",
-      "tags": [
-        "технологии",
-        "семинар",
-        "заметка"
-      ],
-      "path": "archive/semenar-o-tekhnologiyakh.md",
-      "slug": "semenar-o-tekhnologiyakh",
-      "category": "seminars"
-    },
-    {
-      "type": "archive",
       "title": "Да будет воля твоя",
       "subtitle": "Разбор прошения «да будет воля Твоя» из молитвы «Отче наш»",
       "date": "2025-07",
@@ -766,21 +752,6 @@
       "path": "archive/semenar-o-time-management.md",
       "slug": "semenar-o-time-management",
       "category": "seminars"
-    },
-    {
-      "type": "archive",
-      "title": "Стих – Псалом 55:4 (раскраска)",
-      "subtitle": "Печатный лист с раскраской для детей",
-      "date": "2025-06",
-      "tags": [
-        "Пс. 55",
-        "дети",
-        "раскраска",
-        "стих для запоминания"
-      ],
-      "path": "archive/stikh.md",
-      "slug": "stikh",
-      "category": "themes"
     },
     {
       "type": "archive",
@@ -1096,21 +1067,6 @@
     },
     {
       "type": "archive",
-      "title": "Молитва за страны",
-      "subtitle": "Список стран для молитвы о гонимых христианах и о Кыргызстане",
-      "date": "2024-11",
-      "tags": [
-        "молитва",
-        "гонения",
-        "Кыргызстан",
-        "тема"
-      ],
-      "path": "archive/molitva-za-strany.md",
-      "slug": "molitva-za-strany",
-      "category": "themes"
-    },
-    {
-      "type": "archive",
       "title": "Молитва за гонимых христиан",
       "subtitle": "Страны, где вера во Христа стоит дороже всего",
       "date": "2024-11",
@@ -1306,21 +1262,6 @@
       "path": "archive/den-materi.md",
       "slug": "den-materi",
       "category": "feasts"
-    },
-    {
-      "type": "archive",
-      "title": "Второзаконие – помни",
-      "subtitle": "О чём и почему Бог призывает Израиль помнить",
-      "date": "2024-03",
-      "tags": [
-        "Втор. 4",
-        "Втор. 8",
-        "память",
-        "тема"
-      ],
-      "path": "archive/vtorozaknie-pomni.md",
-      "slug": "vtorozaknie-pomni",
-      "category": "series-ot"
     },
     {
       "type": "archive",
@@ -2252,22 +2193,6 @@
     },
     {
       "type": "archive",
-      "title": "Два сына",
-      "subtitle": "Притча о двух сыновьях (Мф. 21:28–32) – черновик, материал не доработан",
-      "date": "2021-12",
-      "tags": [
-        "Мф. 21",
-        "притча",
-        "покаяние",
-        "проповедь",
-        "черновик"
-      ],
-      "path": "archive/dva-syna-ne-gotovo.md",
-      "slug": "dva-syna-ne-gotovo",
-      "category": "themes"
-    },
-    {
-      "type": "archive",
       "title": "Пастырь добрый",
       "subtitle": "Иоанна 10:1–16",
       "date": "2021-11",
@@ -2364,21 +2289,6 @@
       ],
       "path": "archive/tsarstvo-nebesnoe-ego-tsennost-i-ozhidanie.md",
       "slug": "tsarstvo-nebesnoe-ego-tsennost-i-ozhidanie",
-      "category": "themes"
-    },
-    {
-      "type": "archive",
-      "title": "Идеи и заметки",
-      "subtitle": "Мысли проповеди",
-      "date": "2021-05",
-      "tags": [
-        "заметки",
-        "идеи",
-        "темы",
-        "проповедь"
-      ],
-      "path": "archive/idei.md",
-      "slug": "idei",
       "category": "themes"
     },
     {
@@ -2999,35 +2909,6 @@
     },
     {
       "type": "archive",
-      "title": "От идолов к Богу",
-      "subtitle": "Цари Иудеи: Езекия, Манассия, Амнон, Иосия (2 Пар 29–34)",
-      "date": "2018-12",
-      "tags": [
-        "2 Пар.",
-        "идолы",
-        "покаяние",
-        "цари Иудеи",
-        "тема"
-      ],
-      "path": "archive/ot-idolov-k-bogu.md",
-      "slug": "ot-idolov-k-bogu",
-      "category": "themes"
-    },
-    {
-      "type": "archive",
-      "title": "Краски",
-      "subtitle": "Слайды-иллюстрация с картинками палитры, текста нет",
-      "date": "2018-09",
-      "tags": [
-        "тема",
-        "иллюстрация"
-      ],
-      "path": "archive/kraski.md",
-      "slug": "kraski",
-      "category": "themes"
-    },
-    {
-      "type": "archive",
       "title": "2 Петра 2:1–11 – Лжепророки, лжеучения",
       "subtitle": "Опасность ошибочного отношения к Писанию",
       "date": "2018-09",
@@ -3055,20 +2936,6 @@
       "path": "archive/2pet-1-19-21.md",
       "slug": "2pet-1-19-21",
       "category": "series-nt"
-    },
-    {
-      "type": "archive",
-      "title": "Расписание служений 2017–2018",
-      "subtitle": "Служебный файл – список тем и дат выступлений",
-      "date": "2018-06",
-      "tags": [
-        "расписание",
-        "служебное",
-        "архив"
-      ],
-      "path": "archive/raspisanie.md",
-      "slug": "raspisanie",
-      "category": "themes"
     },
     {
       "type": "archive",
@@ -3184,22 +3051,6 @@
     },
     {
       "type": "archive",
-      "title": "Хронология жизни Павла",
-      "subtitle": "Основные события служения апостола Павла",
-      "date": "2017-12",
-      "tags": [
-        "Деян.",
-        "2 Тим. 4",
-        "апостол Павел",
-        "хронология",
-        "тема"
-      ],
-      "path": "archive/khronologiya-zhizni-pavla.md",
-      "slug": "khronologiya-zhizni-pavla",
-      "category": "themes"
-    },
-    {
-      "type": "archive",
       "title": "Рождество",
       "subtitle": "День рождения Христа",
       "date": "2017-12",
@@ -3310,22 +3161,6 @@
       "path": "archive/kharakter-boga-v-istorii-iony.md",
       "slug": "kharakter-boga-v-istorii-iony",
       "category": "attributes"
-    },
-    {
-      "type": "archive",
-      "title": "Идеи",
-      "subtitle": "Страх Божий VS боязнь перед людьми; кротость, служение",
-      "date": "2017-07",
-      "tags": [
-        "идеи",
-        "кротость",
-        "служение",
-        "страх Божий",
-        "тема"
-      ],
-      "path": "archive/idei-2.md",
-      "slug": "idei-2",
-      "category": "themes"
     },
     {
       "type": "archive",

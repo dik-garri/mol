@@ -365,6 +365,39 @@
     },
     {
       "type": "archive",
+      "title": "Царь на осле",
+      "subtitle": "Вербное воскресенье",
+      "date": "2026-04",
+      "tags": [
+        "Мф. 21",
+        "Зах. 9",
+        "смирение",
+        "кротость",
+        "вербное воскресенье",
+        "проповедь"
+      ],
+      "path": "archive/tsar-na-osle.md",
+      "slug": "tsar-na-osle"
+    },
+    {
+      "type": "archive",
+      "title": "Страстная пятница",
+      "subtitle": "Крест как исполнение заветной клятвы Бога",
+      "date": "2026-04",
+      "tags": [
+        "Страстная пятница",
+        "крест",
+        "Быт. 15",
+        "Иер. 31",
+        "Ис. 53",
+        "новый завет",
+        "проповедь"
+      ],
+      "path": "archive/strastnaya-pyatnitsa.md",
+      "slug": "strastnaya-pyatnitsa"
+    },
+    {
+      "type": "archive",
       "title": "Перед крещением",
       "subtitle": "Деяния 2:37–41 – порядок Божий: услышать, поверить, покаяться, креститься",
       "date": "2026-04",
@@ -392,6 +425,20 @@
       ],
       "path": "archive/lyubov-naibolshaya-zapoved.md",
       "slug": "lyubov-naibolshaya-zapoved"
+    },
+    {
+      "type": "archive",
+      "title": "Самарянка",
+      "subtitle": "Разговор, который открыл правду и изменил жизнь",
+      "date": "2026-02",
+      "tags": [
+        "Ин. 4",
+        "свидетельство",
+        "жажда",
+        "проповедь"
+      ],
+      "path": "archive/samaryanka.md",
+      "slug": "samaryanka"
     },
     {
       "type": "archive",
@@ -456,6 +503,22 @@
     },
     {
       "type": "archive",
+      "title": "Рождество как свет во тьме",
+      "subtitle": "Иисус - Свет, разоблачающий, исцеляющий, ведущий и преображающий",
+      "date": "2025-12",
+      "tags": [
+        "Лк. 2",
+        "Ин. 1",
+        "Ин. 3",
+        "рождество",
+        "свет",
+        "проповедь"
+      ],
+      "path": "archive/rozhdestvo-kak-svet-vo-tme.md",
+      "slug": "rozhdestvo-kak-svet-vo-tme"
+    },
+    {
+      "type": "archive",
       "title": "Мир Божий, пришедший на землю",
       "subtitle": "Рождество как Мир, пришедший на землю",
       "date": "2025-12",
@@ -483,6 +546,38 @@
       ],
       "path": "archive/bog-sredi-nas-emmanuil.md",
       "slug": "bog-sredi-nas-emmanuil"
+    },
+    {
+      "type": "archive",
+      "title": "Ход вечери",
+      "subtitle": "Что такое вечеря и как её проводить",
+      "date": "2025-11",
+      "tags": [
+        "1 Кор. 11",
+        "Лк. 22",
+        "вечеря Господня",
+        "причастие",
+        "тема"
+      ],
+      "path": "archive/khod-vecheri.md",
+      "slug": "khod-vecheri"
+    },
+    {
+      "type": "archive",
+      "title": "Страдания Христа: размышление перед вечерей",
+      "subtitle": "Пять граней страданий: предательство, осмеяние, оставленность, причина и цель",
+      "date": "2025-11",
+      "tags": [
+        "вечеря",
+        "страдания Христа",
+        "Мф. 26",
+        "Мф. 27",
+        "Ис. 53",
+        "Рим. 5",
+        "размышление"
+      ],
+      "path": "archive/stradaniya-khrista-razmyshlenie-pered-vecherey.md",
+      "slug": "stradaniya-khrista-razmyshlenie-pered-vecherey"
     },
     {
       "type": "archive",
@@ -517,6 +612,21 @@
     },
     {
       "type": "archive",
+      "title": "Что посеешь, то и пожнёшь",
+      "subtitle": "Библейский принцип сеяния и жатвы",
+      "date": "2025-10",
+      "tags": [
+        "Гал. 6",
+        "сеяние и жатва",
+        "Рим. 6",
+        "выбор",
+        "тема"
+      ],
+      "path": "archive/chto-poseesh-to-i-pozhnesh.md",
+      "slug": "chto-poseesh-to-i-pozhnesh"
+    },
+    {
+      "type": "archive",
       "title": "Бог – Помощник",
       "subtitle": "Бог – наш Помощник. Его помощь изменяет жизнь верующего, даёт уверенность, покой и силы действовать даже в трудностях.",
       "date": "2025-09",
@@ -530,6 +640,21 @@
       ],
       "path": "archive/bog-pomoshchnik.md",
       "slug": "bog-pomoshchnik"
+    },
+    {
+      "type": "archive",
+      "title": "Семинар о технологиях",
+      "subtitle": "Библейский взгляд: ИИ, соцсети, видеоигры",
+      "date": "2025-08",
+      "tags": [
+        "технологии",
+        "ИИ",
+        "соцсети",
+        "видеоигры",
+        "семинар"
+      ],
+      "path": "archive/seminar-o-tekhnologiyakh.md",
+      "slug": "seminar-o-tekhnologiyakh"
     },
     {
       "type": "archive",
@@ -593,6 +718,33 @@
     },
     {
       "type": "archive",
+      "title": "Хлеб наш насущный",
+      "subtitle": "Матфея 6:11",
+      "date": "2025-07",
+      "tags": [
+        "Мф. 6",
+        "молитва",
+        "доверие Богу",
+        "тема"
+      ],
+      "path": "archive/khleb-nash-nasushchnyy.md",
+      "slug": "khleb-nash-nasushchnyy"
+    },
+    {
+      "type": "archive",
+      "title": "Семинар о технологиях",
+      "subtitle": "",
+      "date": "2025-07",
+      "tags": [
+        "технологии",
+        "семинар",
+        "заметка"
+      ],
+      "path": "archive/semenar-o-tekhnologiyakh.md",
+      "slug": "semenar-o-tekhnologiyakh"
+    },
+    {
+      "type": "archive",
       "title": "Да будет воля твоя",
       "subtitle": "Разбор прошения «да будет воля Твоя» из молитвы «Отче наш»",
       "date": "2025-07",
@@ -639,6 +791,81 @@
     },
     {
       "type": "archive",
+      "title": "Характер Бога в истории Ионы (вариант 2)",
+      "subtitle": "",
+      "date": "2025-06",
+      "tags": [
+        "Иона",
+        "характер Бога",
+        "покаяние",
+        "милость",
+        "проповедь"
+      ],
+      "path": "archive/kharakter-boga-v-istorii-iony-2.md",
+      "slug": "kharakter-boga-v-istorii-iony-2"
+    },
+    {
+      "type": "archive",
+      "title": "Троица, Дух Святой",
+      "subtitle": "",
+      "date": "2025-06",
+      "tags": [
+        "Дух Святой",
+        "Троица",
+        "тема",
+        "Деян. 1",
+        "Деян. 2",
+        "Еф. 1"
+      ],
+      "path": "archive/troitsa.md",
+      "slug": "troitsa"
+    },
+    {
+      "type": "archive",
+      "title": "Тайм-менеджмент для христианина",
+      "subtitle": "Ефесянам 5:15–17 – дорожа временем, потому что дни лукавы",
+      "date": "2025-06",
+      "tags": [
+        "тайм-менеджмент",
+        "Еф. 5",
+        "приоритеты",
+        "отдых",
+        "семинар"
+      ],
+      "path": "archive/semenar-o-time-management.md",
+      "slug": "semenar-o-time-management"
+    },
+    {
+      "type": "archive",
+      "title": "Стих – Псалом 55:4 (раскраска)",
+      "subtitle": "Печатный лист с раскраской для детей",
+      "date": "2025-06",
+      "tags": [
+        "Пс. 55",
+        "дети",
+        "раскраска",
+        "стих для запоминания"
+      ],
+      "path": "archive/stikh.md",
+      "slug": "stikh"
+    },
+    {
+      "type": "archive",
+      "title": "Семинар о финансах",
+      "subtitle": "Библейский взгляд на долги, кредиты, работу и накопления",
+      "date": "2025-06",
+      "tags": [
+        "финансы",
+        "долги",
+        "труд",
+        "накопления",
+        "семинар"
+      ],
+      "path": "archive/semenar-o-finansakh.md",
+      "slug": "semenar-o-finansakh"
+    },
+    {
+      "type": "archive",
       "title": "Крещение (2)",
       "subtitle": "Крещение и жизнь после воды",
       "date": "2025-05",
@@ -667,6 +894,52 @@
       ],
       "path": "archive/iakova-5-14-20.md",
       "slug": "iakova-5-14-20"
+    },
+    {
+      "type": "archive",
+      "title": "Страстной четверг",
+      "subtitle": "События страстного четверга",
+      "date": "2025-04",
+      "tags": [
+        "страстная неделя",
+        "Ин. 13",
+        "тайная вечеря",
+        "Гефсимания",
+        "проповедь"
+      ],
+      "path": "archive/strastnoy-chetverg.md",
+      "slug": "strastnoy-chetverg"
+    },
+    {
+      "type": "archive",
+      "title": "Страстной понедельник",
+      "subtitle": "События страстного понедельника: смоковница и очищение храма",
+      "date": "2025-04",
+      "tags": [
+        "Страстная седмица",
+        "Мк. 11",
+        "смоковница",
+        "очищение храма",
+        "плоды веры",
+        "проповедь"
+      ],
+      "path": "archive/strastnoy-ponedelnik.md",
+      "slug": "strastnoy-ponedelnik"
+    },
+    {
+      "type": "archive",
+      "title": "Страстной вторник",
+      "subtitle": "События страстного вторника. Тема: «Бодрствуйте!»",
+      "date": "2025-04",
+      "tags": [
+        "Страстная седмица",
+        "Мк. 13",
+        "бодрствование",
+        "второе пришествие",
+        "проповедь"
+      ],
+      "path": "archive/strastnoy-vtornik.md",
+      "slug": "strastnoy-vtornik"
     },
     {
       "type": "archive",
@@ -715,6 +988,22 @@
       ],
       "path": "archive/vtorozakonie-31.md",
       "slug": "vtorozakonie-31"
+    },
+    {
+      "type": "archive",
+      "title": "Умер за грехи",
+      "subtitle": "Проблема греха и решение во Христе",
+      "date": "2025-02",
+      "tags": [
+        "грех",
+        "крест",
+        "спасение",
+        "проповедь",
+        "Рим. 6",
+        "Мф. 26-27"
+      ],
+      "path": "archive/umer-za-grekhi.md",
+      "slug": "umer-za-grekhi"
     },
     {
       "type": "archive",
@@ -911,6 +1200,22 @@
       ],
       "path": "archive/iakova-2-14-26-vera-dela.md",
       "slug": "iakova-2-14-26-vera-dela"
+    },
+    {
+      "type": "archive",
+      "title": "Страстной четверг (2024)",
+      "subtitle": "Омовение ног – Христос как слуга – пример любви",
+      "date": "2024-05",
+      "tags": [
+        "страстная неделя",
+        "Ин. 13",
+        "омовение ног",
+        "смирение",
+        "служение",
+        "проповедь"
+      ],
+      "path": "archive/strastnoy-chetverg-2024.md",
+      "slug": "strastnoy-chetverg-2024"
     },
     {
       "type": "archive",
@@ -1114,6 +1419,21 @@
     },
     {
       "type": "archive",
+      "title": "Числа 27:12-23",
+      "subtitle": "Избрание Иисуса Навина",
+      "date": "2024-02",
+      "tags": [
+        "Числа 27",
+        "Иисус Навин",
+        "преемственность",
+        "лидерство",
+        "разбор"
+      ],
+      "path": "archive/razbor-chisla-27-12-23.md",
+      "slug": "razbor-chisla-27-12-23"
+    },
+    {
+      "type": "archive",
       "title": "Дух Святой в Ветхом Завете",
       "subtitle": "",
       "date": "2024-02",
@@ -1125,6 +1445,53 @@
       ],
       "path": "archive/dukh-svyatoy-v-vetokhom-zavete.md",
       "slug": "dukh-svyatoy-v-vetokhom-zavete"
+    },
+    {
+      "type": "archive",
+      "title": "Числа 26–27",
+      "subtitle": "Вторая перепись Израильского народа, дочери Салпаада, избрание Иисуса Навина",
+      "date": "2024-01",
+      "tags": [
+        "Числа 26",
+        "Числа 27",
+        "перепись",
+        "Иисус Навин",
+        "разбор"
+      ],
+      "path": "archive/razbor-chisla-26-27.md",
+      "slug": "razbor-chisla-26-27"
+    },
+    {
+      "type": "archive",
+      "title": "Числа 25",
+      "subtitle": "",
+      "date": "2024-01",
+      "tags": [
+        "Числа 25",
+        "разбор",
+        "Финеес",
+        "ревность",
+        "идолопоклонство",
+        "Ваал-Фегор"
+      ],
+      "path": "archive/razbor-chisla-25.md",
+      "slug": "razbor-chisla-25"
+    },
+    {
+      "type": "archive",
+      "title": "Реакция на приход Иисуса",
+      "subtitle": "Как разные люди отреагировали на рождение Христа",
+      "date": "2024-01",
+      "tags": [
+        "Рождество",
+        "Лк. 1",
+        "Лк. 2",
+        "Мф. 1",
+        "Мф. 2",
+        "тема"
+      ],
+      "path": "archive/reaktsiya-na-prikhod-iisusa.md",
+      "slug": "reaktsiya-na-prikhod-iisusa"
     },
     {
       "type": "archive",
@@ -1140,6 +1507,22 @@
       ],
       "path": "archive/iakova-1-1-18-iskusheniya.md",
       "slug": "iakova-1-1-18-iskusheniya"
+    },
+    {
+      "type": "archive",
+      "title": "Числа 20:1–13",
+      "subtitle": "Конец скитания по пустыне",
+      "date": "2023-11",
+      "tags": [
+        "Числа 20",
+        "разбор",
+        "Моисей",
+        "Мерива",
+        "непослушание",
+        "святость"
+      ],
+      "path": "archive/razbor-chisla-20-1-13.md",
+      "slug": "razbor-chisla-20-1-13"
     },
     {
       "type": "archive",
@@ -1204,6 +1587,38 @@
     },
     {
       "type": "archive",
+      "title": "Числа 14:26–38",
+      "subtitle": "",
+      "date": "2023-10",
+      "tags": [
+        "Числа 14",
+        "разбор",
+        "ропот",
+        "наказание",
+        "Халев",
+        "Иисус Навин"
+      ],
+      "path": "archive/razbor-chisla-14-26-38.md",
+      "slug": "razbor-chisla-14-26-38"
+    },
+    {
+      "type": "archive",
+      "title": "Числа 14:1–10",
+      "subtitle": "",
+      "date": "2023-10",
+      "tags": [
+        "Числа 14",
+        "разбор",
+        "ропот",
+        "неверие",
+        "Халев",
+        "Иисус Навин"
+      ],
+      "path": "archive/razbor-chisla-14-1-10.md",
+      "slug": "razbor-chisla-14-1-10"
+    },
+    {
+      "type": "archive",
       "title": "Будь дитем Христа",
       "subtitle": "Привилегии и обязательства детей Божьих",
       "date": "2023-10",
@@ -1220,6 +1635,53 @@
     },
     {
       "type": "archive",
+      "title": "Числа 11:1–15",
+      "subtitle": "",
+      "date": "2023-09",
+      "tags": [
+        "Числа 11",
+        "разбор",
+        "ропот",
+        "Моисей",
+        "манна"
+      ],
+      "path": "archive/razbor-chisla-11-1-15.md",
+      "slug": "razbor-chisla-11-1-15"
+    },
+    {
+      "type": "archive",
+      "title": "Что мешает мне быть учеником Христа?",
+      "subtitle": "Призыв следовать",
+      "date": "2023-08",
+      "tags": [
+        "Лк. 14",
+        "Мк. 1",
+        "Мф. 16",
+        "ученичество",
+        "следование за Христом",
+        "тема"
+      ],
+      "path": "archive/chto-meshaet-mne-byt-uchenikom-khrista.md",
+      "slug": "chto-meshaet-mne-byt-uchenikom-khrista"
+    },
+    {
+      "type": "archive",
+      "title": "Сила христианина в Боге (Самсон)",
+      "subtitle": "Судьи 16:15–21 – откуда берётся и куда уходит сила",
+      "date": "2023-07",
+      "tags": [
+        "Суд. 16",
+        "Самсон",
+        "молитва",
+        "единство",
+        "любовь",
+        "проповедь"
+      ],
+      "path": "archive/sila-khristanina-v-boge-samson.md",
+      "slug": "sila-khristanina-v-boge-samson"
+    },
+    {
+      "type": "archive",
       "title": "Иисус – Царь! А я Раб",
       "subtitle": "Иоанна 12:12-19",
       "date": "2023-07",
@@ -1231,6 +1693,37 @@
       ],
       "path": "archive/iisus-tsar-a-ya-rab.md",
       "slug": "iisus-tsar-a-ya-rab"
+    },
+    {
+      "type": "archive",
+      "title": "Уроки золотого тельца",
+      "subtitle": "Исход 32 – грех народа у горы Синай",
+      "date": "2023-06",
+      "tags": [
+        "Исх. 32",
+        "идолопоклонство",
+        "грех",
+        "разбор",
+        "Моисей",
+        "Аарон"
+      ],
+      "path": "archive/uroki-zolotogo-teltsa.md",
+      "slug": "uroki-zolotogo-teltsa"
+    },
+    {
+      "type": "archive",
+      "title": "Свидетель – препятствия",
+      "subtitle": "Что мешает мне быть свидетелем Христа",
+      "date": "2023-06",
+      "tags": [
+        "Деян. 1",
+        "Деян. 22",
+        "2 Кор. 12",
+        "свидетельство",
+        "проповедь"
+      ],
+      "path": "archive/svidetel-prepyatstviya.md",
+      "slug": "svidetel-prepyatstviya"
     },
     {
       "type": "archive",
@@ -1262,6 +1755,21 @@
       ],
       "path": "archive/vstrecha-so-khristom-izmenyaet-zhizn.md",
       "slug": "vstrecha-so-khristom-izmenyaet-zhizn"
+    },
+    {
+      "type": "archive",
+      "title": "Страстной четверг (2023)",
+      "subtitle": "Хронология событий Иоанна 13–18",
+      "date": "2023-04",
+      "tags": [
+        "страстная неделя",
+        "Ин. 17",
+        "Гефсимания",
+        "молитва Иисуса",
+        "проповедь"
+      ],
+      "path": "archive/strastnoy-chetverg-2023.md",
+      "slug": "strastnoy-chetverg-2023"
     },
     {
       "type": "archive",
@@ -1326,6 +1834,21 @@
     },
     {
       "type": "archive",
+      "title": "Свет – церковь",
+      "subtitle": "Церковь как город на горе и свет миру",
+      "date": "2023-01",
+      "tags": [
+        "Мф. 5",
+        "1 Кор. 5",
+        "церковь",
+        "свет",
+        "проповедь"
+      ],
+      "path": "archive/svet-tserkov.md",
+      "slug": "svet-tserkov"
+    },
+    {
+      "type": "archive",
       "title": "Привычки",
       "subtitle": "Формирование добрых привычек у христианина",
       "date": "2023-01",
@@ -1354,6 +1877,20 @@
       ],
       "path": "archive/doverie-bogu.md",
       "slug": "doverie-bogu"
+    },
+    {
+      "type": "archive",
+      "title": "Рождество 2022",
+      "subtitle": "",
+      "date": "2022-12",
+      "tags": [
+        "Мф. 2",
+        "рождество",
+        "проповедь",
+        "подарок"
+      ],
+      "path": "archive/rozhdestvo-2022.md",
+      "slug": "rozhdestvo-2022"
     },
     {
       "type": "archive",
@@ -1615,6 +2152,37 @@
     },
     {
       "type": "archive",
+      "title": "Утешение от Христа",
+      "subtitle": "",
+      "date": "2022-03",
+      "tags": [
+        "утешение",
+        "мир",
+        "Дух Святой",
+        "проповедь",
+        "Мк. 4",
+        "Ин. 14"
+      ],
+      "path": "archive/uteshenie-ot-khrista.md",
+      "slug": "uteshenie-ot-khrista"
+    },
+    {
+      "type": "archive",
+      "title": "Характеристики Иисуса – пример для нас",
+      "subtitle": "По Марка 12:12-17",
+      "date": "2022-01",
+      "tags": [
+        "Мк. 12",
+        "Иисус",
+        "справедливость",
+        "истина",
+        "проповедь"
+      ],
+      "path": "archive/kharakteristiki-iisusa-primer-dlya-nas.md",
+      "slug": "kharakteristiki-iisusa-primer-dlya-nas"
+    },
+    {
+      "type": "archive",
       "title": "Вечеря – Halle",
       "subtitle": "Почему важно думать о Христе: жизнь с избытком, участие Бога, цена креста",
       "date": "2022-01",
@@ -1722,6 +2290,22 @@
     },
     {
       "type": "archive",
+      "title": "Служение ближнему",
+      "subtitle": "Заботьтесь о других, почитайте других выше себя, любовью служите",
+      "date": "2021-07",
+      "tags": [
+        "служение",
+        "ближний",
+        "любовь",
+        "тема",
+        "Лк. 10",
+        "Гал. 5"
+      ],
+      "path": "archive/sluzhenie.md",
+      "slug": "sluzhenie"
+    },
+    {
+      "type": "archive",
       "title": "Пятидесятница",
       "subtitle": "Сошествие Духа Святого – Деяния 2:1–13",
       "date": "2021-06",
@@ -1735,6 +2319,22 @@
       ],
       "path": "archive/pyatidesyatnitsa.md",
       "slug": "pyatidesyatnitsa"
+    },
+    {
+      "type": "archive",
+      "title": "Царство небесное – его ценность и ожидание",
+      "subtitle": "Притчи Матфея о Царстве и ожидании Господа",
+      "date": "2021-05",
+      "tags": [
+        "Мф. 13",
+        "Мф. 24",
+        "Мф. 25",
+        "Царство Небесное",
+        "притчи",
+        "тема"
+      ],
+      "path": "archive/tsarstvo-nebesnoe-ego-tsennost-i-ozhidanie.md",
+      "slug": "tsarstvo-nebesnoe-ego-tsennost-i-ozhidanie"
     },
     {
       "type": "archive",
@@ -1767,6 +2367,22 @@
     },
     {
       "type": "archive",
+      "title": "Тебе расти, мне умаляться (о служении)",
+      "subtitle": "Пример Христа – Христос пришёл на землю, для того чтобы послужить",
+      "date": "2021-01",
+      "tags": [
+        "служение",
+        "смирение",
+        "Мф. 20",
+        "1 Кор. 12",
+        "дары",
+        "тема"
+      ],
+      "path": "archive/tebe-rasti-mne-umalyatsya-o-sluzhenii.md",
+      "slug": "tebe-rasti-mne-umalyatsya-o-sluzhenii"
+    },
+    {
+      "type": "archive",
       "title": "1 Фессалоникийцам 5:19–28",
       "subtitle": "Духа не угашайте, пророчества не уничижайте",
       "date": "2020-12",
@@ -1782,6 +2398,21 @@
     },
     {
       "type": "archive",
+      "title": "Слово Божие – зеркало",
+      "subtitle": "Иакова 1:22–25 – не быть слушателем забывчивым",
+      "date": "2020-11",
+      "tags": [
+        "Иак. 1",
+        "слово Божие",
+        "послушание",
+        "тема",
+        "Иер. 17"
+      ],
+      "path": "archive/slovo-bozhie-zerkalo.md",
+      "slug": "slovo-bozhie-zerkalo"
+    },
+    {
+      "type": "archive",
       "title": "1 Фессалоникийцам 5:16–28",
       "subtitle": "Всегда радуйтесь, непрестанно молитесь, за всё благодарите",
       "date": "2020-11",
@@ -1794,6 +2425,21 @@
       ],
       "path": "archive/1-fessalonikiytsam-5-3.md",
       "slug": "1-fessalonikiytsam-5-3"
+    },
+    {
+      "type": "archive",
+      "title": "Что с нами будет",
+      "subtitle": "Бог заботится о нас! И он верен своему слову!",
+      "date": "2020-10",
+      "tags": [
+        "Мф. 16",
+        "Исх. 14",
+        "церковь",
+        "Божья верность",
+        "проповедь"
+      ],
+      "path": "archive/tserkov.md",
+      "slug": "tserkov"
     },
     {
       "type": "archive",
@@ -1827,6 +2473,22 @@
     },
     {
       "type": "archive",
+      "title": "Хвались Богом",
+      "subtitle": "То, чем человек наполнен, тем он и хвалится",
+      "date": "2020-09",
+      "tags": [
+        "4 Цар. 20",
+        "Иер. 9",
+        "1 Кор. 1",
+        "хвала",
+        "гордость",
+        "проповедь"
+      ],
+      "path": "archive/khvalis-bogom.md",
+      "slug": "khvalis-bogom"
+    },
+    {
+      "type": "archive",
       "title": "1 Фессалоникийцам 4:3",
       "subtitle": "1 Фес. 4:13–18 и 5:1–11 – о пришествии Господнем",
       "date": "2020-09",
@@ -1855,6 +2517,21 @@
       ],
       "path": "archive/1-fessalonikiytsam-4-3-5-1.md",
       "slug": "1-fessalonikiytsam-4-3-5-1"
+    },
+    {
+      "type": "archive",
+      "title": "Римлянам 12:1-2",
+      "subtitle": "Жертва живая, обновление ума и воля Божия",
+      "date": "2020-08",
+      "tags": [
+        "Рим. 12",
+        "посвящение",
+        "обновление ума",
+        "воля Божия",
+        "разбор"
+      ],
+      "path": "archive/rim-121-2.md",
+      "slug": "rim-121-2"
     },
     {
       "type": "archive",
@@ -1981,6 +2658,82 @@
     },
     {
       "type": "archive",
+      "title": "Страх перед людьми",
+      "subtitle": "Давид и Голиаф – величие Бога против страха",
+      "date": "2020-03",
+      "tags": [
+        "страх",
+        "вера",
+        "1 Цар. 17",
+        "Давид",
+        "тема"
+      ],
+      "path": "archive/strakh-pered-lyudmi.md",
+      "slug": "strakh-pered-lyudmi"
+    },
+    {
+      "type": "archive",
+      "title": "Страдания Христа",
+      "subtitle": "Исаия 53 – «Он истязуем был, но страдал добровольно»",
+      "date": "2020-02",
+      "tags": [
+        "Ис. 53",
+        "страдания Христа",
+        "крест",
+        "искупление",
+        "проповедь"
+      ],
+      "path": "archive/stradaniya-khrista.md",
+      "slug": "stradaniya-khrista"
+    },
+    {
+      "type": "archive",
+      "title": "Сретение",
+      "subtitle": "Луки 2:36–38, Аггей 1 – чего мы ожидаем",
+      "date": "2020-02",
+      "tags": [
+        "Лк. 2",
+        "Сретение",
+        "Агг. 1",
+        "ожидание",
+        "проповедь",
+        "любовь"
+      ],
+      "path": "archive/sretenie-2020.md",
+      "slug": "sretenie-2020"
+    },
+    {
+      "type": "archive",
+      "title": "Рождество 2019",
+      "subtitle": "Спаситель родился нам – ищите и найдёте",
+      "date": "2019-12",
+      "tags": [
+        "Лк. 2",
+        "Рождество",
+        "Спаситель",
+        "поиск",
+        "проповедь"
+      ],
+      "path": "archive/rozhdestvo-2019.md",
+      "slug": "rozhdestvo-2019"
+    },
+    {
+      "type": "archive",
+      "title": "Рождение Иоанна Крестителя",
+      "subtitle": "Луки 1:5–25, 57–66",
+      "date": "2019-12",
+      "tags": [
+        "Лк. 1",
+        "Иоанн Креститель",
+        "верность",
+        "молитва",
+        "разбор"
+      ],
+      "path": "archive/rozhdenie-ioanna-krestitelya.md",
+      "slug": "rozhdenie-ioanna-krestitelya"
+    },
+    {
+      "type": "archive",
       "title": "Радость",
       "subtitle": "Радость совершенная – во Христе",
       "date": "2019-12",
@@ -2099,6 +2852,21 @@
     },
     {
       "type": "archive",
+      "title": "Рим. 12:9–13. Поведение христиан",
+      "subtitle": "Христианский образ жизни",
+      "date": "2019-04",
+      "tags": [
+        "Рим. 12",
+        "любовь",
+        "практика",
+        "служение",
+        "проповедь"
+      ],
+      "path": "archive/rim-129-13-povedenie-khristian.md",
+      "slug": "rim-129-13-povedenie-khristian"
+    },
+    {
+      "type": "archive",
       "title": "Иисус Учитель (Пасха 2019)",
       "subtitle": "",
       "date": "2019-04",
@@ -2128,6 +2896,21 @@
       ],
       "path": "archive/verbnoe-voskresenie-2019-iisus-tsar.md",
       "slug": "verbnoe-voskresenie-2019-iisus-tsar"
+    },
+    {
+      "type": "archive",
+      "title": "Рим. 12:3–8. Церковь",
+      "subtitle": "Каждый нуждается в церкви",
+      "date": "2019-03",
+      "tags": [
+        "Рим. 12",
+        "церковь",
+        "любовь",
+        "тело Христово",
+        "проповедь"
+      ],
+      "path": "archive/rim-123-8-tserkov.md",
+      "slug": "rim-123-8-tserkov"
     },
     {
       "type": "archive",
@@ -2202,6 +2985,19 @@
     },
     {
       "type": "archive",
+      "title": "Расписание служений 2017–2018",
+      "subtitle": "Служебный файл – список тем и дат выступлений",
+      "date": "2018-06",
+      "tags": [
+        "расписание",
+        "служебное",
+        "архив"
+      ],
+      "path": "archive/raspisanie.md",
+      "slug": "raspisanie"
+    },
+    {
+      "type": "archive",
       "title": "Действующая молитва",
       "subtitle": "Условия, при которых молитва праведного имеет силу (Иак. 5:16–18)",
       "date": "2018-06",
@@ -2262,6 +3058,21 @@
     },
     {
       "type": "archive",
+      "title": "Сретение",
+      "subtitle": "Луки 2:22–40 – встреча Симеона со Христом",
+      "date": "2018-02",
+      "tags": [
+        "Лк. 2",
+        "Сретение",
+        "ожидание",
+        "проповедь",
+        "встреча со Христом"
+      ],
+      "path": "archive/sretenie-2018.md",
+      "slug": "sretenie-2018"
+    },
+    {
+      "type": "archive",
       "title": "Верю, помоги моему неверию",
       "subtitle": "Вера без дел мертва – верим ли мы, что Христос может дать победу сегодня?",
       "date": "2018-01",
@@ -2289,6 +3100,36 @@
       ],
       "path": "archive/1-tim-4-povtorenie.md",
       "slug": "1-tim-4-povtorenie"
+    },
+    {
+      "type": "archive",
+      "title": "Хронология жизни Павла",
+      "subtitle": "Основные события служения апостола Павла",
+      "date": "2017-12",
+      "tags": [
+        "Деян.",
+        "2 Тим. 4",
+        "апостол Павел",
+        "хронология",
+        "тема"
+      ],
+      "path": "archive/khronologiya-zhizni-pavla.md",
+      "slug": "khronologiya-zhizni-pavla"
+    },
+    {
+      "type": "archive",
+      "title": "Рождество",
+      "subtitle": "День рождения Христа",
+      "date": "2017-12",
+      "tags": [
+        "Лк. 2",
+        "Рождество",
+        "Христос",
+        "проповедь",
+        "тема"
+      ],
+      "path": "archive/rozhdestvo.md",
+      "slug": "rozhdestvo"
     },
     {
       "type": "archive",
@@ -2365,6 +3206,21 @@
       ],
       "path": "archive/zhizn-khristos.md",
       "slug": "zhizn-khristos"
+    },
+    {
+      "type": "archive",
+      "title": "Характер Бога в истории Ионы",
+      "subtitle": "",
+      "date": "2017-07",
+      "tags": [
+        "Иона",
+        "характер Бога",
+        "покаяние",
+        "милость",
+        "проповедь"
+      ],
+      "path": "archive/kharakter-boga-v-istorii-iony.md",
+      "slug": "kharakter-boga-v-istorii-iony"
     },
     {
       "type": "archive",

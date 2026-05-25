@@ -4,7 +4,7 @@ const $ = (s, root = document) => root.querySelector(s);
 const $$ = (s, root = document) => Array.from(root.querySelectorAll(s));
 
 const state = {
-  data: { sermons: [], luki: [], draft: [] },
+  data: { sermons: [], luki: [], draft: [], archive: [] },
   tab: "sermons",
   query: "",
   activeTags: new Set(),
@@ -104,6 +104,7 @@ function renderList() {
   $("#count-sermons").textContent = state.data.sermons.length;
   $("#count-luki").textContent = state.data.luki.length;
   $("#count-draft").textContent = (state.data.draft || []).length;
+  $("#count-archive").textContent = (state.data.archive || []).length;
 
   renderActiveTags();
 }
@@ -152,7 +153,7 @@ function parseFrontmatter(text) {
   return { meta, body };
 }
 
-const TYPE_TO_KEY = { sermon: "sermons", luki: "luki", draft: "draft" };
+const TYPE_TO_KEY = { sermon: "sermons", luki: "luki", draft: "draft", archive: "archive" };
 
 async function openReader(type, slug) {
   // find item
@@ -217,7 +218,7 @@ function showReader() {
 
 function route() {
   const hash = location.hash.slice(1); // strip '#'
-  const m = hash.match(/^\/(sermon|luki|draft)\/(.+)$/);
+  const m = hash.match(/^\/(sermon|luki|draft|archive)\/(.+)$/);
   if (m) {
     openReader(m[1], decodeURIComponent(m[2]));
   } else {

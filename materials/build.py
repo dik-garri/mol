@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 SERMONS_DIR = ROOT / "sermons"
 LUKI_DIR = ROOT / "luki"
 DRAFT_DIR = ROOT / "draft"
+ARCHIVE_DIR = ROOT / "archive"
 OUT_FILE = ROOT / "materials" / "data.json"
 
 # Defaults for existing files (used to seed frontmatter on first run).
@@ -250,12 +251,16 @@ def main() -> None:
     draft: list[dict] = []
     if DRAFT_DIR.exists():
         draft = collect(DRAFT_DIR, "draft", "*.md")
+    archive: list[dict] = []
+    if ARCHIVE_DIR.exists():
+        archive = collect(ARCHIVE_DIR, "archive", "*.md")
 
     # Sort by date descending; secondary: title
     def sort_key(it: dict) -> tuple:
         return (it.get("date") or "", it.get("title") or "")
     sermons.sort(key=sort_key, reverse=True)
     draft.sort(key=sort_key, reverse=True)
+    archive.sort(key=sort_key, reverse=True)
 
     # For Luki, sort by chapter/verse ascending so the gospel order is preserved
     def luki_key(it: dict) -> tuple:
@@ -265,9 +270,9 @@ def main() -> None:
         return (99, 99)
     luki.sort(key=luki_key)
 
-    data = {"sermons": sermons, "luki": luki, "draft": draft}
+    data = {"sermons": sermons, "luki": luki, "draft": draft, "archive": archive}
     OUT_FILE.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Wrote {OUT_FILE.relative_to(ROOT)} ({len(sermons)} sermons, {len(luki)} luki, {len(draft)} draft)")
+    print(f"Wrote {OUT_FILE.relative_to(ROOT)} ({len(sermons)} sermons, {len(luki)} luki, {len(draft)} draft, {len(archive)} archive)")
 
 
 if __name__ == "__main__":

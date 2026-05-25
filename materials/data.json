@@ -349,6 +349,35 @@
   "archive": [
     {
       "type": "archive",
+      "title": "Послушание",
+      "subtitle": "Глава из учебного пособия по основам христианской жизни",
+      "date": "2018-01",
+      "tags": [
+        "послушание",
+        "ученичество",
+        "основы веры",
+        "тема",
+        "разбор"
+      ],
+      "path": "archive/bgk.md",
+      "slug": "bgk"
+    },
+    {
+      "type": "archive",
+      "title": "Идеи и заметки",
+      "subtitle": "Мысли проповеди",
+      "date": "2018-01",
+      "tags": [
+        "заметки",
+        "идеи",
+        "темы",
+        "проповедь"
+      ],
+      "path": "archive/idei.md",
+      "slug": "idei"
+    },
+    {
+      "type": "archive",
       "title": "В Нём – Радость",
       "subtitle": "Источники радости во Христе",
       "date": "2018-01",
@@ -377,6 +406,87 @@
       ],
       "path": "archive/v-nyom-mir.md",
       "slug": "v-nyom-mir"
+    },
+    {
+      "type": "archive",
+      "title": "Будь готов к пришествию Христа",
+      "subtitle": "Это не повод для паники – это призыв к готовности.",
+      "date": "2018-01",
+      "tags": [
+        "проповедь",
+        "тема",
+        "Мф. 24",
+        "1 Фес. 4",
+        "второе пришествие",
+        "бодрствование"
+      ],
+      "path": "archive/bud-gotov-k-prishestviyu-khrista.md",
+      "slug": "bud-gotov-k-prishestviyu-khrista"
+    },
+    {
+      "type": "archive",
+      "title": "Божья забота (Ангел хранитель)",
+      "subtitle": "Наши нужды никогда не превысят Божьих возможностей.",
+      "date": "2018-01",
+      "tags": [
+        "проповедь",
+        "тема",
+        "Пс. 90",
+        "ангелы",
+        "Божья защита",
+        "упование"
+      ],
+      "path": "archive/bozhya-zabota-angel-khranitel.md",
+      "slug": "bozhya-zabota-angel-khranitel"
+    },
+    {
+      "type": "archive",
+      "title": "Божий план на мою жизнь",
+      "subtitle": "Как узнать Божий план и живу ли я по Его плану?",
+      "date": "2018-01",
+      "tags": [
+        "проповедь",
+        "тема",
+        "Иер. 29",
+        "Быт. 12",
+        "Божий план",
+        "послушание",
+        "вера"
+      ],
+      "path": "archive/bozhiy-plan-na-moyu-zhizn.md",
+      "slug": "bozhiy-plan-na-moyu-zhizn"
+    },
+    {
+      "type": "archive",
+      "title": "Бог – Царь",
+      "subtitle": "Бог царствует вечно и безраздельно; человек не может служить двум царям.",
+      "date": "2018-01",
+      "tags": [
+        "проповедь",
+        "тема",
+        "Пс. 92",
+        "Мф. 6",
+        "царство Божье",
+        "послушание"
+      ],
+      "path": "archive/bog-tsar.md",
+      "slug": "bog-tsar"
+    },
+    {
+      "type": "archive",
+      "title": "Бог – Помощник",
+      "subtitle": "Бог – наш Помощник. Его помощь изменяет жизнь верующего, даёт уверенность, покой и силы действовать даже в трудностях.",
+      "date": "2018-01",
+      "tags": [
+        "проповедь",
+        "тема",
+        "Пс. 53",
+        "помощь Божья",
+        "вера",
+        "упование"
+      ],
+      "path": "archive/bog-pomoshchnik.md",
+      "slug": "bog-pomoshchnik"
     },
     {
       "type": "archive",
@@ -427,6 +537,35 @@
     },
     {
       "type": "archive",
+      "title": "Бог Всезнающий",
+      "subtitle": "Псалом 93:1–11 и характер Бога, от Которого ничего не сокрыто",
+      "date": "2018-01",
+      "tags": [
+        "Пс. 93",
+        "характер Бога",
+        "всеведение",
+        "тема"
+      ],
+      "path": "archive/bog-vseznayushchiy.md",
+      "slug": "bog-vseznayushchiy"
+    },
+    {
+      "type": "archive",
+      "title": "Бог Великий – Псалом 103",
+      "subtitle": "Величие Бога в природе и творении",
+      "date": "2018-01",
+      "tags": [
+        "Пс. 103",
+        "природа",
+        "творение",
+        "величие Божие",
+        "тема"
+      ],
+      "path": "archive/bog-velikiy-priroda.md",
+      "slug": "bog-velikiy-priroda"
+    },
+    {
+      "type": "archive",
       "title": "Благоухание Христово",
       "subtitle": "2 Коринфянам 2:14–17",
       "date": "2018-01",
@@ -439,6 +578,79 @@
       ],
       "path": "archive/blagoukhanie-khristovo.md",
       "slug": "blagoukhanie-khristovo"
+    },
+    {
+      "type": "archive",
+      "title": "2 Петра 3 – Готовность к пришествию",
+      "subtitle": "Ожидание Христа в непорочности",
+      "date": "2018-01",
+      "tags": [
+        "2 Пет. 3",
+        "Второе пришествие",
+        "ожидание",
+        "святость",
+        "разбор"
+      ],
+      "path": "archive/2-petra-3-gotovnost-k-prishestviyu.md",
+      "slug": "2-petra-3-gotovnost-k-prishestviyu"
+    },
+    {
+      "type": "archive",
+      "title": "2 Петра 2:1–11 – Лжепророки, лжеучения",
+      "subtitle": "Опасность ошибочного отношения к Писанию",
+      "date": "2018-01",
+      "tags": [
+        "2 Пет. 2",
+        "лжеучения",
+        "Писание",
+        "разбор"
+      ],
+      "path": "archive/2pet-2-1-11.md",
+      "slug": "2pet-2-1-11"
+    },
+    {
+      "type": "archive",
+      "title": "2 Петра 2 – Лжеучения",
+      "subtitle": "Лжеучители и распространённые лжеучения сегодня",
+      "date": "2018-01",
+      "tags": [
+        "2 Пет. 2",
+        "лжеучения",
+        "ересь",
+        "грех",
+        "разбор"
+      ],
+      "path": "archive/2-petra-2-lzheucheniya.md",
+      "slug": "2-petra-2-lzheucheniya"
+    },
+    {
+      "type": "archive",
+      "title": "2 Петра 1:19–21 – Слово Божие",
+      "subtitle": "Авторитет и сила Священного Писания",
+      "date": "2018-01",
+      "tags": [
+        "2 Пет. 1",
+        "Писание",
+        "Слово Божие",
+        "разбор"
+      ],
+      "path": "archive/2pet-1-19-21.md",
+      "slug": "2pet-1-19-21"
+    },
+    {
+      "type": "archive",
+      "title": "2 Петра 1 – Духовная жизнь христианина",
+      "subtitle": "Сила во Христе, старание, напоминание, пророческое слово",
+      "date": "2018-01",
+      "tags": [
+        "2 Пет. 1",
+        "духовный рост",
+        "познание Христа",
+        "Писание",
+        "разбор"
+      ],
+      "path": "archive/2-petra-1-dukhovnaya-zhizn-khristianina.md",
+      "slug": "2-petra-1-dukhovnaya-zhizn-khristianina"
     },
     {
       "type": "archive",
@@ -457,6 +669,36 @@
     },
     {
       "type": "archive",
+      "title": "1 Фессалоникийцам 5:19–28",
+      "subtitle": "Духа не угашайте, пророчества не уничижайте",
+      "date": "2018-01",
+      "tags": [
+        "1 Фес. 5",
+        "Дух Святой",
+        "пророчество",
+        "освящение",
+        "разбор"
+      ],
+      "path": "archive/1-fessalonikiytsam-5-4.md",
+      "slug": "1-fessalonikiytsam-5-4"
+    },
+    {
+      "type": "archive",
+      "title": "1 Фессалоникийцам 5:16–28",
+      "subtitle": "Всегда радуйтесь, непрестанно молитесь, за всё благодарите",
+      "date": "2018-01",
+      "tags": [
+        "1 Фес. 5",
+        "радость",
+        "молитва",
+        "благодарность",
+        "разбор"
+      ],
+      "path": "archive/1-fessalonikiytsam-5-3.md",
+      "slug": "1-fessalonikiytsam-5-3"
+    },
+    {
+      "type": "archive",
       "title": "1 Фессалоникийцам 5:12–15",
       "subtitle": "Взаимоотношения в церкви",
       "date": "2018-01",
@@ -469,6 +711,36 @@
       ],
       "path": "archive/1-fes-5-2.md",
       "slug": "1-fes-5-2"
+    },
+    {
+      "type": "archive",
+      "title": "1 Фессалоникийцам 5:12–15",
+      "subtitle": "Взаимоотношения в церкви",
+      "date": "2018-01",
+      "tags": [
+        "1 Фес. 5",
+        "разбор",
+        "церковь",
+        "служители",
+        "взаимоотношения"
+      ],
+      "path": "archive/1-fessalonikiytsam-5-2.md",
+      "slug": "1-fessalonikiytsam-5-2"
+    },
+    {
+      "type": "archive",
+      "title": "1 Фессалоникийцам 4:9–12",
+      "subtitle": "Братолюбие и любовь",
+      "date": "2018-01",
+      "tags": [
+        "1 Фес. 4",
+        "разбор",
+        "братолюбие",
+        "любовь",
+        "церковь"
+      ],
+      "path": "archive/1-fessalonikiytsam-4-2.md",
+      "slug": "1-fessalonikiytsam-4-2"
     },
     {
       "type": "archive",
@@ -487,6 +759,83 @@
     },
     {
       "type": "archive",
+      "title": "1 Фессалоникийцам 4:1–8",
+      "subtitle": "Воля Божия есть освящение ваше",
+      "date": "2018-01",
+      "tags": [
+        "1 Фес. 4",
+        "разбор",
+        "освящение",
+        "святость",
+        "воля Божия"
+      ],
+      "path": "archive/1-fessalonikiytsam-4-1.md",
+      "slug": "1-fessalonikiytsam-4-1"
+    },
+    {
+      "type": "archive",
+      "title": "1 Фессалоникийцам 4:13 – 5:11",
+      "subtitle": "Пришествие Господа и надежда воскресения",
+      "date": "2018-01",
+      "tags": [
+        "1 Фес. 4",
+        "1 Фес. 5",
+        "разбор",
+        "второе пришествие",
+        "воскресение",
+        "надежда"
+      ],
+      "path": "archive/1-fessalonikiytsam-4-3-5-1.md",
+      "slug": "1-fessalonikiytsam-4-3-5-1"
+    },
+    {
+      "type": "archive",
+      "title": "1 Фессалоникийцам 3",
+      "subtitle": "",
+      "date": "2018-01",
+      "tags": [
+        "1 Фес. 3",
+        "разбор",
+        "вера",
+        "забота",
+        "любовь"
+      ],
+      "path": "archive/1-fessalonikiytsam-3-1.md",
+      "slug": "1-fessalonikiytsam-3-1"
+    },
+    {
+      "type": "archive",
+      "title": "1 Фессалоникийцам 2:1–12",
+      "subtitle": "Чистое учение, угождение Богу, а не людям",
+      "date": "2018-01",
+      "tags": [
+        "1 Фес. 2",
+        "проповедь",
+        "разбор",
+        "благовестие",
+        "учение",
+        "сердце"
+      ],
+      "path": "archive/1-fessalonikiytsam-2-1.md",
+      "slug": "1-fessalonikiytsam-2-1"
+    },
+    {
+      "type": "archive",
+      "title": "1 Фессалоникийцам 2:13–20",
+      "subtitle": "Слово Божие живо и действенно",
+      "date": "2018-01",
+      "tags": [
+        "1 Фес. 2",
+        "проповедь",
+        "разбор",
+        "слово Божие",
+        "вера"
+      ],
+      "path": "archive/1-fessalonikiytsam-2-2.md",
+      "slug": "1-fessalonikiytsam-2-2"
+    },
+    {
+      "type": "archive",
       "title": "1 Фессалоникийцам 1:1–5",
       "subtitle": "Дело веры, труд любви, терпение упования",
       "date": "2018-01",
@@ -500,6 +849,37 @@
       ],
       "path": "archive/1-fessalonikiytsam-1-1.md",
       "slug": "1-fessalonikiytsam-1-1"
+    },
+    {
+      "type": "archive",
+      "title": "1 Фессалоникийцам 1 (часть 2)",
+      "subtitle": "Благовестие в силе Духа и обращение от идолов к Богу живому",
+      "date": "2018-01",
+      "tags": [
+        "1 Фес. 1",
+        "проповедь",
+        "разбор",
+        "благовестие",
+        "обращение",
+        "Дух Святой"
+      ],
+      "path": "archive/1-fessalonikiytsam-1-2.md",
+      "slug": "1-fessalonikiytsam-1-2"
+    },
+    {
+      "type": "archive",
+      "title": "1 Тимофею 4 – повторение",
+      "subtitle": "Упражняй себя в благочестии – КРЕДО для практических шагов",
+      "date": "2018-01",
+      "tags": [
+        "1 Тим. 4",
+        "проповедь",
+        "благочестие",
+        "упражнение",
+        "практика"
+      ],
+      "path": "archive/1-tim-4-povtorenie.md",
+      "slug": "1-tim-4-povtorenie"
     }
   ]
 }

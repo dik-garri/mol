@@ -4,7 +4,7 @@ const $ = (s, root = document) => root.querySelector(s);
 const $$ = (s, root = document) => Array.from(root.querySelectorAll(s));
 
 const state = {
-  data: { sermons: [], luki: [], archive: [] },
+  data: { sermons: [], luki: [], draft: [] },
   tab: "sermons",
   query: "",
   activeTags: new Set(),
@@ -103,7 +103,7 @@ function renderList() {
   // Counts (отражают тек. фильтр поиска, но не вкладку и не теги — для понимания «сколько вообще»)
   $("#count-sermons").textContent = state.data.sermons.length;
   $("#count-luki").textContent = state.data.luki.length;
-  $("#count-archive").textContent = (state.data.archive || []).length;
+  $("#count-draft").textContent = (state.data.draft || []).length;
 
   renderActiveTags();
 }
@@ -152,7 +152,7 @@ function parseFrontmatter(text) {
   return { meta, body };
 }
 
-const TYPE_TO_KEY = { sermon: "sermons", luki: "luki", archive: "archive" };
+const TYPE_TO_KEY = { sermon: "sermons", luki: "luki", draft: "draft" };
 
 async function openReader(type, slug) {
   // find item
@@ -217,7 +217,7 @@ function showReader() {
 
 function route() {
   const hash = location.hash.slice(1); // strip '#'
-  const m = hash.match(/^\/(sermon|luki|archive)\/(.+)$/);
+  const m = hash.match(/^\/(sermon|luki|draft)\/(.+)$/);
   if (m) {
     openReader(m[1], decodeURIComponent(m[2]));
   } else {

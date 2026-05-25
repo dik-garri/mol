@@ -81,22 +81,6 @@
     },
     {
       "type": "sermon",
-      "title": "Клятва, которая стоила жизни",
-      "subtitle": "",
-      "date": "2026-04",
-      "tags": [
-        "Страстная пятница",
-        "Иоанн Креститель",
-        "Ирод",
-        "клятва",
-        "верность",
-        "крест"
-      ],
-      "path": "sermons/klyatva-kotoraya-stoila-zhizni.md",
-      "slug": "klyatva-kotoraya-stoila-zhizni"
-    },
-    {
-      "type": "sermon",
       "title": "Царство Божие",
       "subtitle": "",
       "date": "2026-03",

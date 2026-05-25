@@ -26,7 +26,6 @@
 | Тема | Ссылка |
 |------|--------|
 | Царство Божие | [sermons/tsarstvo-bozhie.md](sermons/tsarstvo-bozhie.md) |
-| Клятва, которая стоила жизни (Страстная пятница) | [sermons/klyatva-kotoraya-stoila-zhizni.md](sermons/klyatva-kotoraya-stoila-zhizni.md) |
 | Лицемерие и религиозность | [sermons/litsemerie-i-religioznost.md](sermons/litsemerie-i-religioznost.md) |
 | Любовь – наибольшая заповедь | [sermons/lyubov-naibolshaya-zapoved.md](sermons/lyubov-naibolshaya-zapoved.md) |
 | Царь на осле (Вербное воскресенье) | [sermons/tsar-na-osle.md](sermons/tsar-na-osle.md) |

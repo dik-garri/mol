@@ -4,7 +4,7 @@ const $ = (s, root = document) => root.querySelector(s);
 const $$ = (s, root = document) => Array.from(root.querySelectorAll(s));
 
 const state = {
-  data: { sermons: [], luki: [] },
+  data: { sermons: [], luki: [], archive: [] },
   tab: "sermons",
   query: "",
   activeTags: new Set(),
@@ -103,6 +103,7 @@ function renderList() {
   // Counts (отражают тек. фильтр поиска, но не вкладку и не теги — для понимания «сколько вообще»)
   $("#count-sermons").textContent = state.data.sermons.length;
   $("#count-luki").textContent = state.data.luki.length;
+  $("#count-archive").textContent = (state.data.archive || []).length;
 
   renderActiveTags();
 }
@@ -151,9 +152,11 @@ function parseFrontmatter(text) {
   return { meta, body };
 }
 
+const TYPE_TO_KEY = { sermon: "sermons", luki: "luki", archive: "archive" };
+
 async function openReader(type, slug) {
   // find item
-  const items = state.data[type === "sermon" ? "sermons" : "luki"] || [];
+  const items = state.data[TYPE_TO_KEY[type]] || [];
   const item = items.find((it) => it.slug === slug);
   if (!item) {
     showList();
@@ -178,7 +181,7 @@ async function openReader(type, slug) {
     tag.addEventListener("click", () => {
       state.activeTags.clear();
       state.activeTags.add(t);
-      state.tab = type === "sermon" ? "sermons" : "luki";
+      state.tab = TYPE_TO_KEY[type] || "sermons";
       location.hash = "";
     });
     tagsBox.appendChild(tag);
@@ -214,7 +217,7 @@ function showReader() {
 
 function route() {
   const hash = location.hash.slice(1); // strip '#'
-  const m = hash.match(/^\/(sermon|luki)\/(.+)$/);
+  const m = hash.match(/^\/(sermon|luki|archive)\/(.+)$/);
   if (m) {
     openReader(m[1], decodeURIComponent(m[2]));
   } else {

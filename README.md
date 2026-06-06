@@ -21,6 +21,7 @@
 | Где Бог, когда больно? | [presentations/gde-bog-kogda-bolno/](presentations/gde-bog-kogda-bolno/) |
 | Как читать Библию | [presentations/kak-chitat-bibliyu/](presentations/kak-chitat-bibliyu/) |
 | Я и соцсети | [presentations/ya-i-socseti/](presentations/ya-i-socseti/) |
+| Конфликты и прощение | [presentations/konflikty-i-proshchenie/](presentations/konflikty-i-proshchenie/) |
 
 ## Проповеди
 

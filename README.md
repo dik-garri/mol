@@ -28,6 +28,7 @@
 
 | Тема | Ссылка |
 |------|--------|
+| Положил в сердце (Даниил 1) | [sermons/polozhil-v-serdce.md](sermons/polozhil-v-serdce.md) |
 | Царство Божие | [sermons/tsarstvo-bozhie.md](sermons/tsarstvo-bozhie.md) |
 | Лицемерие и религиозность | [sermons/litsemerie-i-religioznost.md](sermons/litsemerie-i-religioznost.md) |
 | Любовь – наибольшая заповедь | [sermons/lyubov-naibolshaya-zapoved.md](sermons/lyubov-naibolshaya-zapoved.md) |

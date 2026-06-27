@@ -23,6 +23,7 @@
 | Я и соцсети | [presentations/ya-i-socseti/](presentations/ya-i-socseti/) |
 | Конфликты и прощение | [presentations/konflikty-i-proshchenie/](presentations/konflikty-i-proshchenie/) |
 | Когда все делают «это» | [presentations/kogda-vse-delayut-eto/](presentations/kogda-vse-delayut-eto/) |
+| Технологии и служение | [presentations/tehnologii-i-sluzhenie/](presentations/tehnologii-i-sluzhenie/) |
 
 ## Проповеди
 

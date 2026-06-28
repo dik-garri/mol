@@ -391,6 +391,55 @@
 }
 
 /* ===========================================
+   NOTEBOOKLM DEMO
+   =========================================== */
+
+.flow {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.flow .node {
+  background: rgba(91, 168, 140, 0.08);
+  border: 1px solid rgba(91, 168, 140, 0.25);
+  border-radius: var(--box-radius);
+  padding: 14px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 150px;
+}
+.flow .node.tool {
+  background: rgba(212, 168, 67, 0.1);
+  border-color: var(--primary-color);
+}
+.flow .node .icon { font-size: 24pt; color: var(--serve-color); margin-bottom: 6px; }
+.flow .node.tool .icon { color: var(--primary-color); }
+.flow .node p { margin: 0; font-size: 15pt; }
+.flow .node .sub { font-size: 12pt; color: var(--muted-color); margin-top: 4px; }
+.flow .arrow { display: flex; align-items: center; color: var(--muted-color); font-size: 22pt; }
+
+.audio-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line-color);
+  border-left: 4px solid var(--primary-color);
+  border-radius: 0 var(--box-radius) var(--box-radius) 0;
+  padding: 16px 22px;
+}
+.audio-card .label {
+  font-size: 13pt;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary-color);
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+.audio-card audio { width: 100%; height: 40px; }
+
+/* ===========================================
    QUOTE PAIR (two scripture blocks side by side)
    =========================================== */
 

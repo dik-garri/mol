@@ -412,6 +412,90 @@
   "draft": [
     {
       "type": "draft",
+      "title": "Молитва о стране и о земных благословениях",
+      "subtitle": "",
+      "date": "2026-07",
+      "tags": [
+        "молитва",
+        "Неделя молитвы",
+        "страна",
+        "власти",
+        "миграция",
+        "урожай",
+        "Иер. 29:7",
+        "1 Тим. 2:1-3"
+      ],
+      "path": "draft/molitva-o-strane.md",
+      "slug": "molitva-o-strane"
+    },
+    {
+      "type": "draft",
+      "title": "Молитва о семьях",
+      "subtitle": "",
+      "date": "2026-07",
+      "tags": [
+        "молитва",
+        "Неделя молитвы",
+        "семья",
+        "Год Семьи",
+        "Еф. 5:22-27",
+        "Кол. 3:18-21"
+      ],
+      "path": "draft/molitva-o-semyah.md",
+      "slug": "molitva-o-semyah"
+    },
+    {
+      "type": "draft",
+      "title": "Молитва о разных возрастных группах",
+      "subtitle": "",
+      "date": "2026-07",
+      "tags": [
+        "молитва",
+        "Неделя молитвы",
+        "дети",
+        "молодёжь",
+        "сироты и вдовы",
+        "Притчи 22:6",
+        "Ин. 13:35"
+      ],
+      "path": "draft/molitva-o-vozrastnyh-gruppah.md",
+      "slug": "molitva-o-vozrastnyh-gruppah"
+    },
+    {
+      "type": "draft",
+      "title": "Молитва о различных служениях",
+      "subtitle": "",
+      "date": "2026-07",
+      "tags": [
+        "молитва",
+        "Неделя молитвы",
+        "служение",
+        "дары",
+        "благовестие",
+        "Рим. 12:1",
+        "1 Кор. 12:4-7"
+      ],
+      "path": "draft/molitva-o-sluzheniyah.md",
+      "slug": "molitva-o-sluzheniyah"
+    },
+    {
+      "type": "draft",
+      "title": "Молитва о духовном состоянии верующих",
+      "subtitle": "",
+      "date": "2026-07",
+      "tags": [
+        "молитва",
+        "Неделя молитвы",
+        "освящение",
+        "духовное возрастание",
+        "Рим. 12:1-2",
+        "2 Пет. 1:3"
+      ],
+      "path": "draft/molitva-o-duhovnom-sostoyanii.md",
+      "slug": "molitva-o-duhovnom-sostoyanii"
+    },
+    {
+      "type": "draft",
       "title": "Молитва о братстве",
       "subtitle": "",
       "date": "2026-07",
@@ -426,6 +510,23 @@
       ],
       "path": "draft/molitva-o-bratstve.md",
       "slug": "molitva-o-bratstve"
+    },
+    {
+      "type": "draft",
+      "title": "Молитва о Церкви",
+      "subtitle": "",
+      "date": "2026-07",
+      "tags": [
+        "молитва",
+        "Неделя молитвы",
+        "церковь",
+        "проповедь",
+        "восхищение",
+        "Пс. 121:1",
+        "1 Фес. 4:16-17"
+      ],
+      "path": "draft/molitva-o-tserkvi.md",
+      "slug": "molitva-o-tserkvi"
     },
     {
       "type": "draft",

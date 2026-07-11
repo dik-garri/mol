@@ -40,6 +40,7 @@
 | Новый год | [sermons/novyy-god.md](sermons/novyy-god.md) |
 | Похороны | [sermons/pokhorony.md](sermons/pokhorony.md) |
 | Самарянка | [sermons/samaryanka.md](sermons/samaryanka.md) |
+| Вера | [sermons/vera.md](sermons/vera.md) |
 
 ## Материалы (веб-интерфейс)
 

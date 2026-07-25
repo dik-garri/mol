@@ -1,0 +1,525 @@
+/* Четыре судьи – молодёжная презентация
+ * Палитра проекта: dark blue #0F1B2D, gold #D4A843, teal #5B8CA8
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+/* ===========================================
+   CSS VARIABLES
+   =========================================== */
+:root {
+  --background-color: #0F1B2D;
+  --section-divider-bg: #0B1522;
+
+  /* Typography */
+  --heading-font: "Montserrat", Helvetica, sans-serif;
+  --body-font: "Montserrat", Helvetica, sans-serif;
+  --scripture-font: "Lora", Georgia, serif;
+  --base-font-size: 32px;
+  --text-size: 17pt;
+  --h1-size: 46pt;
+  --h2-size: 32pt;
+  --h3-size: 22pt;
+  --footnote-size: 11pt;
+
+  /* Colors */
+  --primary-color: #D4A843;    /* gold */
+  --secondary-color: #5B8CA8;  /* teal */
+  --danger-color: #C75B5B;     /* fear-red */
+  --success-color: #5BA88C;    /* faith-green */
+  --text-color: #EAF0F7;
+  --muted-color: #7A8BA8;
+  --line-color: rgba(122, 139, 168, 0.3);
+
+  /* Layout */
+  --slide-padding: 60px;
+  --slide-padding-top: 40px;
+  --content-gap: 24px;
+  --box-radius: 10px;
+}
+
+/* ===========================================
+   BASE
+   =========================================== */
+
+.reveal {
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.reveal-viewport {
+  background-color: var(--background-color);
+}
+
+.reveal-viewport.is-section-divider .slide-background.present {
+  background-color: var(--section-divider-bg) !important;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  font-family: var(--heading-font);
+  text-transform: none;
+  color: var(--text-color);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.reveal h1 { font-size: var(--h1-size); }
+.reveal h2 { font-size: var(--h2-size); margin-bottom: 0; color: var(--primary-color); }
+.reveal h3 { font-size: var(--h3-size); }
+
+.reveal p,
+.reveal li,
+.reveal td,
+.reveal th,
+.reveal blockquote {
+  font-size: var(--text-size);
+  color: var(--text-color);
+  line-height: 1.45;
+}
+
+/* ===========================================
+   LISTS
+   =========================================== */
+
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 12px 0;
+}
+
+.reveal ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+}
+
+.reveal ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 8px;
+  height: 8px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.reveal ol {
+  padding-left: 1.2em;
+}
+
+.reveal ol li {
+  margin-bottom: 10px;
+}
+
+.reveal ol li::marker {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.reveal blockquote p {
+  font-size: inherit;
+}
+
+/* ===========================================
+   SLIDE LAYOUT
+   =========================================== */
+
+.reveal .slides section {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: var(--slide-padding-top) var(--slide-padding) var(--slide-padding) var(--slide-padding) !important;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.reveal .slides section.stack { padding: 0 !important; }
+
+.reveal .slides section > .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: var(--content-gap);
+  text-align: left;
+}
+
+.reveal .slides section > .footnote {
+  position: absolute;
+  bottom: 14px;
+  left: var(--slide-padding);
+  right: var(--slide-padding);
+  font-size: var(--footnote-size);
+  color: var(--muted-color);
+}
+
+/* Title underline on content slides */
+.reveal .slides section:not(.section-divider) > h2 {
+  flex-shrink: 0;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--line-color);
+}
+
+/* ===========================================
+   SECTION DIVIDERS
+   =========================================== */
+
+.reveal .slides section.section-divider {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
+}
+
+.reveal .slides section.section-divider h1 {
+  font-size: 62pt;
+  font-weight: 800;
+  text-align: center;
+  color: var(--primary-color);
+  letter-spacing: -0.01em;
+}
+
+.reveal .slides section.section-divider p {
+  font-size: 19pt;
+  color: var(--muted-color);
+}
+
+/* Gradient rule used on dividers and the title slide */
+.divider-rule {
+  width: 220px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  margin: 22px auto;
+}
+
+.judge-ref {
+  display: inline-block;
+  font-family: var(--heading-font);
+  font-size: 14pt !important;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--secondary-color) !important;
+  border: 1px solid var(--line-color);
+  border-radius: 40px;
+  padding: 7px 22px;
+  margin-top: 6px;
+}
+
+/* ===========================================
+   JUDGE PORTRAITS
+   =========================================== */
+
+/* Section divider with a full-bleed portrait on the left */
+.reveal .slides section.judge-divider {
+  display: grid !important;
+  grid-template-columns: 430px 1fr;
+  /* .section-divider centres its children – the portrait must stretch instead */
+  align-items: stretch !important;
+  justify-content: stretch !important;
+  justify-items: stretch;
+  padding: 0 !important;
+  text-align: left;
+}
+
+.judge-portrait {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.judge-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Soften the seam between photo and background */
+.judge-portrait::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    rgba(15, 27, 45, 0.35) 0%,
+    rgba(15, 27, 45, 0) 30%,
+    rgba(15, 27, 45, 0) 72%,
+    var(--section-divider-bg) 100%);
+}
+
+.judge-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 64px 0 44px;
+}
+
+.reveal .slides section.judge-divider h1 {
+  text-align: left;
+  font-size: 52pt;
+}
+
+.judge-divider .divider-rule {
+  margin: 22px 0;
+}
+
+.reveal .slides section.judge-divider p {
+  text-align: left;
+}
+
+/* Row of four small portraits on the title slide */
+.portrait-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 152px);
+  gap: 18px;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.portrait-strip figure {
+  margin: 0;
+}
+
+.portrait-strip img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: var(--box-radius);
+  border: 1px solid rgba(212, 168, 67, 0.35);
+}
+
+.portrait-strip figcaption {
+  margin-top: 10px;
+  font-family: var(--heading-font);
+  font-size: 13pt;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--muted-color);
+  text-align: center;
+}
+
+/* ===========================================
+   SCRIPTURE
+   =========================================== */
+
+.reveal blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding: 4px 0 4px 22px;
+  margin: 16px 0;
+  font-family: var(--scripture-font);
+  font-style: italic;
+  background: none;
+  box-shadow: none;
+  width: 100%;
+  max-width: none;
+}
+
+.reveal blockquote p {
+  font-family: var(--scripture-font);
+  color: #F2E4C4;
+}
+
+.reveal blockquote cite {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--heading-font);
+  font-style: normal;
+  font-size: 12pt;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-color);
+}
+
+/* ===========================================
+   CARDS & COMPONENTS
+   =========================================== */
+
+/* Generic panel */
+.card {
+  background: rgba(91, 140, 168, 0.10);
+  border: 1px solid var(--line-color);
+  border-radius: var(--box-radius);
+  padding: 20px 24px;
+}
+
+.card h3 {
+  margin: 0 0 8px 0;
+  color: var(--secondary-color);
+}
+
+/* Lesson card: big number + text */
+.lesson {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: 20px;
+  align-items: start;
+  background: rgba(212, 168, 67, 0.09);
+  border-left: 5px solid var(--primary-color);
+  border-radius: var(--box-radius);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+.lesson .num {
+  font-family: var(--heading-font);
+  font-size: 40pt !important;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.lesson h3 {
+  margin: 0 0 6px 0;
+  color: var(--text-color);
+  font-size: 21pt;
+}
+
+.lesson p {
+  margin: 0;
+  color: #C3CFE0;
+  font-size: 16pt;
+}
+
+/* Discussion question card */
+.qcard {
+  background: rgba(91, 140, 168, 0.12);
+  border: 1px solid rgba(91, 140, 168, 0.45);
+  border-radius: var(--box-radius);
+  padding: 16px 20px;
+}
+
+.qcard p { margin: 0; font-size: 16pt; }
+
+/* Small labelled tag */
+.tag {
+  display: inline-block;
+  font-size: 12pt !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 40px;
+  margin: 0 0 10px 0 !important;
+}
+
+.tag-gold  { background: rgba(212, 168, 67, 0.18);  color: var(--primary-color) !important; }
+.tag-teal  { background: rgba(91, 140, 168, 0.20);  color: #9FC4DA !important; }
+.tag-red   { background: rgba(199, 91, 91, 0.20);   color: #E39A9A !important; }
+.tag-green { background: rgba(91, 168, 140, 0.20);  color: #8FD3BC !important; }
+
+/* Cycle arrows (intro slide) */
+.cycle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.cycle-step {
+  text-align: center;
+  border: 1px solid var(--line-color);
+  border-radius: var(--box-radius);
+  padding: 16px 8px;
+}
+
+.cycle-step i {
+  font-size: 26pt;
+  color: var(--secondary-color);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.cycle-step p {
+  margin: 0;
+  font-size: 15pt;
+  font-weight: 600;
+}
+
+/* Contrast pair: strength vs weakness */
+.pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.pair-up, .pair-down {
+  border-radius: var(--box-radius);
+  padding: 18px 22px;
+}
+
+.pair-up {
+  background: rgba(91, 168, 140, 0.10);
+  border-left: 5px solid var(--success-color);
+}
+
+.pair-down {
+  background: rgba(199, 91, 91, 0.10);
+  border-left: 5px solid var(--danger-color);
+}
+
+.pair h3 { margin: 0 0 10px 0; font-size: 19pt; }
+.pair-up h3 { color: #8FD3BC; }
+.pair-down h3 { color: #E39A9A; }
+.pair p, .pair li { font-size: 15pt; }
+.pair ul { margin: 0; }
+.pair ul li { margin-bottom: 7px; }
+.pair-up ul li::before { background: var(--success-color); }
+.pair-down ul li::before { background: var(--danger-color); }
+
+/* Key takeaway strip */
+.takeaway {
+  margin-top: auto;
+  background: linear-gradient(90deg, rgba(212,168,67,0.16), rgba(91,140,168,0.10));
+  border-radius: var(--box-radius);
+  padding: 16px 24px;
+}
+
+.takeaway p {
+  margin: 0;
+  font-size: 19pt;
+  font-weight: 600;
+}
+
+.takeaway .label {
+  display: block;
+  font-size: 11pt !important;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 6px;
+}
+
+/* ===========================================
+   TEXT UTILITIES
+   =========================================== */
+
+.text-lg  { font-size: 19pt !important; }
+.text-xl  { font-size: 21pt !important; }
+.text-2xl { font-size: 25pt !important; }
+.text-3xl { font-size: 29pt !important; }
+.text-4xl { font-size: 33pt !important; }
+
+.text-muted { color: var(--muted-color) !important; }
+.text-center { text-align: center !important; }
+.text-uppercase { text-transform: uppercase; letter-spacing: 0.1em; }
+.font-light { font-weight: 300; }
+.font-bold { font-weight: 700; }
+.text-gold { color: var(--primary-color) !important; }
+.text-teal { color: #9FC4DA !important; }

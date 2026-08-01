@@ -42,6 +42,7 @@
 | Похороны | [sermons/pokhorony.md](sermons/pokhorony.md) |
 | Самарянка | [sermons/samaryanka.md](sermons/samaryanka.md) |
 | Вера | [sermons/vera.md](sermons/vera.md) |
+| Вечеря Господня (проповедь + ход вечери) | [sermons/vecherya-gospodnya.md](sermons/vecherya-gospodnya.md) |
 
 ## Материалы (веб-интерфейс)
 

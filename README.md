@@ -66,3 +66,7 @@
 ## Ученичество
 
 Вынесено в отдельный проект: [dik-garri/uchenichestvo](https://github.com/dik-garri/uchenichestvo)
+
+---
+
+[Все проекты →](https://dik-garri.github.io/garry/)

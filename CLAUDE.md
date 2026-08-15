@@ -42,7 +42,7 @@ mol/
 │   └── <slug>/                        # One folder per presentation
 │       ├── index.html                 # Reveal.js presentation
 │       ├── styles.css                 # Custom styles
-│       ├── konspekt.md                # Study notes (конспект)
+│       ├── prompts.md                 # Image-generation prompts + слоты под картинки (если есть иллюстрации)
 │       ├── presentation.pdf           # PDF export (optional)
 │       └── anons.png                  # Social media announcement image (optional)
 ├── sermons/
@@ -80,7 +80,15 @@ mol/
 - Use the `revealjs` skill
 - Each presentation goes in `presentations/<slug>/` with main file named `index.html`
 - Slug: lowercase latin transliteration of the topic (e.g. `vera-i-strah`)
-- Each presentation should have a `konspekt.md` with study notes
+- **`konspekt.md` больше НЕ создавать** – конспекты для презентаций отменены
+- **Промпты для генерации картинок** – если в презентации есть (или планируются) иллюстрации, создать в папке презентации отдельный файл `prompts.md`:
+  - В начале файла – **навигация**: список всех картинок со ссылками-якорями на секции
+  - **Общий стилевой суффикс** – один блок ``` с описанием стиля серии, добавляется к каждому промпту. База: cinematic digital painting, палитра проекта (navy `#0F1B2D` фон, gold `#D4A843` key light, teal `#5B8CA8` rim light), no text / no watermark
+  - Далее по одной секции на картинку (### заголовок):
+    1. Где используется (номер/название слайда)
+    2. Промпт в блоке ``` (на английском)
+    3. **Слот под картинку**: `![<имя>](img/<имя>.png)` – ссылка на ещё не существующий файл; когда пользователь сгенерирует картинку и положит её в `img/` под этим именем, она отобразится
+  - Имена файлов картинок согласовать с промптами заранее, чтобы слоты «оживали» без правок
 - After creating a new presentation, ALWAYS update ALL of the following:
   1. `index.html` – add a card to the landing page (ОБЯЗАТЕЛЬНО)
   2. `README.md` – add row to the presentations table

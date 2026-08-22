@@ -26,6 +26,7 @@
 | Технологии и служение | [presentations/tehnologii-i-sluzhenie/](presentations/tehnologii-i-sluzhenie/) |
 | Четыре судьи | [presentations/chetyre-sudii/](presentations/chetyre-sudii/) |
 | Мои дары и таланты | [presentations/moi-dary-i-talanty/](presentations/moi-dary-i-talanty/) |
+| Тихое время – практикум (Мк. 4:35–41) | [presentations/tihoe-vremya/](presentations/tihoe-vremya/) |
 
 ## Проповеди
 

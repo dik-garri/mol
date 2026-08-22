@@ -1,0 +1,116 @@
+/* Тихое время – Марка 4:35–41
+ * Только текст Писания. Палитра проекта: navy #0F1B2D / gold #D4A843 / teal #5B8CA8
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lora:wght@400;600&display=swap');
+
+:root {
+  --background-color: #0F1B2D;
+
+  --heading-font: "Montserrat", Helvetica, sans-serif;
+  --scripture-font: "Lora", Georgia, serif;
+  --base-font-size: 32px;
+
+  --primary-color: #D4A843;   /* gold – номера стихов */
+  --secondary-color: #5B8CA8; /* teal */
+  --text-color: #EAF0F7;
+  --muted-color: #7A8BA8;
+
+  --slide-padding: 80px;
+}
+
+/* ===========================================
+   BASE
+   =========================================== */
+
+.reveal {
+  font-family: var(--scripture-font);
+  font-size: var(--base-font-size);
+}
+
+.reveal-viewport { background-color: var(--background-color); }
+
+.reveal .slides section {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  padding: var(--slide-padding) !important;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.reveal .slides section > .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ===========================================
+   ССЫЛКА НА ОТРЫВОК
+   =========================================== */
+
+.ref {
+  font-family: var(--heading-font);
+  font-size: 15pt;
+  font-weight: 600;
+  color: var(--muted-color);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin: 0 0 28px 0;
+}
+
+/* ===========================================
+   ПОЛНЫЙ ОТРЫВОК
+   =========================================== */
+
+.scripture p {
+  font-family: var(--scripture-font);
+  font-size: 21pt;
+  line-height: 1.55;
+  color: var(--text-color);
+  margin: 0 0 14px 0;
+}
+
+.scripture p:last-child { margin-bottom: 0; }
+
+/* ===========================================
+   ОДИН СТИХ
+   =========================================== */
+
+.verse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.verse p {
+  font-family: var(--scripture-font);
+  font-size: 38pt;
+  line-height: 1.45;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* ===========================================
+   НОМЕР СТИХА
+   =========================================== */
+
+.vn {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 0.5em;
+  color: var(--primary-color);
+  vertical-align: super;
+  margin-right: 6px;
+}
+
+.scripture .vn { font-size: 0.6em; }
+
+/* ===========================================
+   ПРОГРЕСС-БАР
+   =========================================== */
+
+.reveal .progress { color: var(--primary-color); height: 4px; }
+.reveal .controls { color: var(--secondary-color); }

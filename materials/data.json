@@ -2,6 +2,22 @@
   "sermons": [
     {
       "type": "sermon",
+      "title": "Не забывай всех благодеяний Его",
+      "subtitle": "",
+      "date": "2026-09",
+      "tags": [
+        "Втор. 8",
+        "Лк. 17",
+        "Пс. 102",
+        "жатва",
+        "благодарность",
+        "праздник"
+      ],
+      "path": "sermons/prazdnik-zhatvy-blagodarnost.md",
+      "slug": "prazdnik-zhatvy-blagodarnost"
+    },
+    {
+      "type": "sermon",
       "title": "Вечеря Господня",
       "subtitle": "Он сделал это добровольно и для тебя – проповедь перед вечерей и ход вечери",
       "date": "2026-08",

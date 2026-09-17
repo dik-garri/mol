@@ -42,6 +42,7 @@
 | Перед крещением | [sermons/pered-kreshcheniem.md](sermons/pered-kreshcheniem.md) |
 | Крещение Христово 2026 | [sermons/kreshchenie-khristovo-2026.md](sermons/kreshchenie-khristovo-2026.md) |
 | Новый год | [sermons/novyy-god.md](sermons/novyy-god.md) |
+| Мы не знаем своего времени (похороны) | [sermons/pokhorony-lysov.md](sermons/pokhorony-lysov.md) |
 | Похороны | [sermons/pokhorony.md](sermons/pokhorony.md) |
 | Самарянка | [sermons/samaryanka.md](sermons/samaryanka.md) |
 | Вера | [sermons/vera.md](sermons/vera.md) |

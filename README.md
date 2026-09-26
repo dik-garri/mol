@@ -27,6 +27,7 @@
 | Четыре судьи | [presentations/chetyre-sudii/](presentations/chetyre-sudii/) |
 | Мои дары и таланты | [presentations/moi-dary-i-talanty/](presentations/moi-dary-i-talanty/) |
 | Тихое время – практикум (Мк. 4:35–41) | [presentations/tihoe-vremya/](presentations/tihoe-vremya/) |
+| 10 вопросов по Притчам 1 | [presentations/pritchi-1-voprosy/](presentations/pritchi-1-voprosy/) |
 
 ## Проповеди
 

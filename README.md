@@ -33,6 +33,7 @@
 
 | Тема | Ссылка |
 |------|--------|
+| Не любите мира (1 Ин. 2:15–17) | [sermons/ne-lyubite-mira.md](sermons/ne-lyubite-mira.md) |
 | Не забывай всех благодеяний Его (Праздник жатвы) | [sermons/prazdnik-zhatvy-blagodarnost.md](sermons/prazdnik-zhatvy-blagodarnost.md) |
 | Положил в сердце (Даниил 1) | [sermons/polozhil-v-serdce.md](sermons/polozhil-v-serdce.md) |
 | Царство Божие | [sermons/tsarstvo-bozhie.md](sermons/tsarstvo-bozhie.md) |

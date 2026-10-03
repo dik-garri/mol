@@ -28,6 +28,7 @@
 | Мои дары и таланты | [presentations/moi-dary-i-talanty/](presentations/moi-dary-i-talanty/) |
 | Тихое время – практикум (Мк. 4:35–41) | [presentations/tihoe-vremya/](presentations/tihoe-vremya/) |
 | 10 вопросов по Притчам 1 | [presentations/pritchi-1-voprosy/](presentations/pritchi-1-voprosy/) |
+| Идите за ковчегом (Нав. 3) | [presentations/idite-za-kovchegom/](presentations/idite-za-kovchegom/) |
 
 ## Проповеди
 

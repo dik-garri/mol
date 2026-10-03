@@ -4,10 +4,10 @@
 
 ## Навигация
 
-1. [Тропа и проводник](#1-тропа-и-проводник) – `img/trail.png`
-2. [Ковчег впереди народа](#2-ковчег-впереди-народа) – `img/ark-ahead.png`
-3. [Разлившийся Иордан](#3-разлившийся-иордан) – `img/jordan-flood.png`
-4. [Священники посреди русла](#4-священники-посреди-русла) – `img/priests-river.png`
+1. [Тропа и проводник](#1-тропа-и-проводник) – `img/trail.jpg`
+2. [Ковчег впереди народа](#2-ковчег-впереди-народа) – `img/ark-ahead.jpg`
+3. [Разлившийся Иордан](#3-разлившийся-иордан) – `img/jordan-flood.jpg`
+4. [Священники посреди русла](#4-священники-посреди-русла) – `img/priests-river.jpg`
 
 ## Общий стилевой суффикс
 
@@ -40,7 +40,7 @@ detail, no text, no lettering, no watermark. Portrait orientation 3:4, dark
 negative space around the subject.
 ```
 
-![trail](img/trail.png)
+![trail](img/trail.jpg)
 
 ---
 
@@ -63,7 +63,7 @@ detail, no text, no lettering, no watermark. Portrait orientation 3:4, dark
 negative space around the subject.
 ```
 
-![ark-ahead](img/ark-ahead.png)
+![ark-ahead](img/ark-ahead.jpg)
 
 ---
 
@@ -85,7 +85,7 @@ detail, no text, no lettering, no watermark. Portrait orientation 3:4, dark
 negative space around the subject.
 ```
 
-![jordan-flood](img/jordan-flood.png)
+![jordan-flood](img/jordan-flood.jpg)
 
 ---
 
@@ -108,4 +108,4 @@ detail, no text, no lettering, no watermark. Portrait orientation 3:4, dark
 negative space around the subject.
 ```
 
-![priests-river](img/priests-river.png)
+![priests-river](img/priests-river.jpg)

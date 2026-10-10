@@ -1,0 +1,690 @@
+/* Бог – да, но для чего Иисус? – молодёжная презентация
+ * по 1-й главе книги В. Буша «Иисус – наша судьба».
+ * Палитра проекта: dark blue #0F1B2D, gold #D4A843, teal #5B8CA8.
+ * Без картинок: типографика, цитаты, эмодзи-иконки.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+/* ===========================================
+   CSS VARIABLES
+   =========================================== */
+:root {
+  --background-color: #0F1B2D;
+  --section-divider-bg: #0B1522;
+
+  --heading-font: "Montserrat", Helvetica, sans-serif;
+  --body-font: "Montserrat", Helvetica, sans-serif;
+  --scripture-font: "Lora", Georgia, serif;
+  --base-font-size: 32px;
+  --text-size: 17pt;
+  --h1-size: 46pt;
+  --h2-size: 30pt;
+  --h3-size: 21pt;
+  --footnote-size: 11pt;
+
+  --primary-color: #D4A843;    /* gold */
+  --secondary-color: #5B8CA8;  /* teal */
+  --danger-color: #C75B5B;     /* fear-red */
+  --success-color: #5BA88C;    /* faith-green */
+  --text-color: #EAF0F7;
+  --soft-text: #C3CFE0;
+  --muted-color: #7A8BA8;
+  --scripture-color: #F2E4C4;
+  --line-color: rgba(122, 139, 168, 0.3);
+
+  --slide-padding: 60px;
+  --slide-padding-top: 40px;
+  --content-gap: 22px;
+  --box-radius: 10px;
+}
+
+/* ===========================================
+   BASE
+   =========================================== */
+
+.reveal {
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
+}
+
+.reveal strong,
+.reveal b {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.reveal em { font-style: italic; }
+
+.reveal-viewport {
+  background-color: var(--background-color);
+}
+
+.reveal-viewport.is-section-divider .slide-background.present {
+  background-color: var(--section-divider-bg) !important;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4 {
+  font-family: var(--heading-font);
+  text-transform: none;
+  color: var(--text-color);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.reveal h1 { font-size: var(--h1-size); }
+.reveal h2 { font-size: var(--h2-size); margin-bottom: 0; color: var(--primary-color); }
+.reveal h3 { font-size: var(--h3-size); }
+
+.reveal p,
+.reveal li,
+.reveal blockquote {
+  font-size: var(--text-size);
+  color: var(--text-color);
+  line-height: 1.45;
+}
+
+.reveal p { margin: 0; }
+
+/* ===========================================
+   LISTS
+   =========================================== */
+
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 8px 0;
+}
+
+.reveal ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+}
+
+.reveal ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.58em;
+  width: 8px;
+  height: 8px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+}
+
+/* ===========================================
+   SLIDE LAYOUT
+   =========================================== */
+
+.reveal .slides section {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: var(--slide-padding-top) var(--slide-padding) var(--slide-padding) var(--slide-padding) !important;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.reveal .slides section > .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding-top: var(--content-gap);
+  text-align: left;
+  min-height: 0;
+}
+
+.reveal .slides section:not(.section-divider) > h2 {
+  flex-shrink: 0;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--line-color);
+}
+
+/* Маленькая метка над заголовком слайда: «Пункт 2 · история» */
+.reveal .slides section > .kicker {
+  flex-shrink: 0;
+  font-size: 11pt;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin: 0 0 6px 0;
+}
+
+/* ===========================================
+   SECTION DIVIDERS
+   =========================================== */
+
+.reveal .slides section.section-divider {
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
+}
+
+.reveal .slides section.section-divider h1 {
+  font-size: 58pt;
+  font-weight: 800;
+  text-align: center;
+  color: var(--primary-color);
+  letter-spacing: -0.01em;
+  max-width: 1100px;
+}
+
+.reveal .slides section.section-divider p {
+  font-size: 19pt;
+  color: var(--muted-color);
+}
+
+.divider-rule {
+  width: 220px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  margin: 22px auto;
+}
+
+/* Разделитель пункта: огромная цифра + заголовок + реплика Буша */
+.point-num {
+  font-family: var(--heading-font);
+  font-size: 110pt !important;
+  font-weight: 800;
+  line-height: 0.9 !important;
+  color: rgba(212, 168, 67, 0.28) !important;
+  margin: 0 0 6px 0 !important;
+}
+
+.reveal .slides section.point-divider h1 {
+  font-size: 46pt;
+  line-height: 1.15;
+}
+
+.reveal .slides section.point-divider .voice {
+  max-width: 900px;
+  text-align: left;
+  margin-top: 4px;
+}
+
+/* ===========================================
+   SCRIPTURE (Lora, золото)
+   =========================================== */
+
+.reveal blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding: 4px 0 4px 22px;
+  margin: 0;
+  font-family: var(--scripture-font);
+  font-style: italic;
+  background: none;
+  box-shadow: none;
+  width: 100%;
+  max-width: none;
+}
+
+.reveal blockquote p {
+  font-family: var(--scripture-font);
+  font-size: inherit;
+  color: var(--scripture-color);
+}
+
+.reveal blockquote cite {
+  display: block;
+  margin-top: 8px;
+  font-family: var(--heading-font);
+  font-style: normal;
+  font-size: 12pt;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-color);
+}
+
+/* Крупный стих в центре слайда */
+.reveal blockquote.verse-hero {
+  border-left: none;
+  padding: 0;
+  text-align: center;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.reveal blockquote.verse-hero p {
+  font-size: 32pt;
+  line-height: 1.4;
+}
+
+.reveal blockquote.verse-hero cite {
+  font-size: 14pt;
+  margin-top: 18px;
+}
+
+/* ===========================================
+   ГОЛОС БУША (Montserrat, бирюза)
+   Реплики из книги – дословно, отличаются от Писания
+   =========================================== */
+
+.voice {
+  border-left: 4px solid var(--secondary-color);
+  background: rgba(91, 140, 168, 0.09);
+  border-radius: 0 var(--box-radius) var(--box-radius) 0;
+  padding: 14px 22px;
+}
+
+.reveal .voice p {
+  font-size: 18pt;
+  line-height: 1.45;
+}
+
+.reveal .voice .who {
+  display: block;
+  font-size: 11pt;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #9FC4DA;
+  margin-bottom: 6px;
+}
+
+.voice.voice-lg p { font-size: 22pt; font-weight: 600; }
+
+/* ===========================================
+   ИСТОРИИ: шаги по фрагментам
+   =========================================== */
+
+.story {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  padding-left: 6px;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.step .ico {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(212, 168, 67, 0.12);
+  border: 1px solid rgba(212, 168, 67, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20pt !important;
+  line-height: 1 !important;
+}
+
+.reveal .step p { font-size: 19pt; line-height: 1.4; }
+
+/* Диалог: реплики персонажей */
+.dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.say {
+  max-width: 82%;
+  border-radius: 16px;
+  padding: 14px 22px;
+  background: rgba(122, 139, 168, 0.14);
+  border: 1px solid var(--line-color);
+}
+
+.say.right {
+  align-self: flex-end;
+  background: rgba(212, 168, 67, 0.12);
+  border-color: rgba(212, 168, 67, 0.4);
+}
+
+.reveal .say .who {
+  display: block;
+  font-size: 11pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--muted-color);
+  margin-bottom: 4px;
+}
+
+.reveal .say.right .who { color: var(--primary-color); }
+
+.reveal .say p { font-size: 21pt; line-height: 1.4; }
+
+/* Песня: строки детского псалма */
+.song {
+  text-align: center;
+  padding: 18px 24px;
+  border-top: 1px solid var(--line-color);
+  border-bottom: 1px solid var(--line-color);
+}
+
+.reveal .song p {
+  font-family: var(--scripture-font);
+  font-style: italic;
+  font-size: 24pt;
+  color: #9FC4DA;
+}
+
+/* Письмо с фронта */
+.letter {
+  background: rgba(242, 228, 196, 0.06);
+  border: 1px dashed rgba(242, 228, 196, 0.35);
+  border-radius: var(--box-radius);
+  padding: 22px 30px;
+}
+
+.reveal .letter p {
+  font-family: var(--scripture-font);
+  font-style: italic;
+  font-size: 20pt;
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.reveal .letter p + p { margin-top: 10px; }
+
+.reveal .letter .hl {
+  color: var(--scripture-color);
+  font-weight: 600;
+}
+
+/* ===========================================
+   ОБРАЗЫ БЕЗ КАРТИНОК
+   =========================================== */
+
+/* Дымовая завеса: люди слева – туман – Бог справа */
+.veil {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr 1fr;
+  align-items: center;
+  gap: 0;
+  height: 230px;
+  border-radius: var(--box-radius);
+  overflow: hidden;
+  background: rgba(11, 21, 34, 0.6);
+  border: 1px solid var(--line-color);
+}
+
+.veil-side {
+  text-align: center;
+  padding: 0 14px;
+}
+
+.reveal .veil-side .big { font-size: 44pt; line-height: 1.1; }
+.reveal .veil-side .cap {
+  font-size: 13pt;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--muted-color);
+  margin-top: 8px;
+}
+
+.veil-smoke {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(200, 210, 225, 0.38), transparent 60%),
+    radial-gradient(ellipse at 70% 65%, rgba(200, 210, 225, 0.32), transparent 60%),
+    radial-gradient(ellipse at 50% 20%, rgba(200, 210, 225, 0.25), transparent 55%),
+    linear-gradient(90deg, rgba(200, 210, 225, 0.08), rgba(200, 210, 225, 0.30), rgba(200, 210, 225, 0.08));
+  filter: blur(0.3px);
+}
+
+.reveal .veil-smoke p {
+  font-size: 15pt;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(234, 240, 247, 0.75);
+}
+
+/* Цепь: звенья-грехи */
+.chain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 10px;
+  align-items: center;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 40px;
+  border: 2px solid rgba(199, 91, 91, 0.6);
+  background: rgba(199, 91, 91, 0.10);
+}
+
+.reveal .link p { font-size: 17pt; font-weight: 600; }
+.link i { color: #E39A9A; font-size: 14pt; }
+
+.link.ring {
+  border-color: var(--muted-color);
+  background: rgba(122, 139, 168, 0.15);
+}
+
+.link.ring i { color: var(--soft-text); }
+
+/* Кто снимет цепь? – перечёркнутые варианты */
+.nope {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.nope-item {
+  text-align: center;
+  border: 1px solid var(--line-color);
+  border-radius: var(--box-radius);
+  padding: 14px 8px;
+}
+
+.reveal .nope-item .big { font-size: 30pt; line-height: 1.1; }
+.reveal .nope-item p { font-size: 16pt; font-weight: 600; margin-top: 6px; }
+.reveal .nope-item .note { font-size: 13pt; font-weight: 400; color: var(--muted-color); }
+
+/* Контраст: слышать vs иметь */
+.contrast {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contrast > div {
+  border-radius: var(--box-radius);
+  padding: 20px 24px;
+  text-align: center;
+}
+
+.contrast .no {
+  background: rgba(122, 139, 168, 0.10);
+  border: 1px solid var(--line-color);
+}
+
+.contrast .yes {
+  background: rgba(212, 168, 67, 0.12);
+  border: 1px solid rgba(212, 168, 67, 0.5);
+}
+
+.reveal .contrast .big { font-size: 34pt; font-weight: 800; line-height: 1.1; }
+.reveal .contrast .no .big { color: var(--muted-color); }
+.reveal .contrast .yes .big { color: var(--primary-color); }
+.reveal .contrast .sub { font-size: 16pt; color: var(--soft-text); margin-top: 8px; }
+
+/* Итог: 5 ответов */
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.answer {
+  display: grid;
+  grid-template-columns: 56px 54px 1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 22px;
+  border-radius: var(--box-radius);
+  background: linear-gradient(90deg, rgba(212,168,67,0.12), rgba(91,140,168,0.06));
+  border-left: 5px solid var(--primary-color);
+}
+
+.reveal .answer .n {
+  font-size: 30pt;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1;
+}
+
+.reveal .answer .e { font-size: 26pt; line-height: 1; }
+.reveal .answer .t { font-size: 21pt; font-weight: 600; }
+.reveal .answer .t span { font-weight: 400; color: var(--soft-text); font-size: 16pt; }
+
+/* Био-карточка */
+.bio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 22px;
+}
+
+.fact {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 14px 18px;
+  border: 1px solid var(--line-color);
+  border-radius: var(--box-radius);
+  background: rgba(91, 140, 168, 0.06);
+}
+
+.reveal .fact .e { font-size: 24pt; line-height: 1.1; }
+.reveal .fact p { font-size: 16pt; line-height: 1.4; }
+
+/* Вывод-полоса */
+.takeaway {
+  background: linear-gradient(90deg, rgba(212,168,67,0.16), rgba(91,140,168,0.10));
+  border-radius: var(--box-radius);
+  padding: 16px 24px;
+}
+
+.reveal .takeaway p {
+  font-size: 20pt;
+  font-weight: 600;
+}
+
+.reveal .takeaway .label {
+  display: block;
+  font-size: 11pt;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 6px;
+}
+
+/* Большая фраза */
+.reveal .big-line {
+  font-size: 36pt;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Метка */
+.tag {
+  display: inline-block;
+  font-size: 12pt !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 40px;
+  margin: 0 0 10px 0 !important;
+}
+
+.tag-gold { background: rgba(212, 168, 67, 0.18); color: var(--primary-color) !important; }
+.tag-teal { background: rgba(91, 140, 168, 0.20); color: #9FC4DA !important; }
+
+/* Молитва */
+.prayer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.prayer > div {
+  border-top: 4px solid var(--primary-color);
+  background: rgba(91, 140, 168, 0.07);
+  border-radius: 0 0 var(--box-radius) var(--box-radius);
+  padding: 18px 20px;
+}
+
+.prayer > div:nth-child(2) { border-top-color: var(--secondary-color); }
+.prayer > div:nth-child(3) { border-top-color: var(--success-color); }
+
+.reveal .prayer h3 { font-size: 19pt; margin: 0 0 10px 0; }
+.reveal .prayer p { font-size: 18pt; color: var(--soft-text); }
+
+/* Тишина */
+.reveal .slides section.silence h1 {
+  font-size: 54pt;
+  color: var(--text-color);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+/* ===========================================
+   TEXT UTILITIES
+   =========================================== */
+
+.text-lg  { font-size: 19pt !important; }
+.text-xl  { font-size: 21pt !important; }
+.text-2xl { font-size: 25pt !important; }
+.text-3xl { font-size: 29pt !important; }
+
+.text-muted { color: var(--muted-color) !important; }
+.text-soft { color: var(--soft-text) !important; }
+.text-center { text-align: center !important; }
+.text-gold { color: var(--primary-color) !important; }
+.text-teal { color: #9FC4DA !important; }
+.text-red { color: #E39A9A !important; }
+.text-green { color: #8FD3BC !important; }
+
+/* ===========================================
+   ПЕРЕБИВАЕМ .section-divider p (muted, 19pt)
+   для стихов и реплик на центрированных слайдах
+   =========================================== */
+
+.reveal .slides section.section-divider blockquote p {
+  color: var(--scripture-color);
+}
+
+.reveal .slides section.section-divider blockquote.verse-hero p {
+  font-size: 32pt;
+  line-height: 1.4;
+}
+
+.reveal .slides section.section-divider .voice p {
+  font-size: 18pt;
+  color: var(--text-color);
+}
+
+.reveal .slides section.section-divider .voice p.text-soft {
+  color: var(--soft-text);
+}

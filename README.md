@@ -29,6 +29,8 @@
 | Тихое время – практикум (Мк. 4:35–41) | [presentations/tihoe-vremya/](presentations/tihoe-vremya/) |
 | 10 вопросов по Притчам 1 | [presentations/pritchi-1-voprosy/](presentations/pritchi-1-voprosy/) |
 | Идите за ковчегом (Нав. 3) | [presentations/idite-za-kovchegom/](presentations/idite-za-kovchegom/) |
+| Бог – да, но для чего Иисус? (В. Буш, гл. 1) | [presentations/bog-da-no-dlya-chego-iisus/](presentations/bog-da-no-dlya-chego-iisus/) |
+| Для чего я живу? (В. Буш, гл. 2) | [presentations/dlya-chego-ya-zhivu/](presentations/dlya-chego-ya-zhivu/) |
 
 ## Проповеди
 

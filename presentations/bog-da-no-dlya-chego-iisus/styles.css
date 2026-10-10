@@ -688,3 +688,13 @@
 .reveal .slides section.section-divider .voice p.text-soft {
   color: var(--soft-text);
 }
+
+/* ===========================================
+   ПОЯСНЕНИЕ К МЫСЛИ БУША
+   =========================================== */
+.reveal ul.explain { margin: 0; }
+.reveal ul.explain li {
+  font-size: 19pt;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}

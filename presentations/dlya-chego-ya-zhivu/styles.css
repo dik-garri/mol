@@ -1,9 +1,10 @@
 /* Для чего я живу? – молодёжная презентация
- * Вильгельм Буш, «Иисус – наша судьба», глава 2
- * Палитра проекта: dark blue #0F1B2D, gold #D4A843, teal #5B8CA8
+ * по 2-й главе книги В. Буша «Иисус – наша судьба» (стили общие с главой 1).
+ * Палитра проекта: dark blue #0F1B2D, gold #D4A843, teal #5B8CA8.
+ * Без картинок: типографика, цитаты, эмодзи-иконки.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 /* ===========================================
    CSS VARIABLES
@@ -12,32 +13,29 @@
   --background-color: #0F1B2D;
   --section-divider-bg: #0B1522;
 
-  /* Typography */
   --heading-font: "Montserrat", Helvetica, sans-serif;
   --body-font: "Montserrat", Helvetica, sans-serif;
   --scripture-font: "Lora", Georgia, serif;
   --base-font-size: 32px;
   --text-size: 17pt;
   --h1-size: 46pt;
-  --h2-size: 32pt;
-  --h3-size: 22pt;
+  --h2-size: 30pt;
+  --h3-size: 21pt;
   --footnote-size: 11pt;
 
-  /* Colors */
   --primary-color: #D4A843;    /* gold */
   --secondary-color: #5B8CA8;  /* teal */
-  --danger-color: #C75B5B;     /* red */
-  --success-color: #5BA88C;    /* green */
+  --danger-color: #C75B5B;     /* fear-red */
+  --success-color: #5BA88C;    /* faith-green */
   --text-color: #EAF0F7;
   --soft-text: #C3CFE0;
   --muted-color: #7A8BA8;
   --scripture-color: #F2E4C4;
   --line-color: rgba(122, 139, 168, 0.3);
 
-  /* Layout */
   --slide-padding: 60px;
   --slide-padding-top: 40px;
-  --content-gap: 24px;
+  --content-gap: 22px;
   --box-radius: 10px;
 }
 
@@ -55,6 +53,8 @@
   font-weight: 700;
   color: var(--primary-color);
 }
+
+.reveal em { font-style: italic; }
 
 .reveal-viewport {
   background-color: var(--background-color);
@@ -81,8 +81,6 @@
 
 .reveal p,
 .reveal li,
-.reveal td,
-.reveal th,
 .reveal blockquote {
   font-size: var(--text-size);
   color: var(--text-color);
@@ -103,8 +101,8 @@
 
 .reveal ul li {
   position: relative;
-  padding-left: 26px;
-  margin-bottom: 12px;
+  padding-left: 24px;
+  margin-bottom: 10px;
 }
 
 .reveal ul li::before {
@@ -112,8 +110,8 @@
   position: absolute;
   left: 0;
   top: 0.58em;
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   background: var(--secondary-color);
   border-radius: 50%;
 }
@@ -136,27 +134,28 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 18px;
   padding-top: var(--content-gap);
   text-align: left;
   min-height: 0;
 }
 
-.reveal .slides section > .footnote {
-  position: absolute;
-  bottom: 18px;
-  left: var(--slide-padding);
-  right: var(--slide-padding);
-  font-size: var(--footnote-size);
-  color: var(--muted-color);
-}
-
-/* Title underline on content slides */
 .reveal .slides section:not(.section-divider) > h2 {
   flex-shrink: 0;
   margin: 0;
   padding-bottom: 12px;
   border-bottom: 2px solid var(--line-color);
+}
+
+/* Маленькая метка над заголовком слайда: «Пункт 2 · история» */
+.reveal .slides section > .kicker {
+  flex-shrink: 0;
+  font-size: 11pt;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin: 0 0 6px 0;
 }
 
 /* ===========================================
@@ -175,13 +174,12 @@
   text-align: center;
   color: var(--primary-color);
   letter-spacing: -0.01em;
-  margin: 0;
+  max-width: 1100px;
 }
 
 .reveal .slides section.section-divider p {
   font-size: 19pt;
   color: var(--muted-color);
-  text-align: center;
 }
 
 .divider-rule {
@@ -189,23 +187,32 @@
   height: 4px;
   border-radius: 2px;
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-  margin: 24px auto;
-  flex-shrink: 0;
+  margin: 22px auto;
 }
 
-/* Большая цифра пункта на разделителе */
+/* Разделитель пункта: огромная цифра + заголовок + реплика Буша */
 .point-num {
   font-family: var(--heading-font);
-  font-size: 15pt !important;
-  font-weight: 700;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--secondary-color) !important;
-  margin-bottom: 14px !important;
+  font-size: 110pt !important;
+  font-weight: 800;
+  line-height: 0.9 !important;
+  color: rgba(212, 168, 67, 0.28) !important;
+  margin: 0 0 6px 0 !important;
+}
+
+.reveal .slides section.point-divider h1 {
+  font-size: 46pt;
+  line-height: 1.15;
+}
+
+.reveal .slides section.point-divider .voice {
+  max-width: 900px;
+  text-align: left;
+  margin-top: 4px;
 }
 
 /* ===========================================
-   SCRIPTURE (Lora, кремовый, золотая черта)
+   SCRIPTURE (Lora, золото)
    =========================================== */
 
 .reveal blockquote {
@@ -218,7 +225,6 @@
   box-shadow: none;
   width: 100%;
   max-width: none;
-  box-sizing: border-box;
 }
 
 .reveal blockquote p {
@@ -238,267 +244,339 @@
   color: var(--muted-color);
 }
 
+/* Крупный стих в центре слайда */
+.reveal blockquote.verse-hero {
+  border-left: none;
+  padding: 0;
+  text-align: center;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.reveal blockquote.verse-hero p {
+  font-size: 32pt;
+  line-height: 1.4;
+}
+
+.reveal blockquote.verse-hero cite {
+  font-size: 14pt;
+  margin-top: 18px;
+}
+
 /* ===========================================
-   ГОЛОС БУША (цитаты из книги – teal, Montserrat)
+   ГОЛОС БУША (Montserrat, бирюза)
+   Реплики из книги – дословно, отличаются от Писания
    =========================================== */
 
-.busch {
-  position: relative;
+.voice {
   border-left: 4px solid var(--secondary-color);
-  background: rgba(91, 140, 168, 0.10);
+  background: rgba(91, 140, 168, 0.09);
   border-radius: 0 var(--box-radius) var(--box-radius) 0;
-  padding: 16px 24px 16px 26px;
+  padding: 14px 22px;
 }
 
-.reveal .busch p {
-  font-style: italic;
-  font-weight: 500;
-  color: var(--text-color);
+.reveal .voice p {
+  font-size: 18pt;
+  line-height: 1.45;
 }
 
-.reveal .busch .who {
+.reveal .voice .who {
   display: block;
-  margin-top: 8px;
-  font-style: normal;
-  font-weight: 600;
   font-size: 11pt;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #9FC4DA;
-}
-
-/* Крупная реплика-кульминация */
-.punch {
-  text-align: center;
-  padding: 10px 40px;
-}
-
-.reveal .punch p {
-  font-size: 30pt;
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--text-color);
-}
-
-.reveal .punch .who {
-  display: block;
-  margin-top: 14px;
-  font-size: 12pt;
-  font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--muted-color);
+  font-weight: 700;
+  color: #9FC4DA;
+  margin-bottom: 6px;
 }
 
+.voice.voice-lg p { font-size: 22pt; font-weight: 600; }
+
 /* ===========================================
-   ИСТОРИЯ ПО ШАГАМ
+   ИСТОРИИ: шаги по фрагментам
    =========================================== */
 
 .story {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
+  position: relative;
+  padding-left: 6px;
 }
 
 .step {
   display: grid;
-  grid-template-columns: 54px 1fr;
+  grid-template-columns: 52px 1fr;
   gap: 18px;
   align-items: center;
 }
 
-.reveal .step .ico {
-  width: 54px;
-  height: 54px;
+.step .ico {
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background: rgba(212, 168, 67, 0.14);
+  background: rgba(212, 168, 67, 0.12);
   border: 1px solid rgba(212, 168, 67, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22pt;
-  line-height: 1;
+  font-size: 20pt !important;
+  line-height: 1 !important;
 }
 
-.reveal .step p {
-  font-size: 20pt;
-}
+.reveal .step p { font-size: 19pt; line-height: 1.4; }
 
-.reveal .step p.speech {
-  font-style: italic;
-  font-weight: 500;
-  color: #9FC4DA;
-}
-
-/* ===========================================
-   ДИАЛОГ: студент – Буш
-   =========================================== */
-
+/* Диалог: реплики персонажей */
 .dialog {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px 26px;
-  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.dialog-label {
-  font-size: 11pt !important;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted-color) !important;
-}
-
-.said, .reply {
-  border-radius: var(--box-radius);
-  padding: 16px 22px;
-}
-
-.said {
-  background: rgba(122, 139, 168, 0.12);
+.say {
+  max-width: 82%;
+  border-radius: 16px;
+  padding: 14px 22px;
+  background: rgba(122, 139, 168, 0.14);
   border: 1px solid var(--line-color);
 }
 
-.reply {
-  background: rgba(212, 168, 67, 0.10);
-  border-left: 5px solid var(--primary-color);
+.say.right {
+  align-self: flex-end;
+  background: rgba(212, 168, 67, 0.12);
+  border-color: rgba(212, 168, 67, 0.4);
 }
 
-.reveal .said p {
-  font-size: 17pt;
-  color: var(--soft-text);
+.reveal .say .who {
+  display: block;
+  font-size: 11pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--muted-color);
+  margin-bottom: 4px;
+}
+
+.reveal .say.right .who { color: var(--primary-color); }
+
+.reveal .say p { font-size: 21pt; line-height: 1.4; }
+
+/* Песня: строки детского псалма */
+.song {
+  text-align: center;
+  padding: 18px 24px;
+  border-top: 1px solid var(--line-color);
+  border-bottom: 1px solid var(--line-color);
+}
+
+.reveal .song p {
+  font-family: var(--scripture-font);
   font-style: italic;
+  font-size: 24pt;
+  color: #9FC4DA;
 }
 
-.reveal .reply p {
-  font-size: 17pt;
-  font-weight: 600;
+/* Письмо с фронта */
+.letter {
+  background: rgba(242, 228, 196, 0.06);
+  border: 1px dashed rgba(242, 228, 196, 0.35);
+  border-radius: var(--box-radius);
+  padding: 22px 30px;
+}
+
+.reveal .letter p {
+  font-family: var(--scripture-font);
+  font-style: italic;
+  font-size: 20pt;
+  line-height: 1.5;
   color: var(--text-color);
 }
 
-.reveal .said .tagline,
-.reveal .reply .tagline {
-  display: block;
-  font-style: normal;
-  font-size: 11pt;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
+.reveal .letter p + p { margin-top: 10px; }
 
-.reveal .said .tagline { color: var(--muted-color); }
-.reveal .reply .tagline { color: var(--primary-color); }
-
-.reveal .said p.note,
-.reveal .reply p.note {
-  font-size: 14pt;
-  color: var(--muted-color);
-  font-style: normal;
-  font-weight: 400;
-  margin-top: 8px;
+.reveal .letter .hl {
+  color: var(--scripture-color);
+  font-weight: 600;
 }
 
 /* ===========================================
-   CARDS & COMPONENTS
+   ОБРАЗЫ БЕЗ КАРТИНОК
    =========================================== */
 
-.card {
-  background: rgba(91, 140, 168, 0.10);
-  border: 1px solid var(--line-color);
-  border-radius: var(--box-radius);
-  padding: 20px 24px;
-}
-
-.reveal .card h3 {
-  margin: 0 0 8px 0;
-  color: #9FC4DA;
-  font-size: 20pt;
-}
-
-.reveal .card p { font-size: 16pt; color: var(--soft-text); }
-
-/* Перечёркнутые «кандидаты» на ответ */
-.nope {
-  text-align: center;
-  border: 1px solid var(--line-color);
-  border-radius: var(--box-radius);
-  padding: 18px 12px;
-  background: rgba(199, 91, 91, 0.06);
-}
-
-.reveal .nope .big {
-  font-size: 30pt;
-  line-height: 1;
-  margin-bottom: 10px;
-}
-
-.reveal .nope h3 {
-  margin: 0 0 6px 0;
-  font-size: 21pt;
-  text-decoration: line-through;
-  text-decoration-color: var(--danger-color);
-  text-decoration-thickness: 3px;
-}
-
-.reveal .nope p { font-size: 15pt; color: var(--muted-color); }
-
-.yes {
-  text-align: center;
-  border-radius: var(--box-radius);
-  padding: 20px 24px;
-  background: linear-gradient(90deg, rgba(212,168,67,0.18), rgba(91,140,168,0.12));
-  border: 1px solid rgba(212, 168, 67, 0.45);
-}
-
-.reveal .yes p {
-  font-size: 23pt;
-  font-weight: 700;
-}
-
-/* Вопрос для обсуждения */
-.qcard {
+/* Дымовая завеса: люди слева – туман – Бог справа */
+.veil {
   display: grid;
-  grid-template-columns: 46px 1fr;
-  gap: 16px;
+  grid-template-columns: 1fr 1.3fr 1fr;
   align-items: center;
-  background: rgba(91, 140, 168, 0.12);
-  border: 1px solid rgba(91, 140, 168, 0.45);
+  gap: 0;
+  height: 230px;
   border-radius: var(--box-radius);
-  padding: 14px 20px;
+  overflow: hidden;
+  background: rgba(11, 21, 34, 0.6);
+  border: 1px solid var(--line-color);
 }
 
-.reveal .qcard .qn {
-  font-size: 24pt;
-  font-weight: 800;
-  color: var(--primary-color);
+.veil-side {
   text-align: center;
-  line-height: 1;
+  padding: 0 14px;
 }
 
-.reveal .qcard p { font-size: 20pt; }
-
-/* Small labelled tag */
-.tag {
-  display: inline-block;
-  align-self: flex-start;
-  font-size: 12pt !important;
+.reveal .veil-side .big { font-size: 44pt; line-height: 1.1; }
+.reveal .veil-side .cap {
+  font-size: 13pt;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-weight: 600;
-  padding: 4px 14px;
-  border-radius: 40px;
-  margin: 0 0 10px 0 !important;
+  font-weight: 700;
+  color: var(--muted-color);
+  margin-top: 8px;
 }
 
-.section-divider .tag { align-self: center; }
+.veil-smoke {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(200, 210, 225, 0.38), transparent 60%),
+    radial-gradient(ellipse at 70% 65%, rgba(200, 210, 225, 0.32), transparent 60%),
+    radial-gradient(ellipse at 50% 20%, rgba(200, 210, 225, 0.25), transparent 55%),
+    linear-gradient(90deg, rgba(200, 210, 225, 0.08), rgba(200, 210, 225, 0.30), rgba(200, 210, 225, 0.08));
+  filter: blur(0.3px);
+}
 
-.tag-gold  { background: rgba(212, 168, 67, 0.18);  color: var(--primary-color) !important; }
-.tag-teal  { background: rgba(91, 140, 168, 0.20);  color: #9FC4DA !important; }
-.tag-red   { background: rgba(199, 91, 91, 0.20);   color: #E39A9A !important; }
-.tag-green { background: rgba(91, 168, 140, 0.20);  color: #8FD3BC !important; }
+.reveal .veil-smoke p {
+  font-size: 15pt;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(234, 240, 247, 0.75);
+}
 
-/* Key takeaway strip */
+/* Цепь: звенья-грехи */
+.chain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 10px;
+  align-items: center;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  border-radius: 40px;
+  border: 2px solid rgba(199, 91, 91, 0.6);
+  background: rgba(199, 91, 91, 0.10);
+}
+
+.reveal .link p { font-size: 17pt; font-weight: 600; }
+.link i { color: #E39A9A; font-size: 14pt; }
+
+.link.ring {
+  border-color: var(--muted-color);
+  background: rgba(122, 139, 168, 0.15);
+}
+
+.link.ring i { color: var(--soft-text); }
+
+/* Кто снимет цепь? – перечёркнутые варианты */
+.nope {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.nope-item {
+  text-align: center;
+  border: 1px solid var(--line-color);
+  border-radius: var(--box-radius);
+  padding: 14px 8px;
+}
+
+.reveal .nope-item .big { font-size: 30pt; line-height: 1.1; }
+.reveal .nope-item p { font-size: 16pt; font-weight: 600; margin-top: 6px; }
+.reveal .nope-item .note { font-size: 13pt; font-weight: 400; color: var(--muted-color); }
+
+/* Контраст: слышать vs иметь */
+.contrast {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.contrast > div {
+  border-radius: var(--box-radius);
+  padding: 20px 24px;
+  text-align: center;
+}
+
+.contrast .no {
+  background: rgba(122, 139, 168, 0.10);
+  border: 1px solid var(--line-color);
+}
+
+.contrast .yes {
+  background: rgba(212, 168, 67, 0.12);
+  border: 1px solid rgba(212, 168, 67, 0.5);
+}
+
+.reveal .contrast .big { font-size: 34pt; font-weight: 800; line-height: 1.1; }
+.reveal .contrast .no .big { color: var(--muted-color); }
+.reveal .contrast .yes .big { color: var(--primary-color); }
+.reveal .contrast .sub { font-size: 16pt; color: var(--soft-text); margin-top: 8px; }
+
+/* Итог: 5 ответов */
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.answer {
+  display: grid;
+  grid-template-columns: 56px 54px 1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 22px;
+  border-radius: var(--box-radius);
+  background: linear-gradient(90deg, rgba(212,168,67,0.12), rgba(91,140,168,0.06));
+  border-left: 5px solid var(--primary-color);
+}
+
+.reveal .answer .n {
+  font-size: 30pt;
+  font-weight: 800;
+  color: var(--primary-color);
+  line-height: 1;
+}
+
+.reveal .answer .e { font-size: 26pt; line-height: 1; }
+.reveal .answer .t { font-size: 21pt; font-weight: 600; }
+.reveal .answer .t span { font-weight: 400; color: var(--soft-text); font-size: 16pt; }
+
+/* Био-карточка */
+.bio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 22px;
+}
+
+.fact {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 14px 18px;
+  border: 1px solid var(--line-color);
+  border-radius: var(--box-radius);
+  background: rgba(91, 140, 168, 0.06);
+}
+
+.reveal .fact .e { font-size: 24pt; line-height: 1.1; }
+.reveal .fact p { font-size: 16pt; line-height: 1.4; }
+
+/* Вывод-полоса */
 .takeaway {
   background: linear-gradient(90deg, rgba(212,168,67,0.16), rgba(91,140,168,0.10));
   border-radius: var(--box-radius);
@@ -506,7 +584,7 @@
 }
 
 .reveal .takeaway p {
-  font-size: 19pt;
+  font-size: 20pt;
   font-weight: 600;
 }
 
@@ -520,107 +598,55 @@
   margin-bottom: 6px;
 }
 
-/* Цепочка итога */
-.chain {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr;
-  gap: 14px;
-  align-items: stretch;
-}
-
-.chain-step {
-  text-align: center;
-  border: 1px solid var(--line-color);
-  border-radius: var(--box-radius);
-  padding: 22px 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.reveal .chain-step .big {
-  font-size: 34pt;
-  line-height: 1;
-  margin-bottom: 12px;
-}
-
-.reveal .chain-step h3 {
-  margin: 0 0 6px 0;
-  font-size: 21pt;
-  color: var(--primary-color);
-}
-
-.reveal .chain-step p { font-size: 17pt; color: var(--soft-text); }
-
-.reveal .chain-arrow {
-  align-self: center;
-  font-size: 24pt;
-  color: var(--secondary-color);
-}
-
-/* Био-строка */
-.fact {
-  display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 14px;
-  align-items: center;
-}
-
-.reveal .fact .ico {
-  font-size: 22pt;
-  line-height: 1;
+/* Большая фраза */
+.reveal .big-line {
+  font-size: 36pt;
+  font-weight: 800;
+  line-height: 1.2;
   text-align: center;
 }
 
-.reveal .fact p { font-size: 21pt; }
+/* Метка */
+.tag {
+  display: inline-block;
+  font-size: 12pt !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 40px;
+  margin: 0 0 10px 0 !important;
+}
+
+.tag-gold { background: rgba(212, 168, 67, 0.18); color: var(--primary-color) !important; }
+.tag-teal { background: rgba(91, 140, 168, 0.20); color: #9FC4DA !important; }
 
 /* Молитва */
 .prayer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.prayer-row {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 22px;
-  align-items: center;
-  border-bottom: 1px solid var(--line-color);
-  padding-bottom: 14px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.prayer-row:last-child { border-bottom: none; }
-
-.reveal .prayer-row .kind {
-  font-size: 13pt;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--primary-color);
+.prayer > div {
+  border-top: 4px solid var(--primary-color);
+  background: rgba(91, 140, 168, 0.07);
+  border-radius: 0 0 var(--box-radius) var(--box-radius);
+  padding: 18px 20px;
 }
 
-.reveal .prayer-row p { font-size: 21pt; }
+.prayer > div:nth-child(2) { border-top-color: var(--secondary-color); }
+.prayer > div:nth-child(3) { border-top-color: var(--success-color); }
 
-/* Финальная цитата */
-.reveal .slides section.section-divider blockquote.final-quote {
-  max-width: 1000px;
-  border-left: none;
-  padding: 0;
-  text-align: center;
-}
+.reveal .prayer h3 { font-size: 19pt; margin: 0 0 10px 0; }
+.reveal .prayer p { font-size: 18pt; color: var(--soft-text); }
 
-.reveal .slides section.section-divider blockquote.final-quote p {
-  font-size: 32pt;
-  line-height: 1.4;
-  color: var(--scripture-color);
-  text-align: center;
-}
-
-.reveal .slides section.section-divider blockquote.final-quote cite {
-  font-size: 14pt;
-  margin-top: 16px;
-  text-align: center;
+/* Тишина */
+.reveal .slides section.silence h1 {
+  font-size: 54pt;
+  color: var(--text-color);
+  font-weight: 300;
+  letter-spacing: 0.02em;
 }
 
 /* ===========================================
@@ -631,19 +657,74 @@
 .text-xl  { font-size: 21pt !important; }
 .text-2xl { font-size: 25pt !important; }
 .text-3xl { font-size: 29pt !important; }
-.text-4xl { font-size: 34pt !important; }
 
 .text-muted { color: var(--muted-color) !important; }
 .text-soft { color: var(--soft-text) !important; }
 .text-center { text-align: center !important; }
-.font-bold { font-weight: 700; }
 .text-gold { color: var(--primary-color) !important; }
 .text-teal { color: #9FC4DA !important; }
+.text-red { color: #E39A9A !important; }
+.text-green { color: #8FD3BC !important; }
 
-/* Фрагменты: мягкое появление снизу */
-.reveal .slides section .fragment.fade-up {
-  transform: translate(0, 20px);
+/* ===========================================
+   ПЕРЕБИВАЕМ .section-divider p (muted, 19pt)
+   для стихов и реплик на центрированных слайдах
+   =========================================== */
+
+.reveal .slides section.section-divider blockquote p {
+  color: var(--scripture-color);
 }
-.reveal .slides section .fragment.fade-up.visible {
-  transform: none;
+
+.reveal .slides section.section-divider blockquote.verse-hero p {
+  font-size: 32pt;
+  line-height: 1.4;
 }
+
+.reveal .slides section.section-divider .voice p {
+  font-size: 18pt;
+  color: var(--text-color);
+}
+
+.reveal .slides section.section-divider .voice p.text-soft {
+  color: var(--soft-text);
+}
+
+/* ===========================================
+   ПОЯСНЕНИЕ К МЫСЛИ БУША
+   =========================================== */
+.reveal ul.explain { margin: 0; }
+.reveal ul.explain li {
+  font-size: 19pt;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+/* Ответы студентов: слева студент, справа Буш */
+.qa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 18px;
+}
+.qa > div {
+  border-radius: 12px;
+  padding: 10px 18px;
+}
+.qa .q {
+  background: rgba(122, 139, 168, 0.14);
+  border: 1px solid var(--line-color);
+}
+.qa .a {
+  background: rgba(212, 168, 67, 0.12);
+  border: 1px solid rgba(212, 168, 67, 0.4);
+}
+.reveal .qa p { font-size: 18pt; line-height: 1.35; }
+.reveal .qa .who {
+  display: block;
+  font-size: 10pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--muted-color);
+  margin-bottom: 2px;
+}
+.reveal .qa .a .who { color: var(--primary-color); }

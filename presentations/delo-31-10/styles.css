@@ -835,3 +835,66 @@
 .reveal .qcard p { font-size: 20pt; }
 #molitva .card p { font-size: 20pt; }
 #molitva .card h3 { font-size: 24pt; margin-bottom: 12px; }
+
+/* ===========================================
+   ДЕКОР: приглушённые силуэты (только квиз)
+   =========================================== */
+
+.deco {
+  position: absolute;
+  pointer-events: none;
+  color: var(--muted-color);
+  opacity: 0.16;
+  z-index: 0;
+}
+
+.deco i { display: block; }
+
+/* Паутина в углу */
+.deco-web {
+  width: 230px;
+  height: 230px;
+  top: 0;
+  right: 0;
+  background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'><path d='M300 0L300 315M300 0L218 304M300 0L143 273M300 0L77 223M300 0L27 157M300 0L-4 82M300 0L-15 0M300 45Q295 40 288 43Q285 37 278 39Q275 32 268 32Q268 25 261 22Q263 15 257 12Q260 5 255 0M300 95Q289 85 275 92Q267 79 252 82Q248 68 233 67Q232 52 218 47Q221 33 208 25Q215 11 205 0M300 150Q282 134 261 145Q248 125 225 130Q218 107 194 106Q193 82 170 75Q175 52 155 39Q166 18 150 0M300 210Q275 187 246 203Q228 175 195 182Q185 150 152 148Q150 115 118 105Q125 72 97 54Q113 25 90 0M300 275Q268 245 229 266Q205 229 163 238Q149 196 106 194Q104 151 62 137Q71 95 34 71Q55 32 25 0' fill='none' stroke='%237A8BA8' stroke-width='1.6'/></svg>") no-repeat top right / contain;
+  opacity: 0.35;
+}
+
+.deco-web.left { right: auto; left: 0; transform: scaleX(-1); }
+
+/* Паук на нити */
+.deco-hang {
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.3;
+}
+
+.deco-hang::before {
+  content: '';
+  width: 2px;
+  height: var(--thread, 140px);
+  background: var(--muted-color);
+}
+
+.deco-hang i { font-size: 30pt; margin-top: -4px; }
+
+/* Крупный силуэт внизу справа */
+.deco-corner {
+  right: 64px;
+  bottom: 44px;
+  font-size: 92pt;
+}
+
+.deco-moon {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.deco-moon .stars { font-size: 18pt; display: flex; flex-direction: column; gap: 14px; margin-top: 8px; }
+
+/* Контент квиза поверх декора */
+.reveal .slides section > .content.quiz,
+.reveal .slides section > .file-label { position: relative; z-index: 1; }

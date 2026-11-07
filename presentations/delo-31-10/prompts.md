@@ -4,11 +4,11 @@
 
 ## Навигация
 
-1. [Папка с делом](#1-папка-с-делом) – `img/case-file.png`
-2. [Фонарь из репы](#2-фонарь-из-репы) – `img/turnip-lantern.png`
-3. [Витрина в конце октября](#3-витрина-в-конце-октября) – `img/costume-aisle.png`
-4. [Писание в свете лампы](#4-писание-в-свете-лампы) – `img/lamp-scripture.png`
-5. [Из тьмы – к свету](#5-из-тьмы--к-свету) – `img/out-of-darkness.png`
+1. [Папка с делом](#1-папка-с-делом) – `img/case-file.jpg`
+2. [Фонарь из репы](#2-фонарь-из-репы) – `img/turnip-lantern.jpg`
+3. [Витрина в конце октября](#3-витрина-в-конце-октября) – `img/costume-aisle.jpg`
+4. [Писание в свете лампы](#4-писание-в-свете-лампы) – `img/lamp-scripture.jpg`
+5. [Из тьмы – к свету](#5-из-тьмы--к-свету) – `img/out-of-darkness.jpg`
 
 ## Общий стилевой суффикс
 
@@ -42,7 +42,7 @@ detail, not gory, not scary for teenagers, no text, no lettering, no watermark.
 Portrait orientation 3:4, dark negative space around the subject.
 ```
 
-![case-file](img/case-file.png)
+![case-file](img/case-file.jpg)
 
 ---
 
@@ -63,7 +63,7 @@ detail, not gory, not scary for teenagers, no text, no lettering, no watermark.
 Portrait orientation 3:4, dark negative space around the subject.
 ```
 
-![turnip-lantern](img/turnip-lantern.png)
+![turnip-lantern](img/turnip-lantern.jpg)
 
 ---
 
@@ -84,7 +84,7 @@ detail, not gory, not scary for teenagers, no text, no lettering, no watermark.
 Portrait orientation 3:4, dark negative space around the subject.
 ```
 
-![costume-aisle](img/costume-aisle.png)
+![costume-aisle](img/costume-aisle.jpg)
 
 ---
 
@@ -105,7 +105,7 @@ detail, not gory, not scary for teenagers, no text, no lettering, no watermark.
 Portrait orientation 3:4, dark negative space around the subject.
 ```
 
-![lamp-scripture](img/lamp-scripture.png)
+![lamp-scripture](img/lamp-scripture.jpg)
 
 ---
 
@@ -126,4 +126,4 @@ detail, not gory, not scary for teenagers, no text, no lettering, no watermark.
 Portrait orientation 3:4, dark negative space around the subject.
 ```
 
-![out-of-darkness](img/out-of-darkness.png)
+![out-of-darkness](img/out-of-darkness.jpg)

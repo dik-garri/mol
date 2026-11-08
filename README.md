@@ -32,6 +32,7 @@
 | Бог – да, но для чего Иисус? (В. Буш, гл. 1) | [presentations/bog-da-no-dlya-chego-iisus/](presentations/bog-da-no-dlya-chego-iisus/) |
 | Для чего я живу? (В. Буш, гл. 2) | [presentations/dlya-chego-ya-zhivu/](presentations/dlya-chego-ya-zhivu/) |
 | Дело № 31.10 (Хэллоуин) | [presentations/delo-31-10/](presentations/delo-31-10/) |
+| Молитва за гонимую церковь (WWL 2026, общее собрание) | [presentations/gonimye-strany/](presentations/gonimye-strany/) |
 
 ## Проповеди
 

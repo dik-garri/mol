@@ -1,0 +1,282 @@
+/* ==========================================================
+   Разборы Луки – стиль «Страница Писания»
+   Для общего собрания (все возрасты): светлый пергамент,
+   крупный текст с засечками, терракотовые акценты.
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@600&display=swap');
+
+:root {
+  --paper: #F3EBDC;
+  --paper-light: #F9F4EA;
+  --paper-dark: #E6D9C2;
+  --ink: #2E2620;
+  --ink-soft: #5A4D42;
+  --terracotta: #A8492A;
+  --olive: #5F6B34;
+  --rule: #C9B89A;
+
+  --heading-font: "Playfair Display", Georgia, serif;
+  --body-font: "PT Serif", Georgia, serif;
+  --label-font: "Montserrat", Helvetica, sans-serif;
+  --base-font-size: 32px;
+}
+
+html, body {
+  background: var(--paper);
+}
+
+.reveal {
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
+  color: var(--ink);
+}
+
+.reveal-viewport {
+  background: radial-gradient(ellipse at center, var(--paper-light) 0%, var(--paper) 55%, var(--paper-dark) 100%);
+}
+
+/* ---------- Слайд: книжная страница ---------- */
+
+.reveal .slides section {
+  height: 720px;
+  box-sizing: border-box;
+  padding: 70px 110px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.reveal .slides section::before {
+  content: "";
+  position: absolute;
+  inset: 26px;
+  border: 1px solid var(--rule);
+  outline: 1px solid var(--rule);
+  outline-offset: -7px;
+  pointer-events: none;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: var(--heading-font);
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.reveal p {
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ---------- Подпись над содержимым ---------- */
+
+.reveal .label {
+  font-family: var(--label-font);
+  font-weight: 600;
+  font-size: 13pt;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 28px;
+}
+
+/* ---------- Орнамент-разделитель ---------- */
+
+.reveal .ornament {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 260px;
+  margin: 30px auto;
+}
+
+.reveal .ornament::before,
+.reveal .ornament::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+}
+
+.reveal .ornament i {
+  width: 9px;
+  height: 9px;
+  background: var(--terracotta);
+  transform: rotate(45deg);
+}
+
+/* ---------- Титул ---------- */
+
+.reveal .title-main {
+  font-size: 68pt;
+  font-weight: 700;
+}
+
+.reveal .title-ref {
+  font-size: 24pt;
+  color: var(--ink-soft);
+}
+
+.reveal .title-sub {
+  font-family: var(--heading-font);
+  font-style: italic;
+  font-size: 26pt;
+  color: var(--terracotta);
+  margin-top: 14px;
+}
+
+/* ---------- Текст Писания ---------- */
+
+.reveal .scripture {
+  font-size: 26pt;
+  line-height: 1.55;
+  text-align: left;
+  max-width: 1000px;
+}
+
+.reveal .scripture.size-lg { font-size: 30pt; }
+.reveal .scripture.size-xl { font-size: 36pt; text-align: center; }
+
+.reveal .scripture sup {
+  font-family: var(--label-font);
+  font-size: 0.5em;
+  font-weight: 600;
+  color: var(--terracotta);
+  vertical-align: super;
+  margin-right: 4px;
+}
+
+.reveal .scripture mark {
+  background: none;
+  color: var(--terracotta);
+  font-weight: 700;
+}
+
+/* ---------- Мысль ---------- */
+
+.reveal .thought {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 38pt;
+  line-height: 1.3;
+  max-width: 960px;
+}
+
+.reveal .thought.size-xl { font-size: 44pt; }
+
+.reveal .question-label {
+  font-family: var(--label-font);
+  font-weight: 600;
+  font-size: 12pt;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin-bottom: 12px;
+}
+
+.reveal .question {
+  font-style: italic;
+  font-size: 24pt;
+  color: var(--ink-soft);
+  max-width: 900px;
+}
+
+/* ---------- Плашки (грани мысли) ---------- */
+
+.reveal .facets {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  width: 100%;
+  max-width: 1020px;
+}
+
+.reveal .facet {
+  border-top: 3px solid var(--terracotta);
+  background: rgba(255, 255, 255, 0.35);
+  padding: 22px 20px 24px;
+}
+
+.reveal .facet h3 {
+  font-size: 22pt;
+  margin-bottom: 8px;
+}
+
+.reveal .facet p {
+  font-style: italic;
+  font-size: 17pt;
+  color: var(--ink-soft);
+}
+
+/* ---------- Два вопроса для начала ---------- */
+
+.reveal .pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  width: 100%;
+  max-width: 1040px;
+  text-align: left;
+}
+
+.reveal .pair h3 {
+  font-size: 26pt;
+  color: var(--terracotta);
+  margin-bottom: 14px;
+}
+
+.reveal .pair p {
+  font-size: 22pt;
+  line-height: 1.5;
+}
+
+/* ---------- Практика ---------- */
+
+.reveal .steps {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  text-align: left;
+}
+
+.reveal .step {
+  display: flex;
+  align-items: baseline;
+  gap: 28px;
+}
+
+.reveal .step .n {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  font-size: 40pt;
+  color: var(--terracotta);
+  min-width: 40px;
+}
+
+.reveal .step .t {
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 32pt;
+}
+
+/* ---------- Навигация reveal ---------- */
+
+.reveal .controls { color: var(--terracotta); }
+.reveal .progress { color: var(--terracotta); height: 4px; }
+
+/* ---------- Ровные переносы и цифры ---------- */
+
+.reveal .thought,
+.reveal .question,
+.reveal .scripture.size-xl,
+.reveal .facet p {
+  text-wrap: balance;
+}
+
+.reveal .step .n {
+  font-variant-numeric: lining-nums;
+}

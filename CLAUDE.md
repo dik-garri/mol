@@ -68,6 +68,11 @@ mol/
 │   └── data/songs.js                  # Same data as `window.SONGS_DATA` (для работы через file://)
 ├── uchenichestvo/
 │   └── index.html                     # Редирект на https://dik-garri.github.io/uchenichestvo/
+├── books/
+│   └── iisus-nasha-sudba/             # В. Буш «Иисус – наша судьба» (CLV, 1994) – исходник для разбора
+│       ├── iisus-nasha-sudba.md       # Полный текст: 17 глав (##) + подразделы (###), из DOC-версии
+│       ├── book.pdf                   # Оригинальная вёрстка (224 стр.; текстовый слой – транслит-шрифт, не парсить)
+│       └── cover.jpg
 ├── data/
 │   └── synodal.json                   # Синодальный перевод (из church.kg) – 66 книг
 ├── templates/

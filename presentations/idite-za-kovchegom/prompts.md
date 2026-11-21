@@ -4,10 +4,10 @@
 
 ## Навигация
 
-1. [Тропа и проводник](#1-тропа-и-проводник) – `img/trail.jpg`
-2. [Ковчег впереди народа](#2-ковчег-впереди-народа) – `img/ark-ahead.jpg`
-3. [Разлившийся Иордан](#3-разлившийся-иордан) – `img/jordan-flood.jpg`
-4. [Священники посреди русла](#4-священники-посреди-русла) – `img/priests-river.jpg`
+1. [Тропа и проводник](#1-тропа-и-проводник) – `img/trail.png`
+2. [Ковчег впереди народа](#2-ковчег-впереди-народа) – `img/ark-ahead.png`
+3. [Разлившийся Иордан](#3-разлившийся-иордан) – `img/jordan-flood.png`
+4. [Священники посреди русла](#4-священники-посреди-русла) – `img/priests-river.png`
 
 ## Общий стилевой суффикс
 
@@ -37,10 +37,14 @@ Style: cinematic digital painting, dramatic chiaroscuro lighting, semi-realistic
 illustration, muted palette of deep navy blue (#0F1B2D) background, warm gold
 (#D4A843) key light and teal (#5B8CA8) rim light. Textured brushwork, restrained
 detail, no text, no lettering, no watermark. Portrait orientation 3:4, dark
+negative space around the subject. Style: cinematic digital painting, dramatic chiaroscuro lighting, semi-realistic
+illustration, muted palette of deep navy blue (#0F1B2D) background, warm gold
+(#D4A843) key light and teal (#5B8CA8) rim light. Textured brushwork, restrained
+detail, no text, no lettering, no watermark. Portrait orientation 3:4, dark
 negative space around the subject.
 ```
 
-![trail](img/trail.jpg)
+![trail](img/trail.png)
 
 ---
 
@@ -60,10 +64,14 @@ Style: cinematic digital painting, dramatic chiaroscuro lighting, semi-realistic
 illustration, muted palette of deep navy blue (#0F1B2D) background, warm gold
 (#D4A843) key light and teal (#5B8CA8) rim light. Textured brushwork, restrained
 detail, no text, no lettering, no watermark. Portrait orientation 3:4, dark
+negative space around the subject. Style: cinematic digital painting, dramatic chiaroscuro lighting, semi-realistic
+illustration, muted palette of deep navy blue (#0F1B2D) background, warm gold
+(#D4A843) key light and teal (#5B8CA8) rim light. Textured brushwork, restrained
+detail, no text, no lettering, no watermark. Portrait orientation 3:4, dark
 negative space around the subject.
 ```
 
-![ark-ahead](img/ark-ahead.jpg)
+![ark-ahead](img/ark-ahead.png)
 
 ---
 
@@ -82,10 +90,14 @@ Style: cinematic digital painting, dramatic chiaroscuro lighting, semi-realistic
 illustration, muted palette of deep navy blue (#0F1B2D) background, warm gold
 (#D4A843) key light and teal (#5B8CA8) rim light. Textured brushwork, restrained
 detail, no text, no lettering, no watermark. Portrait orientation 3:4, dark
+negative space around the subject. Style: cinematic digital painting, dramatic chiaroscuro lighting, semi-realistic
+illustration, muted palette of deep navy blue (#0F1B2D) background, warm gold
+(#D4A843) key light and teal (#5B8CA8) rim light. Textured brushwork, restrained
+detail, no text, no lettering, no watermark. Portrait orientation 3:4, dark
 negative space around the subject.
 ```
 
-![jordan-flood](img/jordan-flood.jpg)
+![jordan-flood](img/jordan-flood.png)
 
 ---
 
@@ -105,7 +117,11 @@ Style: cinematic digital painting, dramatic chiaroscuro lighting, semi-realistic
 illustration, muted palette of deep navy blue (#0F1B2D) background, warm gold
 (#D4A843) key light and teal (#5B8CA8) rim light. Textured brushwork, restrained
 detail, no text, no lettering, no watermark. Portrait orientation 3:4, dark
+negative space around the subject. Style: cinematic digital painting, dramatic chiaroscuro lighting, semi-realistic
+illustration, muted palette of deep navy blue (#0F1B2D) background, warm gold
+(#D4A843) key light and teal (#5B8CA8) rim light. Textured brushwork, restrained
+detail, no text, no lettering, no watermark. Portrait orientation 3:4, dark
 negative space around the subject.
 ```
 
-![priests-river](img/priests-river.jpg)
+![priests-river](img/priests-river.png)

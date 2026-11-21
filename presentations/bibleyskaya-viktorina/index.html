@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Библейская викторина</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ============ ТИТУЛ ============ -->
+
+      <section id="title" class="divider">
+        <p class="big-icon"><i class="fa-solid fa-book-bible"></i></p>
+        <h1>Библейская викторина</h1>
+        <div class="divider-rule"></div>
+        <p class="sub">10 раундов &middot; 20 вопросов &middot; финал</p>
+        <div class="teams-row">
+          <p class="team-chip t1">Команда 1</p>
+          <p class="team-chip t2">Команда 2</p>
+        </div>
+      </section>
+
+      <!-- ============ ПРАВИЛА ============ -->
+
+      <section id="pravila">
+        <p class="slide-title">Правила</p>
+        <div class="rules">
+          <div class="rule">
+            <i class="fa-solid fa-scale-balanced"></i>
+            <p>В каждом раунде <strong>два вопроса одной сложности</strong> &ndash; по одному каждой команде.</p>
+          </div>
+          <div class="rule">
+            <i class="fa-solid fa-arrows-rotate"></i>
+            <p>Первой отвечает команда по очереди: <strong>нечётные раунды &ndash; Команда 1</strong>, чётные &ndash; Команда 2.</p>
+          </div>
+          <div class="rule">
+            <i class="fa-solid fa-stopwatch"></i>
+            <p><strong>30 секунд</strong> на обсуждение. Отвечает капитан &ndash; засчитывается первый ответ.</p>
+          </div>
+          <div class="rule">
+            <i class="fa-solid fa-check"></i>
+            <p>Верный ответ на свой вопрос &ndash; <strong>2 балла</strong>.</p>
+          </div>
+          <div class="rule">
+            <i class="fa-solid fa-hand"></i>
+            <p>Ошиблись &ndash; вопрос переходит соперникам: верный ответ &ndash; <strong>1 балл</strong>.</p>
+          </div>
+          <div class="rule">
+            <i class="fa-solid fa-flag-checkered"></i>
+            <p><strong>Финал</strong> &ndash; обе команды отвечают одновременно, до 9 баллов. Без Библий и телефонов!</p>
+          </div>
+        </div>
+        <aside class="notes">
+          Табло внизу слева: кнопки + / − у каждой команды (или клавиши 1 и 2 = +1, Shift+1 / Shift+2 = −1).
+          Таймер: клик по нему или клавиша T (30 с; на финале – 60 с). Сброс счёта – кнопка ↺.
+          Ответ открывается следующим кликом/стрелкой.
+        </aside>
+      </section>
+
+      <!-- ============ РАУНД 1 ============ -->
+
+      <section id="r1-k1" class="q team-1">
+        <div class="q-head"><p class="badge">Раунд 1 &middot; Команда 1</p><p class="q-num">Вопрос 1 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Сколько дней и ночей шёл дождь во время потопа?</p>
+          <div class="options">
+            <p><b>A</b>7</p>
+            <p><b>B</b>12</p>
+            <p class="correct fragment" data-fragment-index="1"><b>C</b>40</p>
+            <p><b>D</b>150</p>
+          </div>
+          <div class="answer fragment" data-fragment-index="1">
+            <blockquote>
+              <p>и лился на землю дождь сорок дней и сорок ночей.</p>
+              <cite>Бытие 7:12</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="r1-k2" class="q team-2">
+        <div class="q-head"><p class="badge">Раунд 1 &middot; Команда 2</p><p class="q-num">Вопрос 2 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Сколько казней Бог послал на Египет?</p>
+          <div class="options">
+            <p><b>A</b>3</p>
+            <p><b>B</b>7</p>
+            <p class="correct fragment" data-fragment-index="1"><b>C</b>10</p>
+            <p><b>D</b>12</p>
+          </div>
+          <div class="answer fragment" data-fragment-index="1">
+            <div class="plagues">
+              <p>кровь</p><p>жабы</p><p>мошки</p><p>пёсьи мухи</p><p>мор скота</p>
+              <p>нарывы</p><p>град</p><p>саранча</p><p>тьма</p><p>смерть первенцев</p>
+            </div>
+            <p class="ref">Исход 7&ndash;12</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ РАУНД 2 ============ -->
+
+      <section id="r2-k2" class="q team-2">
+        <div class="q-head"><p class="badge">Раунд 2 &middot; Команда 2</p><p class="q-num">Вопрос 3 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Сколько человек спаслось в Ноевом ковчеге?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>8 человек</p>
+            <blockquote>
+              <p>некогда непокорным ожидавшему их Божию долготерпению, во дни Ноя, во время строения ковчега, в котором немногие, то есть восемь душ, спаслись от воды.</p>
+              <cite>1 Петра 3:20</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="r2-k1" class="q team-1">
+        <div class="q-head"><p class="badge">Раунд 2 &middot; Команда 1</p><p class="q-num">Вопрос 4 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Сколько дней Лазарь был во гробе, когда Иисус воскресил его?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>4 дня</p>
+            <blockquote>
+              <p>Иисус говорит: отнимите камень. Сестра умершего, Марфа, говорит Ему: Господи! уже смердит; ибо четыре дня, как он во гробе.</p>
+              <cite>Иоанна 11:39</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ РАУНД 3 ============ -->
+
+      <section id="r3-k1" class="q team-1">
+        <div class="q-head"><p class="badge">Раунд 3 &middot; Команда 1</p><p class="q-num">Вопрос 5 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Что Исав отдал Иакову за чечевичную похлёбку?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>Своё первородство</p>
+            <blockquote>
+              <p>Иаков сказал: поклянись мне теперь же. Он поклялся ему, и продал первородство свое Иакову.</p>
+              <cite>Бытие 25:33</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="r3-k2" class="q team-2">
+        <div class="q-head"><p class="badge">Раунд 3 &middot; Команда 2</p><p class="q-num">Вопрос 6 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Чем Давид победил Голиафа?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>Камнем из пращи</p>
+            <blockquote>
+              <p>И опустил Давид руку свою в сумку и взял оттуда камень, и бросил из пращи и поразил Филистимлянина в лоб, так что камень вонзился в лоб его, и он упал лицем на землю.</p>
+              <cite>1 Царств 17:49</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ РАУНД 4 ============ -->
+
+      <section id="r4-k2" class="q team-2">
+        <div class="q-head"><p class="badge">Раунд 4 &middot; Команда 2</p><p class="q-num">Вопрос 7 из 20</p></div>
+        <div class="content">
+          <p class="q-text">На какой горе Бог дал Моисею десять заповедей?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>Синай</p>
+            <blockquote>
+              <p>И сошел Господь на гору Синай, на вершину горы, и призвал Господь Моисея на вершину горы, и взошел Моисей.</p>
+              <cite>Исход 19:20</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="r4-k1" class="q team-1">
+        <div class="q-head"><p class="badge">Раунд 4 &middot; Команда 1</p><p class="q-num">Вопрос 8 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Вокруг какого города Израиль ходил 7 дней, пока не обрушилась его стена?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>Иерихон</p>
+            <blockquote>
+              <p>Народ воскликнул, и затрубили трубами. Как скоро услышал народ голос трубы, воскликнул народ громким голосом, и обрушилась стена города до своего основания, и народ пошел в город, каждый с своей стороны, и взяли город.</p>
+              <cite>Иисус Навин 6:19</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ РАУНД 5 ============ -->
+
+      <section id="r5-k1" class="q team-1">
+        <div class="q-head"><p class="badge">Раунд 5 &middot; Команда 1</p><p class="q-num">Вопрос 9 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Кого бросили в ров со львами?</p>
+          <div class="options">
+            <p><b>A</b>Илию</p>
+            <p class="correct fragment" data-fragment-index="1"><b>B</b>Даниила</p>
+            <p><b>C</b>Иеремию</p>
+            <p><b>D</b>Иону</p>
+          </div>
+          <div class="answer fragment" data-fragment-index="1">
+            <blockquote>
+              <p>Тогда царь повелел, и привели Даниила, и бросили в ров львиный; при этом царь сказал Даниилу: Бог твой, Которому ты неизменно служишь, Он спасет тебя!</p>
+              <cite>Даниил 6:16</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="r5-k2" class="q team-2">
+        <div class="q-head"><p class="badge">Раунд 5 &middot; Команда 2</p><p class="q-num">Вопрос 10 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Кто стал первым христианским мучеником?</p>
+          <div class="options">
+            <p><b>A</b>Пётр</p>
+            <p class="correct fragment" data-fragment-index="1"><b>B</b>Стефан</p>
+            <p><b>C</b>Иаков</p>
+            <p><b>D</b>Павел</p>
+          </div>
+          <div class="answer fragment" data-fragment-index="1">
+            <blockquote>
+              <p>и побивали камнями Стефана, который молился и говорил: Господи Иисусе! приими дух мой.</p>
+              <cite>Деяния 7:59</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ РАУНД 6 ============ -->
+
+      <section id="r6-k2" class="q team-2">
+        <div class="q-head"><p class="badge">Раунд 6 &middot; Команда 2</p><p class="q-num">Вопрос 11 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Сколько дней Иона провёл во чреве кита?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>3 дня и 3 ночи</p>
+            <blockquote>
+              <p>И повелел Господь большому киту поглотить Иону; и был Иона во чреве этого кита три дня и три ночи.</p>
+              <cite>Иона 2:1</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="r6-k1" class="q team-1">
+        <div class="q-head"><p class="badge">Раунд 6 &middot; Команда 1</p><p class="q-num">Вопрос 12 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Сколько лет Израиль ходил по пустыне?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>40 лет</p>
+            <blockquote>
+              <p>по числу сорока дней, в которые вы осматривали землю, вы понесете наказание за грехи ваши сорок лет, год за день, дабы вы познали, что значит быть оставленным Мною.</p>
+              <cite>Числа 14:34</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ РАУНД 7 ============ -->
+
+      <section id="r7-k1" class="q team-1">
+        <div class="q-head"><p class="badge">Раунд 7 &middot; Команда 1</p><p class="q-num">Вопрос 13 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Сколько лет прожил Мафусал (Мафусаил) &ndash; самый долгоживущий человек в Библии?</p>
+          <div class="options">
+            <p><b>A</b>777</p>
+            <p><b>B</b>930</p>
+            <p class="correct fragment" data-fragment-index="1"><b>C</b>969</p>
+            <p><b>D</b>1000</p>
+          </div>
+          <div class="answer fragment" data-fragment-index="1">
+            <blockquote>
+              <p>Всех же дней Мафусала было девятьсот шестьдесят девять лет; и он умер.</p>
+              <cite>Бытие 5:27</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="r7-k2" class="q team-2">
+        <div class="q-head"><p class="badge">Раунд 7 &middot; Команда 2</p><p class="q-num">Вопрос 14 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Сколько лет было Аврааму, когда у него родился Исаак?</p>
+          <div class="options">
+            <p><b>A</b>75</p>
+            <p><b>B</b>90</p>
+            <p class="correct fragment" data-fragment-index="1"><b>C</b>100</p>
+            <p><b>D</b>120</p>
+          </div>
+          <div class="answer fragment" data-fragment-index="1">
+            <blockquote>
+              <p>Авраам был ста лет, когда родился у него Исаак, сын его.</p>
+              <cite>Бытие 21:5</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ РАУНД 8 ============ -->
+
+      <section id="r8-k2" class="q team-2">
+        <div class="q-head"><p class="badge">Раунд 8 &middot; Команда 2</p><p class="q-num">Вопрос 15 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Какое чудо Иисус совершил первым?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>Превратил воду в вино в Кане Галилейской</p>
+            <blockquote>
+              <p>Так положил Иисус начало чудесам в Кане Галилейской и явил славу Свою; и уверовали в Него ученики Его.</p>
+              <cite>Иоанна 2:11</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="r8-k1" class="q team-1">
+        <div class="q-head"><p class="badge">Раунд 8 &middot; Команда 1</p><p class="q-num">Вопрос 16 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Сколько хлебов и рыб было у мальчика, когда Иисус накормил 5000 человек?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>5 хлебов и 2 рыбки</p>
+            <blockquote>
+              <p>здесь есть у одного мальчика пять хлебов ячменных и две рыбки; но что это для такого множества?</p>
+              <cite>Иоанна 6:9</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ РАУНД 9 ============ -->
+
+      <section id="r9-k1" class="q team-1">
+        <div class="q-head"><p class="badge">Раунд 9 &middot; Команда 1</p><p class="q-num">Вопрос 17 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Как звали отца Иоанна Крестителя?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>Захария</p>
+            <blockquote>
+              <p>Ангел же сказал ему: не бойся, Захария, ибо услышана молитва твоя, и жена твоя Елисавета родит тебе сына, и наречешь ему имя: Иоанн;</p>
+              <cite>Луки 1:13</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="r9-k2" class="q team-2">
+        <div class="q-head"><p class="badge">Раунд 9 &middot; Команда 2</p><p class="q-num">Вопрос 18 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Как звали мать пророка Самуила?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>Анна</p>
+            <blockquote>
+              <p>Чрез несколько времени зачала Анна и родила сына и дала ему имя: Самуил, ибо, говорила она, от Господа я испросила его.</p>
+              <cite>1 Царств 1:20</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ РАУНД 10 ============ -->
+
+      <section id="r10-k2" class="q team-2">
+        <div class="q-head"><p class="badge">Раунд 10 &middot; Команда 2</p><p class="q-num">Вопрос 19 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Сколько сыновей было у Иакова?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>12 сыновей</p>
+            <p class="ref">От них пошли 12 колен Израилевых &ndash; Бытие 35:22&ndash;26</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="r10-k1" class="q team-1">
+        <div class="q-head"><p class="badge">Раунд 10 &middot; Команда 1</p><p class="q-num">Вопрос 20 из 20</p></div>
+        <div class="content">
+          <p class="q-text">Иисус исцелил десять прокажённых. Сколько из них вернулись поблагодарить Его?</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>Один &ndash; самарянин</p>
+            <blockquote>
+              <p>Тогда Иисус сказал: не десять ли очистились? где же девять?</p>
+              <cite>Луки 17:17</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ФИНАЛ ============ -->
+
+      <section id="final" class="q team-both" data-timer="60">
+        <div class="q-head"><p class="badge">Финал &middot; обе команды</p><p class="q-num">до 9 баллов</p></div>
+        <div class="content">
+          <p class="q-text">Напишите на листке плод Духа. У вас 60 секунд!</p>
+          <p class="text-muted" style="font-size: 18pt; color: var(--muted-color);">1 балл за каждое верное слово. Подсказка: их девять (Галатам 5:22&ndash;23).</p>
+          <div class="answer fragment">
+            <div class="fruit">
+              <p>любовь</p><p>радость</p><p>мир</p>
+              <p>долготерпение</p><p>благость</p><p>милосердие</p>
+              <p>вера</p><p>кротость</p><p>воздержание</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="final-stih" class="q team-both">
+        <div class="q-head"><p class="badge">Финал &middot; проверка</p></div>
+        <div class="content" style="justify-content: center; flex: 1;">
+          <div class="answer">
+            <blockquote>
+              <p style="font-size: 26pt;">Плод же духа: любовь, радость, мир, долготерпение, благость, милосердие, вера,</p>
+              <cite>Галатам 5:22</cite>
+            </blockquote>
+            <blockquote style="margin-top: 20px;">
+              <p style="font-size: 26pt;">кротость, воздержание. На таковых нет закона.</p>
+              <cite>Галатам 5:23</cite>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ТАЙ-БРЕЙК ============ -->
+
+      <section id="tie-break" class="q team-both">
+        <div class="q-head"><p class="badge">Если ничья</p><p class="q-num">кто ближе &ndash; тот победил</p></div>
+        <div class="content">
+          <p class="q-text">Сколько стихов в Псалме 118 &ndash; самом длинном псалме?</p>
+          <p style="font-size: 18pt; color: var(--muted-color);">Каждая команда пишет одно число. Побеждает самый близкий ответ.</p>
+          <div class="answer fragment">
+            <p class="answer-main"><i class="fa-solid fa-check"></i>176 стихов</p>
+            <p class="ref">Нумерация Синодального перевода (в других переводах это Псалом 119)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ ИТОГИ ============ -->
+
+      <section id="itogi" class="divider">
+        <h1>Итоги</h1>
+        <div class="final-scores">
+          <div class="final-score t1">
+            <p class="name">Команда 1</p>
+            <p class="num" data-score="1">0</p>
+          </div>
+          <div class="final-score t2">
+            <p class="name">Команда 2</p>
+            <p class="num" data-score="2">0</p>
+          </div>
+        </div>
+        <p class="closing-quote">Слово Твое &ndash; светильник ноге моей и свет стезе моей.</p>
+        <p class="closing-ref">Псалом 118:105</p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- ============ ТАБЛО ============ -->
+  <div class="scoreboard" id="scoreboard">
+    <div class="sb-team t1">
+      <span class="sb-name">К1</span>
+      <span class="sb-score" data-score="1">0</span>
+      <button data-team="1" data-delta="-1" title="−1 (Shift+1)">−</button>
+      <button data-team="1" data-delta="1" title="+1 (клавиша 1)">+</button>
+    </div>
+    <button class="sb-timer" id="sb-timer" title="Таймер (клавиша T)"><i class="fa-solid fa-stopwatch"></i></button>
+    <div class="sb-team t2">
+      <span class="sb-name">К2</span>
+      <span class="sb-score" data-score="2">0</span>
+      <button data-team="2" data-delta="-1" title="−1 (Shift+2)">−</button>
+      <button data-team="2" data-delta="1" title="+1 (клавиша 2)">+</button>
+    </div>
+    <button class="sb-reset" id="sb-reset" title="Сбросить счёт">↺</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      width: 1280,
+      height: 720,
+      margin: 0,
+      controls: true,
+      progress: true,
+      slideNumber: false,
+      hash: true,
+      transition: 'slide',
+      center: false
+    });
+
+    // ---------- Счёт ----------
+    const STORE_KEY = 'viktorina-score';
+    let score = { 1: 0, 2: 0 };
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORE_KEY));
+      if (saved) score = { 1: saved[1] || 0, 2: saved[2] || 0 };
+    } catch (e) {}
+
+    function renderScore() {
+      document.querySelectorAll('[data-score]').forEach(el => {
+        el.textContent = score[el.dataset.score];
+      });
+      try { localStorage.setItem(STORE_KEY, JSON.stringify(score)); } catch (e) {}
+    }
+
+    function addPoints(team, delta) {
+      score[team] = Math.max(0, score[team] + delta);
+      renderScore();
+    }
+
+    document.querySelectorAll('.scoreboard [data-team]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        addPoints(btn.dataset.team, Number(btn.dataset.delta));
+        btn.blur();
+      });
+    });
+
+    document.getElementById('sb-reset').addEventListener('click', e => {
+      e.currentTarget.blur();
+      if (confirm('Сбросить счёт обеих команд?')) {
+        score = { 1: 0, 2: 0 };
+        renderScore();
+      }
+    });
+
+    // ---------- Таймер ----------
+    const timerBtn = document.getElementById('sb-timer');
+    const timerIdle = timerBtn.innerHTML;
+    let timerId = null;
+
+    function stopTimer() {
+      clearInterval(timerId);
+      timerId = null;
+      timerBtn.classList.remove('running', 'ending');
+      timerBtn.innerHTML = timerIdle;
+    }
+
+    function toggleTimer() {
+      if (timerId) { stopTimer(); return; }
+      const slide = Reveal.getCurrentSlide();
+      let left = Number(slide && slide.dataset.timer) || 30;
+      timerBtn.classList.add('running');
+      timerBtn.textContent = left;
+      timerId = setInterval(() => {
+        left -= 1;
+        timerBtn.textContent = left > 0 ? left : 'Время!';
+        timerBtn.classList.toggle('ending', left <= 5);
+        if (left <= 0) {
+          clearInterval(timerId);
+          timerId = null;
+          setTimeout(() => { if (!timerId) stopTimer(); }, 3000);
+        }
+      }, 1000);
+    }
+
+    timerBtn.addEventListener('click', () => { timerBtn.blur(); toggleTimer(); });
+    Reveal.on('slidechanged', stopTimer);
+
+    // ---------- Клавиши ----------
+    document.addEventListener('keydown', e => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      if (e.code === 'Digit1') { addPoints(1, e.shiftKey ? -1 : 1); e.preventDefault(); e.stopPropagation(); }
+      else if (e.code === 'Digit2') { addPoints(2, e.shiftKey ? -1 : 1); e.preventDefault(); e.stopPropagation(); }
+      else if (e.code === 'KeyT') { toggleTimer(); e.preventDefault(); e.stopPropagation(); }
+    }, true);
+
+    renderScore();
+  </script>
+</body>
+</html>

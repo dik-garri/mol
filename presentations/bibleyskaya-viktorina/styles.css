@@ -1,0 +1,439 @@
+/* Библейская викторина – 2 команды, 10 раундов + финал
+ * Палитра проекта: dark blue #0F1B2D, gold #D4A843 (Команда 1), teal #5B8CA8 (Команда 2)
+ * green #5BA88C – верный ответ
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root {
+  --background-color: #0F1B2D;
+  --bg-deep: #0B1522;
+  --card-bg: rgba(255, 255, 255, 0.04);
+
+  --heading-font: "Montserrat", Helvetica, sans-serif;
+  --body-font: "Montserrat", Helvetica, sans-serif;
+  --scripture-font: "Lora", Georgia, serif;
+  --base-font-size: 32px;
+  --text-size: 18pt;
+
+  --gold: #D4A843;
+  --teal: #5B8CA8;
+  --green: #5BA88C;
+  --red: #C75B5B;
+  --text-color: #EAF0F7;
+  --muted-color: #7A8BA8;
+  --line-color: rgba(122, 139, 168, 0.3);
+
+  --team: var(--gold);
+}
+
+html, body, .reveal-viewport { background: var(--background-color); }
+
+.reveal {
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
+  color: var(--text-color);
+}
+
+.reveal .slides section {
+  height: 100%;
+  padding: 36px 64px 96px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-family: var(--heading-font);
+  text-transform: none;
+  color: var(--text-color);
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.reveal p, .reveal li {
+  font-size: var(--text-size);
+  color: var(--text-color);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.reveal .progress { color: var(--gold); }
+.reveal .controls { color: var(--gold); }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ============ Титул / разделители ============ */
+
+.reveal .slides section.divider {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.divider .big-icon {
+  font-size: 64pt;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.reveal .divider h1 {
+  font-size: 54pt;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1.1;
+}
+
+.divider-rule {
+  width: 220px;
+  height: 4px;
+  margin: 26px auto;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--teal));
+}
+
+.reveal .divider .sub {
+  font-size: 22pt;
+  color: var(--muted-color);
+}
+
+.teams-row {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.reveal .team-chip {
+  font-size: 20pt;
+  font-weight: 700;
+  padding: 12px 30px;
+  border-radius: 40px;
+  border: 2px solid currentColor;
+}
+
+.reveal .team-chip.t1 { color: var(--gold); }
+.reveal .team-chip.t2 { color: var(--teal); }
+
+/* ============ Правила ============ */
+
+.reveal .slide-title {
+  font-size: 32pt;
+  font-weight: 800;
+  color: var(--gold);
+  margin-bottom: 26px;
+}
+
+.rules {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 22px;
+}
+
+.rule {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: var(--card-bg);
+  border: 1px solid var(--line-color);
+  border-radius: 12px;
+  padding: 18px 22px;
+}
+
+.rule i {
+  font-size: 22pt;
+  color: var(--gold);
+  width: 36px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.reveal .rule p { font-size: 17pt; }
+.reveal .rule strong { color: var(--gold); }
+
+/* ============ Вопрос ============ */
+
+section.q.team-1 { --team: var(--gold); }
+section.q.team-2 { --team: var(--teal); }
+
+.q-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.reveal .badge {
+  font-size: 15pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--bg-deep);
+  background: var(--team);
+  padding: 8px 20px;
+  border-radius: 30px;
+}
+
+.reveal .q-num {
+  font-size: 14pt;
+  font-weight: 600;
+  color: var(--muted-color);
+  letter-spacing: 1px;
+}
+
+.reveal .q-text {
+  font-size: 34pt;
+  font-weight: 700;
+  line-height: 1.25;
+  border-left: 6px solid var(--team);
+  padding-left: 26px;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 22px;
+  margin-top: 8px;
+}
+
+.reveal .options p {
+  font-size: 24pt;
+  font-weight: 600;
+  background: var(--card-bg);
+  border: 2px solid var(--line-color);
+  border-radius: 12px;
+  padding: 14px 24px;
+  transition: all 0.3s ease;
+}
+
+.reveal .options p b {
+  color: var(--team);
+  margin-right: 12px;
+}
+
+/* верный вариант виден всегда, а по клику подсвечивается */
+.reveal .options p.correct.fragment {
+  opacity: 1;
+  visibility: inherit;
+}
+
+.reveal .options p.correct.fragment.visible {
+  border-color: var(--green);
+  background: rgba(91, 168, 140, 0.18);
+}
+
+.reveal .options p.correct.fragment.visible b { color: var(--green); }
+
+/* блок ответа */
+.answer {
+  border: 2px solid var(--green);
+  background: rgba(91, 168, 140, 0.1);
+  border-radius: 14px;
+  padding: 20px 28px;
+}
+
+.reveal .answer-main {
+  font-size: 28pt;
+  font-weight: 800;
+  color: var(--green);
+}
+
+.reveal .answer-main i { margin-right: 12px; }
+
+.reveal .answer blockquote {
+  margin: 12px 0 0;
+  padding: 0;
+  width: 100%;
+  box-shadow: none;
+  background: none;
+  border: none;
+  text-align: left;
+}
+
+.reveal .answer blockquote p {
+  font-family: var(--scripture-font);
+  font-style: italic;
+  font-size: 18pt;
+  line-height: 1.45;
+}
+
+.reveal .answer blockquote cite {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--body-font);
+  font-style: normal;
+  font-size: 13pt;
+  font-weight: 600;
+  color: var(--muted-color);
+  letter-spacing: 0.5px;
+}
+
+.reveal .answer .ref {
+  margin-top: 8px;
+  font-size: 15pt;
+  color: var(--muted-color);
+}
+
+.plagues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  margin-top: 12px;
+}
+
+.reveal .plagues p {
+  font-size: 14pt;
+  padding: 4px 14px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ============ Финал ============ */
+
+section.q.team-both { --team: var(--gold); }
+
+section.q.team-both .badge {
+  background: linear-gradient(90deg, var(--gold), var(--teal));
+}
+
+.fruit {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.reveal .fruit p {
+  font-size: 22pt;
+  font-weight: 700;
+  text-align: center;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid var(--green);
+  background: rgba(91, 168, 140, 0.12);
+}
+
+/* ============ Итоги ============ */
+
+.final-scores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 760px;
+  margin-top: 30px;
+}
+
+.final-score {
+  border: 3px solid var(--c);
+  border-radius: 18px;
+  padding: 26px 20px;
+  text-align: center;
+}
+
+.final-score.t1 { --c: var(--gold); }
+.final-score.t2 { --c: var(--teal); }
+
+.reveal .final-score .name {
+  font-size: 22pt;
+  font-weight: 700;
+  color: var(--c);
+}
+
+.reveal .final-score .num {
+  font-size: 80pt;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--c);
+}
+
+.reveal .closing-quote {
+  font-family: var(--scripture-font);
+  font-style: italic;
+  font-size: 22pt;
+  max-width: 900px;
+  margin-top: 40px;
+}
+
+.reveal .closing-ref {
+  font-size: 14pt;
+  color: var(--muted-color);
+  margin-top: 8px;
+}
+
+/* ============ Табло (вне слайдов) ============ */
+
+.scoreboard {
+  position: fixed;
+  left: 16px;
+  bottom: 14px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--body-font);
+  user-select: none;
+}
+
+.sb-team {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px 6px 14px;
+  border-radius: 30px;
+  background: rgba(11, 21, 34, 0.85);
+  border: 2px solid var(--c);
+  color: var(--c);
+}
+
+.sb-team.t1 { --c: #D4A843; }
+.sb-team.t2 { --c: #5B8CA8; }
+
+.sb-name {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.sb-score {
+  font-size: 24px;
+  font-weight: 800;
+  min-width: 34px;
+  text-align: center;
+  color: #EAF0F7;
+}
+
+.scoreboard button {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(122, 139, 168, 0.5);
+  background: transparent;
+  color: #EAF0F7;
+  cursor: pointer;
+}
+
+.scoreboard button:hover { background: rgba(255, 255, 255, 0.1); }
+
+.sb-timer {
+  width: auto !important;
+  padding: 0 14px;
+  border-radius: 30px !important;
+  font-size: 18px !important;
+  min-width: 82px;
+  background: rgba(11, 21, 34, 0.85) !important;
+}
+
+.sb-timer.running { border-color: #5BA88C; color: #5BA88C; }
+.sb-timer.ending { border-color: #C75B5B; color: #C75B5B; }
+
+.sb-reset {
+  opacity: 0.5;
+}

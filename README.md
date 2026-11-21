@@ -35,6 +35,7 @@
 | Молитва за гонимую церковь (WWL 2026, общее собрание) | [presentations/gonimye-strany/](presentations/gonimye-strany/) |
 | Молитва за гонимую церковь – кратко (7 слайдов) | [presentations/gonimye-strany/kratko.html](presentations/gonimye-strany/kratko.html) |
 | Большой ужин – Луки 14:15–24 (разбор, общее собрание) | [presentations/luki-14-15-24/](presentations/luki-14-15-24/) |
+| Библейская викторина (2 команды, табло и таймер) | [presentations/bibleyskaya-viktorina/](presentations/bibleyskaya-viktorina/) |
 
 ## Проповеди
 
